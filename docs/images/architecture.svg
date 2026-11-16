@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="IBM Plex Sans, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>reel-decode architecture</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5d6675"/>
+    </marker>
+    <style>
+      .bg{fill:#f6f7f9}
+      .box{fill:#ffffff;stroke:#dfe3ea;stroke-width:1.5;rx:10}
+      .t{font-size:17px;font-weight:600;fill:#14181f}
+      .s{font-size:13px;fill:#5d6675}
+      .m{font-family:IBM Plex Mono, Menlo, monospace;font-size:12.5px;fill:#1f5fd6}
+      .lane{font-size:12px;font-weight:600;letter-spacing:.12em;fill:#8a93a3}
+      .ln{stroke:#5d6675;stroke-width:1.6;fill:none}
+      .loop{stroke:#0f8a5f;stroke-width:1.8;fill:none;stroke-dasharray:6 5}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="560" rx="16"/>
+
+  <text class="lane" x="40" y="44">DECODE: WHAT SEPARATES WINNERS FROM LOSERS</text>
+
+  <!-- decode row -->
+  <rect class="box" x="40" y="62" width="170" height="118"/>
+  <text class="t" x="58" y="94">collect</text>
+  <text class="s" x="58" y="118">video list + views</text>
+  <text class="s" x="58" y="138">CSV, or opt-in grid</text>
+  <text class="m" x="58" y="164">reference_*.json</text>
+
+  <rect class="box" x="236" y="62" width="160" height="118"/>
+  <text class="t" x="254" y="94">fetch</text>
+  <text class="s" x="254" y="118">audio + caption</text>
+  <text class="s" x="254" y="138">likes, post time</text>
+  <text class="m" x="254" y="164">yt-dlp</text>
+
+  <rect class="box" x="422" y="62" width="170" height="118"/>
+  <text class="t" x="440" y="94">transcribe</text>
+  <text class="s" x="440" y="118">sentences with</text>
+  <text class="s" x="440" y="138">start times</text>
+  <text class="m" x="440" y="164">Whisper, local</text>
+
+  <rect class="box" x="618" y="62" width="200" height="118"/>
+  <text class="t" x="636" y="94">anatomy</text>
+  <text class="s" x="636" y="118">role of every sentence;</text>
+  <text class="s" x="636" y="138">format, opener, ask, tone</text>
+  <text class="m" x="636" y="164">Jev typed questions</text>
+
+  <rect class="box" x="618" y="200" width="200" height="96"/>
+  <text class="t" x="636" y="230">visual</text>
+  <text class="s" x="636" y="254">cuts, faces, motion, text</text>
+  <text class="m" x="636" y="278">OpenCV + tesseract</text>
+
+  <rect class="box" x="866" y="62" width="294" height="234" style="stroke:#1f5fd6"/>
+  <text class="t" x="886" y="94">page</text>
+  <text class="s" x="886" y="118">each video ÷ its account's same-year</text>
+  <text class="s" x="886" y="138">median → top third vs bottom third</text>
+  <text class="s" x="886" y="166">trait gap = winners' share − losers'</text>
+  <text class="s" x="886" y="186">share, in points, with counts</text>
+  <text class="m" x="886" y="222">decode.html  (one file,</text>
+  <text class="m" x="886" y="242">  works offline)</text>
+  <text class="m" x="886" y="270">VISUAL-FINDINGS.md</text>
+
+  <path class="ln" d="M210 121 H232" marker-end="url(#a)"/>
+  <path class="ln" d="M396 121 H418" marker-end="url(#a)"/>
+  <path class="ln" d="M592 121 H614" marker-end="url(#a)"/>
+  <path class="ln" d="M818 121 H862" marker-end="url(#a)"/>
+  <path class="ln" d="M316 180 V248 H614" marker-end="url(#a)"/>
+  <path class="ln" d="M818 248 H862" marker-end="url(#a)"/>
+
+  <text class="lane" x="180" y="352">THE LOOP: USE IT ON THE NEXT VIDEO</text>
+
+  <rect class="box" x="40" y="370" width="230" height="140"/>
+  <text class="t" x="58" y="402">formula</text>
+  <text class="s" x="58" y="426">your thresholds, per account,</text>
+  <text class="s" x="58" y="446">from what your page showed</text>
+  <text class="m" x="58" y="490">reeldecode.toml</text>
+
+  <rect class="box" x="300" y="370" width="250" height="140"/>
+  <text class="t" x="318" y="402">gate</text>
+  <text class="s" x="318" y="426">brief: one viewer, one topic,</text>
+  <text class="s" x="318" y="446">stage-fit ask, three hooks;</text>
+  <text class="s" x="318" y="466">Jev reads the script</text>
+  <text class="m" x="318" y="494">gate check → exit 1 / 0</text>
+
+  <rect class="box" x="580" y="370" width="250" height="140"/>
+  <text class="t" x="598" y="402">post versions</text>
+  <text class="s" x="598" y="426">2–4 different cuts as trials,</text>
+  <text class="s" x="598" y="446">about a week apart;</text>
+  <text class="s" x="598" y="466">winner to the main feed</text>
+  <text class="m" x="598" y="494">you, on your phone</text>
+
+  <rect class="box" x="860" y="370" width="300" height="140"/>
+  <text class="t" x="878" y="402">learn</text>
+  <text class="s" x="878" y="426">numbers at 24 h, 72 h, 7 d;</text>
+  <text class="s" x="878" y="446">winner by 3 s hold, watch %,</text>
+  <text class="s" x="878" y="466">then sends per 1,000 views</text>
+  <text class="m" x="878" y="494">LEARNINGS.md</text>
+
+  <path class="ln" d="M270 440 H296" marker-end="url(#a)"/>
+  <path class="ln" d="M550 440 H576" marker-end="url(#a)"/>
+  <path class="ln" d="M830 440 H856" marker-end="url(#a)"/>
+  <path class="ln" d="M1013 296 V326 H155 V366" marker-end="url(#a)"/>
+  <path class="loop" d="M1010 510 V540 H155 V514" marker-end="url(#a)"/>
+  <text class="s" x="470" y="535" style="fill:#0f8a5f">update the formula from your own results</text>
+</svg>

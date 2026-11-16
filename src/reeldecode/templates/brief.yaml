@@ -1,0 +1,44 @@
+id: E000
+title: ''
+status: idea            # idea | scripted | rendered | scheduled | posted | reviewed
+created: ''
+account: ''             # the handle this video is for (an [[accounts]] entry in reeldecode.toml)
+funnel:
+  stage: ''             # tofu (reach strangers) | mofu (build trust, show the mechanism) | bofu (ask)
+  audience: ''          # the ONE viewer, as a situation: "home cook who burns garlic every time"
+  goal: ''              # the ONE thing they should feel or do after watching
+topic: ''               # one idea, one sentence, 20 words max
+viewer_takeaway: ''     # what a stranger can use today; must make sense with your name removed
+send_to: ''             # who a viewer forwards this to: "the roommate who never cleans the pan"
+time_sensitive: false   # true only for dated news; skips the three-hook trial
+hook_variants: []       # three different hooks for the trial run
+format: ''              # talking_head | voiceover_cards | screen_demo | hybrid | ...
+duration_s: null
+variable: ''            # the ONE thing this video changes versus its control
+control: null           # experiment id this is compared against
+hypothesis: ''          # "If we <change>, then <metric> rises, because <reason>."
+spoken_script: ''       # every spoken word, in order; the formula reads this
+formula_exception: ''   # only for a deliberate test of another shape: say why
+script:
+  hook: ''              # first 2 seconds, on screen and spoken, 12 words max
+  sub_hook: ''          # promise of a clear payoff: "in the next 30 seconds I'll show you..."
+  story:
+    character: ''       # who this happens to (a real person, real data)
+    conflict: ''        # what went wrong or what they wanted
+    turn: ''            # the moment it changes
+  rehooks: []           # one every 8 to 10 seconds: "but here's what surprised me"
+  reward: ''            # the payoff the sub-hook promised, delivered late
+  personal_payoff: ''   # what this does for YOU, the viewer, in one sentence
+  cta:
+    type: ''            # tofu: question|follow|send|save · mofu: + comment_keyword · bofu: comment_keyword|link_in_bio|dm
+    keyword: ''
+    text: ''
+proof: []               # each on-screen claim: {claim, source}
+asset: ''               # rendered file path
+caption: ''
+posted_at: null
+url: null               # one link, or several trial versions as "a URL | b URL | c URL"
+metrics: []             # appended by `reeldecode learn log` and `reeldecode learn pull`
+review:
+  verdict: ''
+  learnings: ''

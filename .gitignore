@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# reel-decode working files: never commit downloaded media or other people's data
+.reeldecode-cache/
+data/
+reeldecode-demo/
+experiments/
+LEARNINGS.md
+/reeldecode.toml
+*.mp4
+*.m4a
+*.webm
+*.aiff
+
+# Secrets
+.env
+.env.*
+*.token.json
+token.json
+
+.DS_Store

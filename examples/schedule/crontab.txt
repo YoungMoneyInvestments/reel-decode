@@ -1,0 +1,2 @@
+# Twice a day, 09:15 and 21:15 local time. Edit the paths, then add with `crontab -e`.
+15 9,21 * * * REELDECODE_PROJECT=$HOME/my-content REELDECODE_BIN=$HOME/my-content/.venv/bin/reeldecode $HOME/my-content/metrics_cycle.sh >> $HOME/my-content/metrics.log 2>&1

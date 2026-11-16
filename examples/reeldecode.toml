@@ -1,0 +1,45 @@
+# reeldecode.toml: one file for the whole pipeline. Keys go in env vars, never here.
+#   TYPESAFE_API_KEY   needed by `anatomy` and `gate read` (the Jev script read)
+
+[paths]
+data = "data"                 # reference_<handle>.json files plus decode.json / decode.html
+cache = ".reeldecode-cache"   # audio, video, transcripts, visual measurements (safe to delete)
+experiments = "experiments"   # one YAML brief per video (the brief gate and the learning loop)
+
+[decode]
+per_account = 150             # newest N reels per account (0 = all)
+min_age_days = 7              # younger reels are still collecting views and are never judged
+whisper_model = "small.en"
+
+# Every account you study. Mark the ones that are yours: they are listed first on the page,
+# and only they are read by the metrics loop.
+[[accounts]]
+handle = "your_handle"
+yours = true
+# Optional per-account formula rules (see docs/formula.md):
+# duration = [45, 60]         # seconds; use 0 for "no lower bound"
+# method_cap = true           # teaching ("method" sentences) at most a third of the script
+# spoken_ask = true           # the script must end on a spoken call to action
+# browser_profile = "~/.reeldecode/profiles/your_handle"   # signed-in profile for the metrics loop
+
+[[accounts]]
+handle = "a_creator_you_study"
+yours = false
+
+[formula]
+first_max_words = 12
+method_max_share = 0.334
+good_openers = ["specific_number", "question"]
+# Your own names, so the brief gate can tell a viewer-first takeaway from a sales line.
+brand_terms = []
+
+[collect.instagram]
+# Opt-in. Reads the public Reels grid of an account through YOUR OWN signed-in browser profile.
+# Public data only, slow on purpose; Instagram's terms and rate limits are your responsibility.
+enabled = false
+profile_dir = "~/.reeldecode/browser-profile"
+browser = ""                  # optional path to a Chrome/Chromium binary
+
+[metrics]
+marks_hours = [24, 72, 168]
+youtube_token = ""            # optional: an OAuth authorized-user token JSON for your channel

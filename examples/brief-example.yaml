@@ -1,0 +1,48 @@
+# A filled-in brief that passes `reeldecode gate check` once `gate read` has stored a matching Jev read.
+id: E001
+title: Garlic burns at a temperature
+status: scripted
+account: your_handle
+funnel:
+  stage: tofu
+  audience: home cook who burns garlic every time
+  goal: turn the heat down before the garlic goes in
+topic: Garlic burns at a temperature most stoves pass in a minute.
+viewer_takeaway: Add garlic after the pan comes off high heat.
+send_to: the roommate who sets off the smoke alarm
+time_sensitive: false
+hook_variants:
+  - Why does my garlic always go bitter?
+  - Your garlic burns at 210 degrees.
+  - 160 degrees is where garlic turns sweet.
+format: talking_head
+duration_s: 38
+variable: hook
+control: null
+hypothesis: If we open on a question, then the 3-second hold rises, because the viewer has asked it themselves.
+spoken_script: >-
+  Why does my garlic always go bitter? I tested 12 batches with a thermometer, and every bitter one passed 200 degrees.
+  Take the pan off the heat. Count to ten. Then add the garlic. That is the whole trick. Save this for tonight.
+formula_exception: ''
+script:
+  hook: Why does my garlic always go bitter?
+  sub_hook: In 30 seconds you will know the exact temperature.
+  story:
+    character: a home cook
+    conflict: kept burning the garlic
+    turn: a thermometer showed why
+  rehooks:
+    - But the fix is not lower heat.
+  reward: Off the heat, count to ten, then garlic.
+  personal_payoff: You stop wasting garlic tonight.
+  cta:
+    type: save
+    keyword: ''
+    text: Save this for tonight.
+proof:
+  - claim: 12 batches, bitter ones passed 200 degrees
+    source: own kitchen test, thermometer log
+caption: Why does my garlic always go bitter? The answer is 200 degrees.
+posted_at: null
+url: null
+metrics: []

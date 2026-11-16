@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reel Decode</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@600&display=swap">
+<style>
+/* Layout: one working column. Picture of every reel first, then the trait table that
+   explains it, then the script of whichever reel is selected. Colour carries script role. */
+:root{
+  --bg:#f6f7f9; --panel:#ffffff; --fg:#14181f; --muted:#5d6675; --line:#dfe3ea; --accent:#1f5fd6;
+  --win:#0f8a5f; --lose:#c2412d; --mid:#8a93a3; --new:#b9c0cc;
+  --r-hook:#d6336c; --r-setup:#7c5cd6; --r-story:#0b8fa8; --r-proof:#0f8a5f; --r-method:#1f5fd6;
+  --r-payoff:#c77700; --r-cta:#c2412d; --r-filler:#9aa3b2;
+  --pos:#0f8a5f; --neg:#c2412d;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --cond:"IBM Plex Sans Condensed","IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0f1319; --panel:#171c24; --fg:#e8ecf2; --muted:#98a2b3; --line:#2a313d; --accent:#6ea0ff;
+  --win:#3ecf98; --lose:#ff7b66; --mid:#7d8798; --new:#4a5362;
+  --r-hook:#ff6b9d; --r-setup:#a48bff; --r-story:#3cc4dc; --r-proof:#3ecf98; --r-method:#6ea0ff;
+  --r-payoff:#f0a93a; --r-cta:#ff7b66; --r-filler:#6b7485; --pos:#3ecf98; --neg:#ff7b66; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0f1319; --panel:#171c24; --fg:#e8ecf2; --muted:#98a2b3; --line:#2a313d; --accent:#6ea0ff;
+  --win:#3ecf98; --lose:#ff7b66; --mid:#7d8798; --new:#4a5362;
+  --r-hook:#ff6b9d; --r-setup:#a48bff; --r-story:#3cc4dc; --r-proof:#3ecf98; --r-method:#6ea0ff;
+  --r-payoff:#f0a93a; --r-cta:#ff7b66; --r-filler:#6b7485; --pos:#3ecf98; --neg:#ff7b66; color-scheme:dark }
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--sans)}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+h1{font:600 30px/1.1 var(--cond);margin:0;letter-spacing:.01em;text-wrap:balance}
+h2{font:600 19px/1.2 var(--cond);margin:0;text-wrap:balance}
+p{margin:0;max-width:68ch}
+.muted{color:var(--muted)} .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.lede{display:flex;flex-direction:column;gap:8px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--fg);font:500 14px var(--mono)}
+section{display:flex;flex-direction:column;gap:12px;min-width:0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.scroll{overflow-x:auto}
+.controls{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:5px;overflow:hidden;flex-wrap:wrap}
+.seg button{font:500 12.5px var(--sans);padding:5px 10px;background:var(--panel);color:var(--muted);border:0;border-right:1px solid var(--line);cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--panel)}
+button:focus-visible,tr:focus-visible,circle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:baseline}
+svg text{font-family:var(--mono);fill:var(--muted);font-size:11px}
+svg .lane{fill:var(--fg);font-family:var(--sans);font-size:12.5px;font-weight:500}
+svg .grid{stroke:var(--line);stroke-width:1}
+svg .med{stroke:var(--fg);stroke-width:1;stroke-dasharray:3 3;opacity:.55}
+svg circle{cursor:pointer}
+svg circle.sel{stroke:var(--fg);stroke-width:2.5}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;white-space:nowrap}
+th{font:500 11.5px var(--sans);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+tr.pick{cursor:pointer} tr.pick:hover td{background:color-mix(in srgb,var(--accent) 7%,transparent)}
+tr.on td{background:color-mix(in srgb,var(--accent) 13%,transparent)}
+.bar{height:8px;border-radius:2px;background:var(--accent);min-width:1px}
+.gap{font:500 12.5px var(--mono);text-align:center;border-radius:3px;padding:3px 6px;display:block;min-width:44px}
+.dimtag{font:400 11px var(--mono);color:var(--muted);margin-right:6px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.reelhead{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+.reelhead a{color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:400 12px var(--mono);border:1px solid var(--line);border-radius:3px;padding:2px 7px;color:var(--muted)}
+.chip b{color:var(--fg);font-weight:500}
+.strip{display:flex;height:14px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.strip span{display:block;height:100%}
+.script{display:flex;flex-direction:column;gap:2px}
+.line{display:grid;grid-template-columns:44px 66px minmax(0,1fr);gap:8px;align-items:baseline;padding:4px 0;border-bottom:1px solid var(--line)}
+.line .t{font:400 11.5px var(--mono);color:var(--muted)}
+.line .r{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.list{max-height:420px;overflow:auto}
+.cap{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.note{font-size:13px;color:var(--muted)} .note li{margin:3px 0;max-width:80ch}
+</style>
+
+<div class="wrap">
+  <header class="lede">
+    <h1>Reel Decode</h1>
+    <p id="lede"></p>
+    <div class="facts" id="facts"></div>
+  </header>
+
+  <section>
+    <h2>Every reel in one picture</h2>
+    <p class="muted">One dot per reel, one row per account. Position is views measured against the median of that account's reels from the same year, so a small account and a large one, or an old reel and a new one, share the same axis. Click a dot to read its script.</p>
+    <div class="controls">
+      <span class="muted">Colour by</span>
+      <div class="seg" id="colorSeg"></div>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="panel scroll"><svg id="plot" role="img" aria-label="Reels by views relative to account median"></svg></div>
+  </section>
+
+  <section>
+    <h2>What separates each account's winners from its losers</h2>
+    <p class="muted">Each cell is the share of that account's top-third reels with the trait minus the share of its bottom-third reels with it, in percentage points. Green means winners do it more. Hover a cell for the counts.</p>
+    <div class="panel scroll"><table id="lift"></table></div>
+  </section>
+
+  <section>
+    <h2>Which choices win, account by account</h2>
+    <div class="controls">
+      <div class="seg" id="acctSeg"></div>
+      <div class="seg" id="dimSeg"></div>
+    </div>
+    <div class="two">
+      <div class="panel scroll"><table id="groups"></table></div>
+      <div class="panel"><div class="muted" id="listTitle" style="font-size:13px;margin-bottom:6px"></div><div class="list scroll"><table id="reelList"></table></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Script, sentence by sentence</h2>
+    <div class="panel" id="detail"></div>
+  </section>
+
+  <section>
+    <h2>How to read this</h2>
+    <ul class="note" id="notes"></ul>
+  </section>
+</div>
+
+<script type="application/json" id="data">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = n => n == null ? '–' : n >= 1e6 ? (n/1e6).toFixed(1)+'M' : n >= 1e4 ? Math.round(n/1e3)+'k' : n >= 1e3 ? (n/1e3).toFixed(1)+'k' : String(Math.round(n));
+const nice = s => String(s ?? '').replace(/_/g,' ');
+const median = a => { if(!a.length) return null; const s=[...a].sort((x,y)=>x-y), m=s.length>>1; return s.length%2?s[m]:(s[m-1]+s[m])/2; };
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const ROLE_VAR = r => `var(--r-${r})`;
+const PAL = ['--r-method','--r-payoff','--r-proof','--r-hook','--r-setup','--r-story','--r-cta','--win','--lose','--accent','--r-filler'];
+
+const accts = D.accounts.slice().sort((a,b)=> (b.ours-a.ours) || a.handle.localeCompare(b.handle));
+const med = {};
+accts.forEach(a => { med[a.handle] = a.median_views || median(D.reels.filter(r=>r.a===a.handle).map(r=>r.views)); });
+D.reels.forEach(r => { r.x = r.xm != null ? r.xm : (med[r.a] ? r.views/med[r.a] : null); });
+const DIMS = Object.keys(D.dims);
+let state = { color:'tier', acct: (accts.find(a=>a.ours&&a.decoded>3)||accts[0]).handle, dim:'format', group:null, sel:null };
+
+function colorOf(r){
+  if(state.color==='tier') return `var(--${r.tier==='winner'?'win':r.tier==='loser'?'lose':r.tier==='middle'?'mid':'new'})`;
+  const v = r.labels && r.labels[state.color];
+  if(!v) return 'var(--new)';
+  const i = D.dims[state.color].indexOf(v);
+  return `var(${PAL[i % PAL.length]})`;
+}
+
+function seg(el, items, cur, on){
+  el.innerHTML = items.map(([k,l]) => `<button type="button" aria-pressed="${k===cur}" data-k="${esc(k)}">${esc(l)}</button>`).join('');
+  el.onclick = e => { const b=e.target.closest('button'); if(b){ on(b.dataset.k); } };
+}
+
+function drawHead(){
+  const dec = D.reels.filter(r=>r.script).length;
+  const ours = accts.filter(a=>a.ours).map(a=>'@'+a.handle), refs = accts.filter(a=>!a.ours).map(a=>'@'+a.handle);
+  $('lede').textContent = `Jev read the spoken script of every reel that has one, labelled each sentence by the job it does, and sorted each reel by format, hook and call to action. Yours: ${ours.join(', ')||'none'}. Compared with: ${refs.join(', ')||'none'}.`;
+  $('facts').innerHTML = [[D.reels.length,'reels plotted'],[dec,'scripts decoded'],[D.reels.filter(r=>r.status==='no_speech').length,'with no spoken script'],[accts.length,'accounts'],['$'+D.jev_cost_usd.toFixed(D.jev_cost_usd<1?3:2),'Jev cost'],[D.generated_at.slice(0,10),'data pulled']]
+    .map(([v,l])=>`<span><b>${esc(v)}</b> ${esc(l)}</span>`).join('');
+}
+
+function drawPlot(){
+  const W=1000, L=170, R=20, laneH=86, top=26, H=top+accts.length*laneH+30;
+  const lo=Math.log10(0.05), hi=Math.log10(60), X=x=>L+(Math.log10(Math.min(60,Math.max(0.05,x)))-lo)/(hi-lo)*(W-L-R);
+  let s='';
+  [0.1,0.25,0.5,1,2,5,10,25,50].forEach(t=>{ s+=`<line class="${t===1?'med':'grid'}" x1="${X(t)}" x2="${X(t)}" y1="${top-6}" y2="${H-26}"/><text x="${X(t)}" y="${H-10}" text-anchor="middle">${t===1?'median':'×'+t}</text>`; });
+  accts.forEach((a,i)=>{
+    const y0=top+i*laneH, cy=y0+laneH/2;
+    s+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${y0+laneH}" y2="${y0+laneH}"/>`;
+    s+=`<text class="lane" x="0" y="${cy-4}">@${esc(a.handle)}</text><text x="0" y="${cy+12}">${a.ours?'yours':'reference'} · median ${fmt(med[a.handle])}</text>`;
+    D.reels.filter(r=>r.a===a.handle && r.x!=null).forEach(r=>{
+      let h=0; for(const c of r.sc) h=(h*31+c.charCodeAt(0))>>>0;
+      const y=cy+((h%1000)/1000-0.5)*(laneH-40);
+      const dec=!!r.script;
+      s+=`<circle tabindex="0" data-sc="${esc(r.sc)}" cx="${X(r.x).toFixed(1)}" cy="${y.toFixed(1)}" r="${dec?5:3.2}" fill="${dec?colorOf(r):'var(--panel)'}" stroke="${dec?'none':colorOf(r)}" stroke-width="1.4" fill-opacity="${state.group&&!inGroup(r)?0.12:0.85}" class="${state.sel===r.sc?'sel':''}"><title>@${esc(r.a)} · ${fmt(r.views)} views · ×${r.x.toFixed(2)} its year median${r.labels?' · '+nice(r.labels.format):''}</title></circle>`;
+    });
+  });
+  const p=$('plot'); p.setAttribute('viewBox',`0 0 ${W} ${H}`); p.style.minWidth='720px'; p.style.width='100%'; p.innerHTML=s;
+  const keys = state.color==='tier' ? [['win','top third'],['mid','middle'],['lose','bottom third'],['new','too new or too few to judge']].map(([v,l])=>[`var(--${v})`,l])
+    : D.dims[state.color].map((v,i)=>[`var(${PAL[i%PAL.length]})`,nice(v)]);
+  $('legend').innerHTML = keys.map(([c,l])=>`<span><i style="background:${c}"></i>${esc(l)}</span>`).join('') + `<span><i style="background:var(--panel);border:1.4px solid var(--mid)"></i>hollow = no spoken script</span>`;
+}
+function inGroup(r){ return r.a===state.acct && r.labels && r.labels[state.dim]===state.group; }
+
+function drawLift(){
+  const cols = accts.filter(a=>a.lift && a.lift.length);
+  if(!cols.length){ $('lift').innerHTML='<tr><td class="muted">Not enough judged reels with a spoken script in any account yet.</td></tr>'; return; }
+  const rows = new Map();
+  cols.forEach(a=>a.lift.forEach(x=>{ const k=x.dim+'|'+x.value; if(!rows.has(k)) rows.set(k,{dim:x.dim,value:x.value,c:{}}); rows.get(k).c[a.handle]=x; }));
+  const score = r => { const o=cols.filter(a=>a.ours).map(a=>Math.abs(r.c[a.handle]?.gap||0)), t=cols.filter(a=>!a.ours).map(a=>Math.abs(r.c[a.handle]?.gap||0)); return Math.max(0,...o,...t); };
+  const list=[...rows.values()].filter(r=>score(r)>=0.12).sort((a,b)=>score(b)-score(a)).slice(0,28);
+  let h='<thead><tr><th>Trait</th>'+cols.map(a=>`<th class="num">@${esc(a.handle)}<br><span style="text-transform:none;letter-spacing:0">${a.ours?'yours':'reference'}</span></th>`).join('')+'</tr></thead><tbody>';
+  list.forEach(r=>{
+    h+=`<tr><td><span class="dimtag">${esc(nice(r.dim))}</span>${esc(nice(r.value))}</td>`+cols.map(a=>{
+      const x=r.c[a.handle]; if(!x) return '<td class="num muted">–</td>';
+      const g=Math.round(x.gap*100), al=Math.min(0.55,Math.abs(x.gap)*1.1);
+      return `<td><span class="gap" title="winners ${x.win_n} (${Math.round(x.win_share*100)}%) · losers ${x.lose_n} (${Math.round(x.lose_share*100)}%)" style="background:color-mix(in srgb,var(--${g>=0?'pos':'neg'}) ${Math.round(al*100)}%,transparent)">${g>0?'+':''}${g}</span></td>`;
+    }).join('')+'</tr>';
+  });
+  $('lift').innerHTML=h+'</tbody>';
+}
+
+function drawGroups(){
+  seg($('acctSeg'), accts.map(a=>[a.handle,'@'+a.handle]), state.acct, k=>{state.acct=k;state.group=null;drawGroups();drawPlot();});
+  seg($('dimSeg'), DIMS.map(d=>[d,nice(d)]), state.dim, k=>{state.dim=k;state.group=null;drawGroups();drawPlot();});
+  const rs=D.reels.filter(r=>r.a===state.acct && r.labels && r.tier!=='unjudged');
+  const g={}; rs.forEach(r=>{ (g[r.labels[state.dim]||'–'] ||= []).push(r); });
+  const rows=Object.entries(g).map(([k,v])=>({k,n:v.length,m:median(v.map(r=>r.views)),w:v.filter(r=>r.tier==='winner').length})).sort((a,b)=>b.m-a.m);
+  const mx=Math.max(1,...rows.map(r=>r.m));
+  $('groups').innerHTML = rows.length ? '<thead><tr><th>'+esc(nice(state.dim))+'</th><th class="num">reels</th><th class="num">median views</th><th></th><th class="num">in top third</th></tr></thead><tbody>'+rows.map(r=>
+    `<tr class="pick ${state.group===r.k?'on':''}" tabindex="0" data-k="${esc(r.k)}"><td>${esc(nice(r.k))}</td><td class="num">${r.n}</td><td class="num">${fmt(r.m)}</td><td style="width:34%"><div class="bar" style="width:${(r.m/mx*100).toFixed(1)}%"></div></td><td class="num">${r.w}/${r.n}</td></tr>`).join('')+'</tbody>'
+    : '<tr><td class="muted">No judged reels with a spoken script in this account.</td></tr>';
+  $('groups').onclick=e=>{ const tr=e.target.closest('tr.pick'); if(tr){ state.group = state.group===tr.dataset.k?null:tr.dataset.k; drawGroups(); drawPlot(); } };
+  $('groups').onkeydown=e=>{ if(e.key==='Enter') e.target.click(); };
+  const list=D.reels.filter(r=>r.a===state.acct && (state.group? inGroup(r) : true)).sort((a,b)=>b.views-a.views);
+  $('listTitle').textContent = `@${state.acct}: ${list.length} reels${state.group?' · '+nice(state.dim)+' = '+nice(state.group):''}, most viewed first. Click one for its script.`;
+  $('reelList').innerHTML = list.map(r=>`<tr class="pick ${state.sel===r.sc?'on':''}" tabindex="0" data-sc="${esc(r.sc)}"><td class="num">${fmt(r.views)}</td><td class="num muted">${r.x!=null?'×'+r.x.toFixed(1):''}</td><td style="white-space:normal">${esc(r.script? r.script[0][2].slice(0,90) : (r.caption||'').slice(0,90)||'(no spoken script, no caption)')}</td></tr>`).join('');
+  $('reelList').onclick=e=>{ const tr=e.target.closest('tr.pick'); if(tr) select(tr.dataset.sc,false); };
+  $('reelList').onkeydown=e=>{ if(e.key==='Enter') e.target.click(); };
+}
+
+function drawDetail(){
+  const r=D.reels.find(x=>x.sc===state.sel);
+  if(!r){ $('detail').innerHTML='<p class="muted">Click a dot or a row to open a reel.</p>'; return; }
+  let h=`<div style="display:flex;flex-direction:column;gap:12px"><div class="reelhead"><b>@${esc(r.a)}</b><span class="mono">${fmt(r.views)} views</span><span class="mono muted">${r.x!=null?'×'+r.x.toFixed(2)+' of its year median':''}</span><span class="mono muted">${fmt(r.likes)} likes · ${fmt(r.comments)} comments</span><span class="muted">${esc(r.posted||'')}</span><span class="muted">${r.tier==='unjudged'?'not judged':nice(r.tier==='winner'?'top third':r.tier==='loser'?'bottom third':'middle third')}</span><a href="${esc(r.url)}" target="_blank" rel="noopener">Open video</a></div>`;
+  if(r.caption) h+=`<div class="cap">Caption: ${esc(r.caption)}</div>`;
+  if(!r.script){ h+=`<p class="muted">${r.status==='no_speech'?'No spoken script: this reel is music, ambient sound or on-screen text only, so there is nothing for Jev to read.':'Script not decoded ('+esc(nice(r.status))+').'}</p></div>`; $('detail').innerHTML=h; return; }
+  const dv=r.dv;
+  h+='<div class="chips">'+DIMS.map(d=>`<span class="chip">${esc(nice(d))} <b>${esc(nice(r.labels[d]))}</b></span>`).join('')
+    +`<span class="chip">hook <b>${dv.hook_words} words</b></span><span class="chip">length <b>${dv.seconds??'–'}s</b></span><span class="chip">substance starts <b>${dv.t_first_substance==null?'never':dv.t_first_substance+'s'}</b></span><span class="chip">pace <b>${dv.words_per_sec??'–'} words/s</b></span>`
+    +Object.entries(r.checks).map(([k,v])=>`<span class="chip">${esc(nice(k))} <b>${v==null?'–':Math.round(v*100)+'%'}</b></span>`).join('')+'</div>';
+  h+='<div class="strip" title="Script by sentence, in order">'+r.script.map(s=>`<span style="flex:${Math.max(1,s[2].split(' ').length)};background:${ROLE_VAR(s[1])}" title="${esc(s[1])}"></span>`).join('')+'</div>';
+  h+='<div class="legend">'+D.roles.map(x=>`<span><i style="background:${ROLE_VAR(x)}"></i>${esc(x)}</span>`).join('')+'</div>';
+  h+='<div class="script">'+r.script.map(s=>`<div class="line"><span class="t">${Math.floor(s[0]/60)}:${String(Math.floor(s[0]%60)).padStart(2,'0')}</span><span class="r" style="color:${ROLE_VAR(s[1])}">${esc(s[1])}</span><span>${esc(s[2])}</span></div>`).join('')+'</div></div>';
+  $('detail').innerHTML=h;
+}
+function select(sc,scroll){ state.sel=sc; const r=D.reels.find(x=>x.sc===sc); if(r && r.a!==state.acct){state.acct=r.a;state.group=null;} drawPlot(); drawGroups(); drawDetail(); if(scroll) $('detail').scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }
+
+$('plot').addEventListener('click',e=>{ const c=e.target.closest('circle'); if(c) select(c.dataset.sc,true); });
+$('plot').addEventListener('keydown',e=>{ if(e.key==='Enter'){ const c=e.target.closest('circle'); if(c) select(c.dataset.sc,true); } });
+seg($('colorSeg'), [['tier','result'],...DIMS.map(d=>[d,nice(d)])], state.color, function on(k){ state.color=k; seg($('colorSeg'), [['tier','result'],...DIMS.map(d=>[d,nice(d)])], k, on); drawPlot(); });
+$('notes').innerHTML = [
+  `Winners and losers are the top and bottom third inside one account, ranked by views against that account's median for the same year, among reels at least ${D.min_age_days} days old. Views are never compared raw across accounts or across years.`,
+  'Only reels with a spoken script can be decoded. Music-only and text-on-screen reels are plotted as hollow dots and left out of the trait table.',
+  'A cell built on a handful of reels is a lead, not a finding. Hover for the counts before acting on it.',
+  'Views are the public play count on the day of the pull. Older reels have had longer to collect them.',
+  'Jev answers typed questions (pick one label, or yes/no as a probability). Lengths, timings and shares are computed in code from the transcript, not asked of the model.'
+].map(x=>`<li>${esc(x)}</li>`).join('');
+const full = r => r.script && r.script.length >= 6;
+const first = D.reels.filter(r=>full(r) && r.tier==='winner' && accts.find(a=>a.handle===r.a)?.ours).sort((a,b)=>b.x-a.x)[0] || D.reels.filter(full).sort((a,b)=>b.views-a.views)[0];
+if(first){ state.sel=first.sc; state.acct=first.a; }
+drawHead(); drawPlot(); drawLift(); drawGroups(); drawDetail();
+</script>
