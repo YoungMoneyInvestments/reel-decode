@@ -6,6 +6,8 @@ Pipeline (each step caches, so reruns only do new work):
   transcribe  local Whisper, word timestamps -> sentences
   anatomy     Jev labels every sentence and every script (needs TYPESAFE_API_KEY)
   visual      cuts, faces, opening motion and on-screen text, measured locally
+  taste       reference videos -> tastebook.md (pacing rules with timestamps)
+  edit-plan   Jev keep/delete/move verdict per script line, for an editing tool to apply
   page        the interactive decode page (decode.html); `page --demo` needs nothing else
 
 Then the loop that uses what you learned:
@@ -91,6 +93,18 @@ def c_visual(a) -> int:
     from .visual import cmd_visual
     cfg = _cfg(a)
     return cmd_visual(_store(a, cfg), _per(a, cfg), cfg.min_age_days, cfg.yours(), a.workers or 3)
+
+
+def c_taste(a) -> int:
+    from .taste import cmd_taste
+    cfg = _cfg(a)
+    return cmd_taste(a.videos, Path(a.out), Path(a.work), a.model or cfg.whisper_model)
+
+
+def c_edit_plan(a) -> int:
+    from . import jev
+    from .edit import cmd_edit_plan
+    return cmd_edit_plan(Path(a.script), Path(a.out), jev.api_key())
 
 
 def c_page(a) -> int:
@@ -186,6 +200,18 @@ def parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("visual", parents=[common, data], help="cuts, faces, motion, on-screen text")
     p.set_defaults(fn=c_visual)
+
+    p = sub.add_parser("taste", parents=[common], help="reference videos in, tastebook.md out (pacing rules with timestamps)")
+    p.add_argument("videos", nargs="+", help="3 to 5 URLs or local files of edits you want to copy")
+    p.add_argument("--out", default="tastebook.md")
+    p.add_argument("--work", default="taste-work", help="folder for downloads and before/after cut frames")
+    p.add_argument("--model", default="", help="Whisper model (default from config)")
+    p.set_defaults(fn=c_taste)
+
+    p = sub.add_parser("edit-plan", parents=[common], help="Jev: keep, delete or move each script line")
+    p.add_argument("script", help="text file, one script line per line")
+    p.add_argument("--out", default="edit-plan", help="folder for edit-plan.json and edit-plan.md")
+    p.set_defaults(fn=c_edit_plan)
 
     p = sub.add_parser("page", parents=[common, data], help="build the interactive decode page")
     p.add_argument("--demo", action="store_true", help="use the bundled synthetic dataset (offline)")

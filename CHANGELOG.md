@@ -2,6 +2,12 @@
 
 All notable changes to this project are listed here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+- `reeldecode taste`: reference videos in, `tastebook.md` out (shot length, opening cuts, opening hold, cuts on new sentences, each cited with timestamps), plus before/after frames for every cut. Zooms, captions, b-roll and sound effects are reported as not measured.
+- `reeldecode edit-plan`: a typed keep / delete / move verdict, destination and coded reason for every script line, with repeat and contradiction handling. See [docs/editing.md](docs/editing.md).
+
 ## [0.1.0] - 2026-11-16
 
 ### Added
