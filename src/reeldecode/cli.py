@@ -6,6 +6,8 @@ Pipeline (each step caches, so reruns only do new work):
   transcribe  local Whisper, word timestamps -> sentences
   anatomy     Jev labels every sentence and every script (needs TYPESAFE_API_KEY)
   visual      cuts, faces, opening motion and on-screen text, measured locally
+  frames      Jev looks at six stills per video: shot type, captions, what the first frame does
+  formats     which formats, hooks and openings beat each creator's typical video, and across creators
   taste       reference videos -> tastebook.md (pacing rules with timestamps)
   edit-plan   Jev keep/delete/move verdict per script line, for an editing tool to apply
   page        the interactive decode page (decode.html); `page --demo` needs nothing else
@@ -95,6 +97,26 @@ def c_visual(a) -> int:
     from .visual import cmd_visual
     cfg = _cfg(a)
     return cmd_visual(_store(a, cfg), _per(a, cfg), cfg.min_age_days, cfg.yours(), a.workers or 3)
+
+
+def c_frames(a) -> int:
+    from .frames import cmd_frames
+    cfg = _cfg(a)
+    return cmd_frames(_store(a, cfg), _per(a, cfg), a.force, a.workers or 4)
+
+
+def c_formats(a) -> int:
+    from . import page
+    from .formats import cmd_formats
+    from .store import Store
+    if a.demo:
+        st, yours, per, min_age = Store(config.Config(), page.demo_dir()), {"demo_creator"}, 0, 7
+        out = Path(a.out or "reeldecode-demo")
+    else:
+        cfg = _cfg(a)
+        st, yours, per, min_age = _store(a, cfg), cfg.yours(), _per(a, cfg), cfg.min_age_days
+        out = Path(a.out) if a.out else st.data
+    return cmd_formats(page.build(st, per, min_age, yours), out, a.min_n, a.top)
 
 
 def c_taste(a) -> int:
@@ -221,6 +243,17 @@ def parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("visual", parents=[common, data], help="cuts, faces, motion, on-screen text")
     p.set_defaults(fn=c_visual)
+
+    p = sub.add_parser("frames", parents=[common, data], help="Jev looks at stills: shot type, captions, first frame")
+    p.add_argument("--force", action="store_true", help="look again at videos already labelled")
+    p.set_defaults(fn=c_frames)
+
+    p = sub.add_parser("formats", parents=[common, data], help="which formats, hooks and openings win, per creator and across")
+    p.add_argument("--min-n", type=int, default=3, help="videos a group needs before it is shown (default 3)")
+    p.add_argument("--top", type=int, default=5, help="rows per table (default 5)")
+    p.add_argument("--demo", action="store_true", help="use the bundled synthetic dataset (offline)")
+    p.add_argument("--out", help="output folder (default: the data folder)")
+    p.set_defaults(fn=c_formats)
 
     p = sub.add_parser("taste", parents=[common], help="reference videos in, tastebook.md out (pacing rules with timestamps)")
     p.add_argument("videos", nargs="+", help="3 to 5 URLs or local files of edits you want to copy")

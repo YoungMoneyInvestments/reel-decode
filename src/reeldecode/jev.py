@@ -35,7 +35,10 @@ def http_call(payload: dict, key: str, attempts: int = 3) -> dict:
     last: Exception | None = None
     for a in range(attempts):
         try:
-            r = requests.post(ENDPOINT, headers={"Authorization": "Bearer " + key}, json=payload, timeout=(5, 60))
+            headers = {"Authorization": "Bearer " + key}
+            if payload.get("assets"):                     # images are opt-in per request
+                headers["TypeSafe-Danger-Zone-Images"] = "true"
+            r = requests.post(ENDPOINT, headers=headers, json=payload, timeout=(5, 60))
             if r.status_code == 429 or r.status_code >= 500:
                 raise JevError(f"HTTP {r.status_code}")
             if r.status_code != 200:

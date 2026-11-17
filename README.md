@@ -6,6 +6,7 @@
 - **Fair comparisons.** Each video is judged against its own account's median for the same year. A 300-view account and a 300,000-view account can be compared on what separates their good videos from their bad ones.
 - **One interactive page.** Every video as a dot, a winners-vs-losers table per account, and each script sentence by sentence. A single HTML file that works offline.
 - **From findings to an edit.** `reeldecode taste` writes a taste book (pacing rules with timestamps) from reference videos you want to edit like; `reeldecode edit-plan` gives a keep, delete or move verdict for every script line. See [docs/editing.md](docs/editing.md).
+- **What formats win, from frames and words.** `reeldecode frames` has Jev look at stills from each video; `reeldecode formats` ranks formats, hooks and opening sequences per creator and across creators, each against that creator's own typical video. See [docs/formats.md](docs/formats.md).
 - **From outliers to your own idea.** `reeldecode ideas` turns the videos that beat their account's normal numbers into idea cards (structure, not wording); the gate fails a script that copies its reference. See [docs/ideas.md](docs/ideas.md).
 - **Lanes, so it ships every week.** Give each account named content lanes (job, funnel stage, format, weekly target, off-limits words); the gate checks every brief against its lane and `reeldecode lanes` shows which are behind. See [docs/lanes.md](docs/lanes.md).
 - **A gate for the next script.** Turn the findings into checks (`reeldecode gate check`) and a test-and-learn loop that reads each post's numbers at 24 h, 72 h and 7 days.
@@ -62,6 +63,8 @@ reeldecode fetch && reeldecode transcribe && reeldecode anatomy && reeldecode pa
 | Transcribe | `reeldecode transcribe` | Whisper with word timestamps, split into sentences with start times | local |
 | Anatomy | `reeldecode anatomy` | One typed call per sentence (its role) and one per script (format, opener, payoff, ask, tone, six yes/no checks). See [docs/decode-questions.md](docs/decode-questions.md) | TypeSafe API |
 | Visual | `reeldecode visual` | Cuts, faces, motion in the first half second, on-screen text in the first 3 seconds (OpenCV, tesseract). Covers music-only videos too | local |
+| Frames | `reeldecode frames` | Six stills per video go to Jev as images: shot type (talking head, screen recording, interview, b-roll, person over screen...), on-screen caption, and what the first frame does to stop the scroll. See [docs/formats.md](docs/formats.md) | TypeSafe API |
+| Formats | `reeldecode formats` | Which script formats, spoken hooks, opening sequences, visual formats and first frames beat each creator's typical video, and which hold up across creators | local |
 | Page | `reeldecode page` | `decode.json` and `decode.html`: the plot, the lift table, every script | local |
 
 Every step caches per video, so a rerun only does new work, and a failed video is recorded and skipped rather than half-labeled.
@@ -101,6 +104,7 @@ A brief is one YAML file per video. The gate checks the script rubric (hook, pay
 |---|---|
 | Collect, fetch, transcribe, visual, page, gate check, learn | free, on your machine |
 | Anatomy (TypeSafe Jev) | about **$0.04 per million input tokens**. One script is one call per sentence plus one. A short 3-sentence script measured 4,056 input tokens ($0.0002); a typical 30 to 60 second script with 8 to 12 sentences runs about 11,000 tokens: roughly **$0.0005 per video**, or **about 20 cents for 400 videos** |
+| Frames (TypeSafe Jev, images) | about 1,900 input tokens per still, six stills a video: measured **$0.038 for 80 real videos** (about $0.0005 each) |
 | Gate read | the same, once per script you write |
 
 Every anatomy run appends its token count and cost to `decode_runs.jsonl`, and the page shows the total. Check TypeSafe's current price before a big run.

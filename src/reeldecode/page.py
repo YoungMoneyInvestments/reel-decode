@@ -12,6 +12,8 @@ from .decode import run_costs
 from .questions import REEL_CHOICE_DIMS, REEL_NOUL_DIMS, REEL_Q, ROLES
 from .store import Store
 
+FRAME_KEYS = ("visual_format", "open_shot", "hook_visual", "shot_seq", "shot_changes", "caption_share")
+
 
 def demo_dir() -> Path:
     return Path(str(resources.files("reeldecode") / "demo_data"))
@@ -50,6 +52,7 @@ def build(st: Store, per_account: int, min_age_days: int, yours: set[str],
                 "checks": {d: (round(r.get(f"d_{d}"), 2) if isinstance(r.get(f"d_{d}"), (int, float)) else None)
                            for d in REEL_NOUL_DIMS} if sc else None,
                 "dv": r["dv"],
+                "frames": {k: r["frames"].get(k) for k in FRAME_KEYS} if r.get("frames") else None,
                 "script": [[s["t"], s["role"], s["text"]] for s in sc] if sc else None,
             })
     cost, tokens = run_costs(st.data)
