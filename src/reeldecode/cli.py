@@ -12,6 +12,7 @@ Pipeline (each step caches, so reruns only do new work):
 
 Then the loop that uses what you learned:
   gate        briefs: write one per video, check it against the formula before you film
+  lanes       what each account is for, and which lanes are behind on their weekly target
   learn       log or pull each post's numbers, pick trial winners, write LEARNINGS.md
 """
 from __future__ import annotations
@@ -131,7 +132,7 @@ def c_gate(a) -> int:
     from .gate import brief
     cfg = _cfg(a)
     if a.gate_cmd == "new":
-        return brief.cmd_new(cfg, a.id, a.title, a.variable, a.stage, a.account, a.control)
+        return brief.cmd_new(cfg, a.id, a.title, a.variable, a.stage, a.account, a.control, a.lane, a.format)
     if a.gate_cmd == "check":
         return brief.cmd_check(cfg, a.id)
     if a.gate_cmd == "read":
@@ -139,6 +140,11 @@ def c_gate(a) -> int:
     if a.gate_cmd == "mix":
         return brief.cmd_mix(cfg, a.last)
     return brief.cmd_list(cfg)
+
+
+def c_lanes(a) -> int:
+    from .gate import lanes
+    return lanes.cmd_plan(_cfg(a), a.days, a.strict)
 
 
 def c_learn(a) -> int:
@@ -229,6 +235,8 @@ def parser() -> argparse.ArgumentParser:
                    help="funnel job: tofu reaches strangers, mofu builds trust, bofu asks")
     x.add_argument("--account", required=True)
     x.add_argument("--control", help="the experiment this one is compared against")
+    x.add_argument("--lane", default="", help="the content lane this post belongs to (see docs/lanes.md)")
+    x.add_argument("--format", default="", help="talking_head, interview, carousel, screen_demo, ...")
     x = gs.add_parser("check", parents=[common], help="exit 1 unless the brief passes every check")
     x.add_argument("id")
     x = gs.add_parser("read", parents=[common], help="Jev reads the spoken script; stored on the brief")
@@ -237,6 +245,11 @@ def parser() -> argparse.ArgumentParser:
     x.add_argument("--last", type=int, default=10)
     gs.add_parser("list", parents=[common], help="every brief with its rubric score")
     g.set_defaults(fn=c_gate)
+
+    p = sub.add_parser("lanes", parents=[common], help="content lanes per account: posted, queued, short of target")
+    p.add_argument("--days", type=int, default=7, help="window to plan, in days (default 7)")
+    p.add_argument("--strict", action="store_true", help="exit 1 if any lane is short")
+    p.set_defaults(fn=c_lanes)
 
     from .learn.loop import FLOAT_METRICS, METRICS
     lp = sub.add_parser("learn", parents=[common], help="log numbers, pull numbers, write LEARNINGS.md")
