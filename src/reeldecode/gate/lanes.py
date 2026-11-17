@@ -84,10 +84,13 @@ def cmd_plan(cfg: Config, days: int, strict: bool, today: dt.date | None = None)
         print("no lanes defined: add [[accounts.lanes]] to the config (docs/lanes.md)", file=sys.stderr)
         return 2
     rows = plan(cfg, [d for _p, d in all_exps(cfg.path(cfg.experiments))], today or dt.date.today(), days)
-    print(f"{'account':22} {'lane':20} {'format':13} target posted queued  short  last post")
+    aw = max([22] + [len(r["account"]) for r in rows])
+    fw = max([13] + [len(r["format"] or "-") for r in rows])
+    lw = max([20] + [len(r["lane"]) for r in rows])
+    print(f"{'account':{aw}} {'lane':{lw}} {'format':{fw}} target posted queued  short  last post")
     for r in rows:
         last = "never" if r["days_since"] is None else f"{r['days_since']} d ago"
-        print(f"{r['account']:22} {r['lane']:20} {r['format'] or '-':13} {r['target']:6} {r['posted']:6} {r['queued']:6} "
+        print(f"{r['account']:{aw}} {r['lane']:{lw}} {r['format'] or '-':{fw}} {r['target']:6g} {r['posted']:6} {r['queued']:6} "
               f"{r['short']:6}  {last}")
     gaps = [r for r in rows if r["short"]]
     if gaps:
