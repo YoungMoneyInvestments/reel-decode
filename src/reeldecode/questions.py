@@ -157,3 +157,48 @@ REEL_NOUL_DIMS = ["open_loop", "viewer_addressed", "concrete_detail", "proof_sho
 ROLES = list(ROLE_Q["criteria"])
 ROLE_LETTER = {"hook": "H", "setup": "S", "story": "T", "proof": "P", "method": "M",
                "payoff": "Y", "cta": "C", "filler": "f"}
+
+
+# ---------------------------------------------------------------- frames: Jev looks at stills
+# One request per still. `frame` in the state is the image. See src/reeldecode/frames.py.
+SHOT_Q = {
+    "type": "choice",
+    "instructions": ("`frame` is one still from a short vertical video (a Reel, TikTok or Short). What kind "
+                     "of shot is it? Judge what fills the frame, not any caption on top of it. " + UNTRUSTED),
+    "criteria": {
+        "talking_head": "A person facing the camera and talking, filling most of the frame.",
+        "person_over_screen": "A person cut out or shown small over a screenshot, website, chart or other background (green screen).",
+        "screen_recording": "A phone or computer screen fills the frame: an app, website, chart, code or document.",
+        "interview": "Two or more people in conversation, a podcast set, or someone being interviewed off-camera.",
+        "b_roll": "Footage of places, objects or activity, with no one addressing the camera.",
+        "product_shot": "A product, device or object shown close up as the subject.",
+        "text_card": "Mostly text on a plain or simple background.",
+        "clip_from_elsewhere": "A clip taken from TV, a film, a game, news or another creator's video.",
+        "split_screen": "The frame is split into two or more separate videos.",
+        "other": "None of the above.",
+    },
+}
+
+CAPTION_Q = {
+    "type": "noul",
+    "instructions": "Is there an on-screen caption, headline or title of three or more words in `frame`? " + UNTRUSTED,
+    "criteria": {"true": "Readable on-screen text of three or more words.", "false": "No such text."},
+}
+
+HOOK_FRAME_Q = {
+    "type": "choice",
+    "instructions": ("`frame` is the very first thing a viewer sees in a short vertical video, before deciding "
+                     "to keep watching. What is doing the work of stopping the scroll? " + UNTRUSTED),
+    "criteria": {
+        "headline_text": "Large on-screen text is the main thing: a claim, question or title.",
+        "face_closeup": "A person's face close to the camera, expression or eye contact.",
+        "proof_on_screen": "A result shown as evidence: a number, a chart, a P&L, a screenshot of an outcome.",
+        "product_or_tool": "A product, app or tool shown as the subject.",
+        "action": "Something visibly happening: movement, a demonstration, an event.",
+        "unexpected_image": "A surprising, odd or striking image that raises a question.",
+        "scene_or_aesthetic": "A pleasant scene, place or mood with nothing specific to read.",
+        "other": "None of the above.",
+    },
+}
+
+SHOTS = list(SHOT_Q["criteria"])

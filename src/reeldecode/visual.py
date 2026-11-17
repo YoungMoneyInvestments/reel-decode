@@ -18,6 +18,7 @@ import subprocess
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
+from pathlib import Path
 
 from . import analysis, store
 from .store import Store
@@ -117,14 +118,10 @@ def measure_file(mp4: str) -> dict:
     }
 
 
-def visual_one(st: Store, post: dict) -> dict:
-    sc = post["shortcode"]
-    out = st.visual / f"{sc}.json"
-    if out.exists():
-        return json.loads(out.read_text())
+def ensure_video(st: Store, post: dict) -> Path:
+    """The cached low-resolution copy of a video, downloaded with yt-dlp on first use."""
     st.video.mkdir(parents=True, exist_ok=True)
-    st.visual.mkdir(parents=True, exist_ok=True)
-    mp4 = st.video / f"{sc}.mp4"
+    mp4 = st.video / f"{post['shortcode']}.mp4"
     if not mp4.exists():
         time.sleep(random.uniform(0.6, 1.8))
         cmd = ["yt-dlp", "-q", "--no-warnings", "--no-playlist", "-f",
@@ -132,6 +129,16 @@ def visual_one(st: Store, post: dict) -> dict:
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=240)
         if r.returncode != 0 or not mp4.exists():
             raise RuntimeError((r.stderr or r.stdout or "yt-dlp failed").strip()[-200:])
+    return mp4
+
+
+def visual_one(st: Store, post: dict) -> dict:
+    sc = post["shortcode"]
+    out = st.visual / f"{sc}.json"
+    if out.exists():
+        return json.loads(out.read_text())
+    st.visual.mkdir(parents=True, exist_ok=True)
+    mp4 = ensure_video(st, post)
     rec = {"shortcode": sc, **measure_file(str(mp4))}
     out.write_text(json.dumps(rec))
     return rec
