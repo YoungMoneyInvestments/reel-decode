@@ -1,6 +1,12 @@
 # Editing with what you decoded: taste book and edit plan
 
-Two commands turn the decode into instructions an editor (or an agent driving an editing tool) can follow. Neither touches your editing project.
+Two commands turn the decode into instructions you can follow in **any** editor: Instagram Edits, CapCut, Premiere, DaVinci, or an agent that can drive one. Neither command edits video or opens your project. They write text files (a checklist and a plan); you, or an agent, make the edits.
+
+| Piece | Needs | Cost |
+|---|---|---|
+| `taste` | `ffmpeg`, `yt-dlp` | free, runs on your machine |
+| Whisper (speech to text) | `pip install 'reel-decode[transcribe]'` | free, open source, runs locally, no account or key. Optional for `taste` (it enables only the cuts-on-new-sentences rule); the decode uses it for transcripts |
+| `edit-plan` | a `TYPESAFE_API_KEY` and your script as text (from Whisper, platform captions, or typed by hand) | a tiny charge per line |
 
 ## `reeldecode taste`: a taste book from edits you like
 
@@ -15,9 +21,11 @@ Give it 3 to 5 videos from a creator whose editing you want to copy (URLs or loc
 
 Cut detection is a threshold on frame change (`SCENE = 0.3` in `taste.py`). Whip pans and flashes can read as cuts and soft dissolves can be missed; check a few timestamps by eye before trusting a rule.
 
-### Handing the taste book to an editing agent
+### Using the taste book
 
-Paste this, with your own folder:
+By hand, in any editor: treat it as a checklist ("cut about every 2.9 s", "no shot over 8 s") and check your timeline against it.
+
+With an agent that can drive your editor, paste this, with your own folder:
 
 > Read `tastebook.md`. Cut my raw footage in `<folder>` following it exactly, using the editing tool you have. Keep a list of every rule you could not follow and why, and render the result as a new version next to the original.
 
@@ -36,7 +44,11 @@ Output: `edit-plan.json` and `edit-plan.md` (the table, a "check by hand" list, 
 
 It is all or nothing: if any line gets no answer, no plan is written. Needs `TYPESAFE_API_KEY`.
 
-### Handing the plan to an editing agent
+### Using the plan
+
+By hand: delete the `delete` lines, move the `move` lines where `where` says, and leave the rest. `edit-plan.md` shows the new line order.
+
+With an agent that can drive your editor:
 
 > Apply every verdict in `edit-plan.json` to my timeline using the editing tool you have: delete the `delete` lines, move the `move` lines where `where` says, leave the rest. Keep a list of what changed. Render it as a new version so I can compare it with the original. Do not apply a line flagged "check by hand" without asking.
 
