@@ -101,6 +101,8 @@ def test_jev_read_with_a_fake_transport():
             s = payload["state"]["sentence"]
             role = "hook" if payload["state"]["position"] == "first sentence" else ("proof" if "19" in s else "method")
             return {"answers": {"role": {"choice": role}}, "usage": {"input_tokens": 100}}
+        if "context_spot" in payload["questions"]:
+            return {"answers": HOOK_ANSWERS, "usage": {"input_tokens": 300}}
         return {"answers": {"talking": {"noul": 0.97}, "hook_formula": {"choice": "question"},
                             "format": {"choice": "how_to_steps"}, "viewer_payoff": {"choice": "practical_tip"},
                             "cta_type": {"choice": "save"}, "register": {"choice": "playful"},
@@ -113,3 +115,26 @@ def test_jev_read_with_a_fake_transport():
     assert chk["fails"] == [] and chk["reel"]["hook_formula"] == "question"
     assert chk["roles"][1].startswith("proof:")
     assert chk["cost_usd"] > 0
+    assert chk["hook"]["score"] == 3
+
+
+HOOK_ANSWERS = {"context_spot": {"choice": "first_words"}, "lean": {"choice": "proof_or_stat"},
+                "leans_in": {"noul": 0.9}, "snapback": {"noul": 0.8}, "keyword_ask": {"choice": "no_keyword"}}
+
+
+def test_gate_read_blocks_a_hook_without_lean_or_snapback():
+    def fake(payload, key):
+        if "role" in payload["questions"]:
+            return {"answers": {"role": {"choice": "proof"}}, "usage": {"input_tokens": 100}}
+        if "context_spot" in payload["questions"]:
+            return {"answers": {**HOOK_ANSWERS, "lean": {"choice": "none"}, "snapback": {"noul": 0.1}},
+                    "usage": {"input_tokens": 300}}
+        return {"answers": {"talking": {"noul": 0.97}, "hook_formula": {"choice": "question"},
+                            "format": {"choice": "how_to_steps"}, "viewer_payoff": {"choice": "practical_tip"},
+                            "cta_type": {"choice": "save"}, "register": {"choice": "playful"},
+                            **{k: {"noul": 0.8} for k in ("open_loop", "viewer_addressed", "concrete_detail",
+                                                          "proof_shown", "single_idea", "self_promo")}},
+                "usage": {"input_tokens": 900}}
+    chk = formula.jev_read(brief(), CFG, transport=fake)
+    assert any("no lean" in f for f in chk["fails"]) and any("no snapback" in f for f in chk["fails"])
+    assert chk["hook"]["score"] == 1

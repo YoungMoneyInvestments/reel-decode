@@ -7,6 +7,7 @@ Pipeline (each step caches, so reruns only do new work):
   anatomy     Jev labels every sentence and every script (needs TYPESAFE_API_KEY)
   visual      cuts, faces, opening motion and on-screen text, measured locally
   frames      Jev looks at six stills per video: shot type, captions, what the first frame does
+  hooks       Jev scores each opening on the triple hook: context, lean, snapback, topic-word ask
   formats     which formats, hooks and openings beat each creator's typical video, and across creators
   taste       reference videos -> tastebook.md (pacing rules with timestamps)
   edit-plan   Jev keep/delete/move verdict per script line, for an editing tool to apply
@@ -103,6 +104,12 @@ def c_frames(a) -> int:
     from .frames import cmd_frames
     cfg = _cfg(a)
     return cmd_frames(_store(a, cfg), _per(a, cfg), a.force, a.workers or 4)
+
+
+def c_hooks(a) -> int:
+    from .hooks import cmd_hooks
+    cfg = _cfg(a)
+    return cmd_hooks(_store(a, cfg), _per(a, cfg), a.force, a.workers or 6)
 
 
 def c_formats(a) -> int:
@@ -247,6 +254,10 @@ def parser() -> argparse.ArgumentParser:
     p = sub.add_parser("frames", parents=[common, data], help="Jev looks at stills: shot type, captions, first frame")
     p.add_argument("--force", action="store_true", help="look again at videos already labelled")
     p.set_defaults(fn=c_frames)
+
+    p = sub.add_parser("hooks", parents=[common, data], help="Jev scores each opening: context, lean, snapback, ask")
+    p.add_argument("--force", action="store_true", help="score again videos already scored")
+    p.set_defaults(fn=c_hooks)
 
     p = sub.add_parser("formats", parents=[common, data], help="which formats, hooks and openings win, per creator and across")
     p.add_argument("--min-n", type=int, default=3, help="videos a group needs before it is shown (default 3)")

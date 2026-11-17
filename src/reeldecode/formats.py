@@ -44,6 +44,15 @@ def _fr(r: dict, k: str):
     return (r.get("frames") or {}).get(k)
 
 
+def _hk(r: dict, k: str):
+    h = r.get("hook")
+    return None if not h else h.get(k)
+
+
+def _yn(v):
+    return None if v is None else ("yes" if v else "no")
+
+
 def _pair(a, b):
     return f"{a} + {b}" if a and b else None
 
@@ -55,6 +64,13 @@ GROUPINGS: list[tuple[str, Callable[[dict], str | None]]] = [
     ("visual format", lambda r: _fr(r, "visual_format")),
     ("opening shot", lambda r: _fr(r, "open_shot")),
     ("first frame", lambda r: _fr(r, "hook_visual")),
+    ("triple hook score (0-3)", lambda r: None if _hk(r, "score") is None else f"{_hk(r, 'score')} of 3"),
+    ("context in the first words", lambda r: _yn(_hk(r, "context"))),
+    ("lean", lambda r: _hk(r, "lean")),
+    ("snapback", lambda r: _yn(_hk(r, "snapback_turn"))),
+    ("context channels (said, written, shown)",
+     lambda r: None if _hk(r, "channels") is None else (" + ".join(_hk(r, "channels")) or "none")),
+    ("topic-word comment ask", lambda r: _hk(r, "keyword_ask")),
     ("script format + spoken hook", lambda r: _pair(_lab(r, "format"), _lab(r, "hook_formula"))),
     ("visual format + script format", lambda r: _pair(_fr(r, "visual_format"), _lab(r, "format"))),
     ("opening shot + spoken hook", lambda r: _pair(_fr(r, "open_shot"), _lab(r, "hook_formula"))),

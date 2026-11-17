@@ -52,6 +52,7 @@ def build(st: Store, per_account: int, min_age_days: int, yours: set[str],
                 "checks": {d: (round(r.get(f"d_{d}"), 2) if isinstance(r.get(f"d_{d}"), (int, float)) else None)
                            for d in REEL_NOUL_DIMS} if sc else None,
                 "dv": r["dv"],
+                "hook": {k: v for k, v in r["hook"].items()} if r.get("hook") else None,
                 "frames": {k: r["frames"].get(k) for k in FRAME_KEYS} if r.get("frames") else None,
                 "script": [[s["t"], s["role"], s["text"]] for s in sc] if sc else None,
             })
