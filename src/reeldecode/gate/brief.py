@@ -15,7 +15,7 @@ from pathlib import Path
 import yaml
 
 from ..config import Config
-from . import formula
+from . import formula, lanes
 
 STATUSES = ["idea", "scripted", "rendered", "scheduled", "posted", "reviewed"]
 STAGES = ("tofu", "mofu", "bofu")
@@ -29,6 +29,7 @@ CTA_TYPES = set().union(*STAGE_CTAS.values())
 GENERIC_ASKS = (r"link in bio|free trial|sign up|subscribe|join (us|the|my)|discord|membership|"
                 r"use (my|the) code|dm me")
 TARGET_MIX = {"tofu": 6, "mofu": 3, "bofu": 1}  # per ten videos; a default, tune it from results
+NON_VIDEO = {"carousel", "image", "text_post"}   # no spoken script: the script rubric and formula do not apply
 VARIABLES = ["hook", "story", "payoff", "cta", "format", "length", "baseline"]
 
 
@@ -94,6 +95,7 @@ def brief_checks(d: dict, cfg: Config | None = None) -> list[str]:
     cfg = cfg or Config()
     brand = brand_re(cfg)
     s = d.get("script") or {}
+    video = d.get("format") not in NON_VIDEO
     fails: list[str] = []
 
     def check(ok: bool, msg: str) -> None:
@@ -113,17 +115,32 @@ def brief_checks(d: dict, cfg: Config | None = None) -> list[str]:
     check(not brand.search(take),
           "viewer_takeaway names you or an ask: it must stand without the brand (selfish-content test)")
     check(bool((d.get("send_to") or "").strip()), "send_to missing: the person a viewer would forward this to")
-    if stage == "tofu":
+    if stage == "tofu" and video:
         check(not brand.search(s.get("hook") or ""), "tofu hook names the brand or an ask: strangers stop for themselves")
     cta_type = (s.get("cta") or {}).get("type")
-    if stage in STAGES:
+    if stage in STAGES and video:
         check(cta_type in STAGE_CTAS[stage],
               f"cta '{cta_type}' does not fit {stage} (allowed: {', '.join(sorted(STAGE_CTAS[stage]))})")
     variants = [v for v in (d.get("hook_variants") or []) if str(v).strip()]
-    if not d.get("time_sensitive"):
+    if not d.get("time_sensitive") and video:
         check(len(variants) >= 3 and len(set(variants)) == len(variants),
               "need 3 different hook_variants for the trial run (or set time_sensitive: true)")
+    if not video:
+        proof = d.get("proof") or []
+        check(bool(proof) and all(p.get("source") for p in proof),
+              "each quote or claim needs a recorded source (who said it, where, and permission)")
+        check(not re.search(r"[–—]", d.get("caption") or ""), "caption contains an em or en dash")
+    fails += lanes.lane_checks(d, cfg)
     return fails
+
+
+def all_failures(d: dict, cfg: Config | None = None) -> tuple[int | None, list[str], list[str]]:
+    """(rubric score, rubric failures, brief failures). Non-video posts have no spoken script, so the
+    script rubric and the formula are skipped for them."""
+    if d.get("format") in NON_VIDEO:
+        return None, [], brief_checks(d, cfg)
+    sc, fails = score(d)
+    return sc, fails, brief_checks(d, cfg) + formula.formula_checks(d, cfg)
 
 
 def gate(exp_dir: Path, eid: str, cfg: Config | None = None) -> list[str]:
@@ -132,7 +149,8 @@ def gate(exp_dir: Path, eid: str, cfg: Config | None = None) -> list[str]:
     if p is None:
         return [f"no experiment {eid} in {exp_dir}"]
     d = load(p)
-    return score(d)[1] + brief_checks(d, cfg) + formula.formula_checks(d, cfg)
+    _sc, fails, bfails = all_failures(d, cfg)
+    return fails + bfails
 
 
 def stage_mix(exps: list[dict], last: int = 10) -> dict:
@@ -145,7 +163,8 @@ def stage_mix(exps: list[dict], last: int = 10) -> dict:
 
 
 # ---------------------------------------------------------------- commands
-def cmd_new(cfg: Config, eid: str, title: str, variable: str, stage: str, account: str, control: str | None) -> int:
+def cmd_new(cfg: Config, eid: str, title: str, variable: str, stage: str, account: str, control: str | None,
+            lane: str = "", fmt: str = "") -> int:
     exp_dir = cfg.path(cfg.experiments)
     exp_dir.mkdir(parents=True, exist_ok=True)
     slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:40]
@@ -157,6 +176,10 @@ def cmd_new(cfg: Config, eid: str, title: str, variable: str, stage: str, accoun
     tpl.update({"id": eid, "title": title, "variable": variable, "control": control,
                 "created": dt.date.today().isoformat(), "account": account.lstrip("@")})
     tpl["funnel"]["stage"] = stage
+    if lane:
+        tpl["lane"] = lane
+    if fmt:
+        tpl["format"] = fmt
     save(p, tpl)
     print(p)
     mix = stage_mix([d for _p, d in all_exps(exp_dir)])
@@ -172,9 +195,8 @@ def cmd_check(cfg: Config, eid: str) -> int:
         print(f"no experiment {eid} in {exp_dir}", file=sys.stderr)
         return 1
     d = load(p)
-    sc, fails = score(d)
-    bfails = brief_checks(d, cfg) + formula.formula_checks(d, cfg)
-    print(f"{eid}: rubric {sc}/10, brief " + ("PASS" if not bfails else f"{len(bfails)} FAIL"))
+    sc, fails, bfails = all_failures(d, cfg)
+    print(f"{eid}: rubric {'n/a (no spoken script)' if sc is None else f'{sc}/10'}, brief " + ("PASS" if not bfails else f"{len(bfails)} FAIL"))
     for f in fails + bfails:
         print("  -", f)
     if d.get("status") not in formula.BLOCKING_STATUSES:

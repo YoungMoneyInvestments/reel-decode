@@ -42,6 +42,17 @@ yours = true
 # spoken_ask = true           # the script must end on a spoken call to action
 # browser_profile = "~/.reeldecode/profiles/your_handle"   # signed-in profile for the metrics loop
 
+# Content lanes: the recurring kinds of post this account makes. Optional. With lanes defined, every
+# brief names its lane, the gate checks the lane's funnel stage and off-limits words, and
+# `reeldecode lanes` shows which lanes are behind on their weekly target. See docs/lanes.md.
+# [[accounts.lanes]]
+# name = "founder-story"
+# job = "The human side: what I am building and why"
+# stages = ["tofu", "mofu"]
+# format = "talking_head"     # talking_head, interview, carousel, screen_demo, ... (carousel/image/text_post skip the spoken-script checks)
+# per_week = 3
+# avoid = ["buy now"]
+
 [[accounts]]
 handle = "a_creator_you_study"
 yours = false
@@ -67,6 +78,17 @@ youtube_token = ""            # optional: an OAuth authorized-user token JSON fo
 
 
 @dataclass
+class Lane:
+    """One recurring kind of post on an account: what it is for, and how often it ships."""
+    name: str
+    job: str = ""
+    stages: tuple[str, ...] = ()        # funnel stages this lane may serve (empty = any)
+    format: str = ""                    # free label: talking_head, interview, carousel, screen_demo...
+    per_week: float = 0                 # target posts per week (0 = no cadence target)
+    avoid: tuple[str, ...] = ()         # words and phrases that do not belong in this lane
+
+
+@dataclass
 class Account:
     handle: str
     yours: bool = False
@@ -74,6 +96,10 @@ class Account:
     method_cap: bool = False
     spoken_ask: bool = False
     browser_profile: str = ""
+    lanes: list[Lane] = field(default_factory=list)
+
+    def lane(self, name: str) -> Lane | None:
+        return next((ln for ln in self.lanes if ln.name == name), None)
 
 
 @dataclass
@@ -133,6 +159,17 @@ def _duration(v) -> tuple[float | None, float | None] | None:
     return (lo or None, hi or None)
 
 
+def _lane(src: Path, handle: str, x: dict) -> Lane:
+    if not x.get("name"):
+        raise ValueError(f"{src}: every lane under {handle} needs a name")
+    stages = tuple(x.get("stages", ()))
+    bad = [t for t in stages if t not in ("tofu", "mofu", "bofu")]
+    if bad:
+        raise ValueError(f"{src}: lane {x['name']}: stages must be tofu, mofu or bofu, not {bad}")
+    return Lane(name=str(x["name"]), job=str(x.get("job", "")), stages=stages, format=str(x.get("format", "")),
+                per_week=float(x.get("per_week", 0)), avoid=tuple(str(t) for t in x.get("avoid", ())))
+
+
 def load(explicit: str | None = None) -> Config:
     src = find(explicit)
     if src is None:
@@ -165,5 +202,6 @@ def load(explicit: str | None = None) -> Config:
         cfg.accounts.append(Account(
             handle=normalize(a["handle"]), yours=bool(a.get("yours", False)),
             duration=_duration(a.get("duration")), method_cap=bool(a.get("method_cap", False)),
-            spoken_ask=bool(a.get("spoken_ask", False)), browser_profile=str(a.get("browser_profile", ""))))
+            spoken_ask=bool(a.get("spoken_ask", False)), browser_profile=str(a.get("browser_profile", "")),
+            lanes=[_lane(src, a["handle"], x) for x in a.get("lanes", [])]))
     return cfg
