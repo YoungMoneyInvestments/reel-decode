@@ -21,6 +21,9 @@ FLOAT_METRICS = {"avg_watch_s", "avg_watch_pct", "hold_3s", "non_follower_pct"}
 READ_AT_HOURS = 72
 
 
+PROMOTE_VIEWS = 100_000   # organic views at which a post is listed as worth considering for promotion
+
+
 def _median(xs: list) -> float | None:
     xs = sorted(x for x in xs if x is not None)
     if not xs:
@@ -164,6 +167,13 @@ def learn_markdown(exps: list[dict], now: dt.datetime | None = None) -> str:
                 out.append(f"- {eid}: winner **{w['variant']}** on {why} (\"{w['hook']}\")." if w
                            else f"- {eid}: no winner, {why}.")
             out.append("")
+        hot = sorted((r for r in rows if (r["views"] or 0) >= PROMOTE_VIEWS), key=lambda r: -(r["views"] or 0))
+        if hot:
+            out += [f"## Promotion candidates ({PROMOTE_VIEWS:,}+ views)", "",
+                    "Organic posts that crossed the bar. reel-decode never spends money: whether to promote one, "
+                    "and with how much, is your decision."] + [
+                f"- {r['id']}{'/' + r['variant'] if r['variant'] else ''} ({r['account']}): {r['views']:,} views, "
+                f"\"{str(r['hook'])[:70]}\"" for r in hot] + [""]
         curves = [r for r in rows if r["curve"]]
         if curves:
             out += ["## Retention curves", ""] + [

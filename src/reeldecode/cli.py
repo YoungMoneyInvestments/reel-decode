@@ -12,6 +12,7 @@ Pipeline (each step caches, so reruns only do new work):
 
 Then the loop that uses what you learned:
   gate        briefs: write one per video, check it against the formula before you film
+  ideas       idea cards from outlier videos (structure to learn from, never wording to copy)
   lanes       what each account is for, and which lanes are behind on their weekly target
   learn       log or pull each post's numbers, pick trial winners, write LEARNINGS.md
 """
@@ -128,6 +129,20 @@ def c_page(a) -> int:
     return 0
 
 
+def c_ideas(a) -> int:
+    from . import page
+    from .ideas import cmd_ideas
+    from .store import Store
+    if a.demo:
+        st, yours, per, min_age = Store(config.Config(), page.demo_dir()), {"demo_creator"}, 0, 7
+        out = Path(a.out or "reeldecode-demo")
+    else:
+        cfg = _cfg(a)
+        st, yours, per, min_age = _store(a, cfg), cfg.yours(), _per(a, cfg), cfg.min_age_days
+        out = Path(a.out) if a.out else st.data
+    return cmd_ideas(page.build(st, per, min_age, yours), out, a.min_x, a.limit, a.include_yours)
+
+
 def c_gate(a) -> int:
     from .gate import brief
     cfg = _cfg(a)
@@ -224,6 +239,14 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument("--out", help="output folder (default: the data folder, or ./reeldecode-demo)")
     p.add_argument("--open", action="store_true", help="open the page in your browser")
     p.set_defaults(fn=c_page)
+
+    p = sub.add_parser("ideas", parents=[common, data], help="idea cards from videos that crushed their account's median")
+    p.add_argument("--min-x", type=float, default=3.0, help="times the account's same-year median (default 3)")
+    p.add_argument("--limit", type=int, default=20)
+    p.add_argument("--include-yours", action="store_true", help="also cards from your own best videos")
+    p.add_argument("--demo", action="store_true", help="use the bundled synthetic dataset (offline)")
+    p.add_argument("--out", help="output folder (default: the data folder)")
+    p.set_defaults(fn=c_ideas)
 
     g = sub.add_parser("gate", parents=[common], help="briefs and the script formula check")
     gs = g.add_subparsers(dest="gate_cmd", required=True, metavar="ACTION")

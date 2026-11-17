@@ -6,6 +6,7 @@
 - **Fair comparisons.** Each video is judged against its own account's median for the same year. A 300-view account and a 300,000-view account can be compared on what separates their good videos from their bad ones.
 - **One interactive page.** Every video as a dot, a winners-vs-losers table per account, and each script sentence by sentence. A single HTML file that works offline.
 - **From findings to an edit.** `reeldecode taste` writes a taste book (pacing rules with timestamps) from reference videos you want to edit like; `reeldecode edit-plan` gives a keep, delete or move verdict for every script line. See [docs/editing.md](docs/editing.md).
+- **From outliers to your own idea.** `reeldecode ideas` turns the videos that beat their account's normal numbers into idea cards (structure, not wording); the gate fails a script that copies its reference. See [docs/ideas.md](docs/ideas.md).
 - **Lanes, so it ships every week.** Give each account named content lanes (job, funnel stage, format, weekly target, off-limits words); the gate checks every brief against its lane and `reeldecode lanes` shows which are behind. See [docs/lanes.md](docs/lanes.md).
 - **A gate for the next script.** Turn the findings into checks (`reeldecode gate check`) and a test-and-learn loop that reads each post's numbers at 24 h, 72 h and 7 days.
 
