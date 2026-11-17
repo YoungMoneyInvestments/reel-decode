@@ -202,3 +202,75 @@ HOOK_FRAME_Q = {
 }
 
 SHOTS = list(SHOT_Q["criteria"])
+
+
+# ---------------------------------------------------------------- the triple hook (docs/hooks.md)
+# One text call per video about its opening and its ask, plus one image call on the first still when
+# the frames stage kept it. The 0-3 score and the pass/fail are decided in code (hooks.py).
+HOOK_Q = {
+    "context_spot": {
+        "type": "choice",
+        "instructions": ("`opening` is the first sentences of a short vertical video's spoken script, numbered. "
+                         "Where does a viewer first learn what topic the video is about? " + UNTRUSTED),
+        "criteria": {
+            "first_words": "Within the first half of sentence 1: the topic is named or obvious from the first few words.",
+            "end_of_first_sentence": "Only in the second half of sentence 1.",
+            "second_sentence": "Not until sentence 2.",
+            "later_or_never": "Sentence 3 or later, or the opening never makes the topic clear.",
+        },
+    },
+    "lean": {
+        "type": "choice",
+        "instructions": ("After the topic is set, what in sentences 1 and 2 of `opening` makes a viewer curious "
+                         "to hear more? Pick the strongest. " + UNTRUSTED),
+        "criteria": {
+            "proof_or_stat": "A result, number, statistic or credential that backs up what is coming.",
+            "pain_point": "Names a specific problem, frustration or fear the viewer has.",
+            "desired_benefit": "Names a specific outcome or gain the viewer wants.",
+            "shocking_or_unexpected": "Something surprising, strange or hard to believe.",
+            "none": "Nothing pulls the viewer in; it only states the topic or makes small talk.",
+        },
+    },
+    "leans_in": {
+        "type": "noul",
+        "instructions": ("A viewer who cares about this topic has heard only `opening`. Would they actively want "
+                         "to hear what comes next, rather than feel they already got it or lose interest? " + UNTRUSTED),
+        "criteria": {"true": "They lean in: an open question or promise makes them want more.",
+                     "false": "They could scroll away: nothing is left open, or it is dull or vague."},
+    },
+    "snapback": {
+        "type": "noul",
+        "instructions": ("In `opening`, after the first sentence or two point the viewer one way, does a later "
+                         "sentence yank them in a different direction: say the obvious answer is wrong, reveal a "
+                         "twist or catch, or turn with 'but', 'actually', 'here's the problem'? A plain "
+                         "continuation in the same direction is not a snapback. " + UNTRUSTED),
+        "criteria": {"true": "There is a turn against the direction the viewer was leaning.",
+                     "false": "The opening keeps going the same way, with no turn."},
+    },
+    "text_context": {
+        "type": "noul",
+        "instructions": ("`on_screen_text` is the text shown on screen in the first seconds (may be empty or "
+                         "garbled). Does it say what the video is about? " + UNTRUSTED),
+        "criteria": {"true": "On-screen text names or makes clear the topic.",
+                     "false": "No usable text, or it does not name the topic."},
+    },
+    "keyword_ask": {
+        "type": "choice",
+        "instructions": ("Judging `ending` (the last sentences of the script): does it ask the viewer to comment "
+                         "a specific word, and does that word match the video's topic in `opening`? " + UNTRUSTED),
+        "criteria": {
+            "topic_keyword": "Asks for a comment word that matches the topic (e.g. a hooks video asking for 'HOOK').",
+            "other_keyword": "Asks for a comment word unrelated to the topic.",
+            "no_keyword": "No comment-a-word ask.",
+        },
+    },
+}
+
+VISUAL_CONTEXT_Q = {
+    "type": "noul",
+    "instructions": ("`frame` is the first thing a viewer sees in a short vertical video. `first_sentence` is "
+                     "what is said over it. Does the frame itself show or write what that sentence is about, "
+                     "so a viewer with the sound off would know the topic? " + UNTRUSTED),
+    "criteria": {"true": "The picture or its on-screen text makes the topic clear.",
+                 "false": "The picture alone does not tell you the topic."},
+}

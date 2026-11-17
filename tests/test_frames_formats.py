@@ -181,3 +181,53 @@ def test_page_carries_frame_summary(tmp_path):
 def test_frame_answers_fail_closed(bad):
     with pytest.raises(jev.JevError):
         frames.frame_answers(bad, first=False)
+
+
+# ---------------------------------------------------------------- triple hook
+from reeldecode import hooks  # noqa: E402
+
+RAW = {"context_spot": "first_words", "lean": "pain_point", "leans_in": 0.8, "snapback": 0.7,
+       "keyword_ask": "topic_keyword", "text_context": 0.9, "visual_context": 0.2}
+
+
+def test_parts_score_and_channels():
+    h = hooks.parts(RAW, ["hook", "setup", "method", "payoff", "cta"])
+    assert h["score"] == 3 and h["channels"] == ["said", "written"] and h["close"] and h["value_before_ask"]
+    weak = hooks.parts({**RAW, "context_spot": "second_sentence", "leans_in": 0.3}, ["hook", "cta", "payoff"])
+    assert weak["score"] == 1 and not weak["context"] and not weak["lean_in"]
+    assert not weak["close"] and weak["value_before_ask"] is False      # asked before giving value
+    assert hooks.judge(weak)[0].startswith("triple hook: the topic") and len(hooks.judge(weak)) == 2
+    assert hooks.judge(h) == []
+
+
+def test_read_hook_text_and_image_calls():
+    seen = []
+
+    def call(payload, key):
+        seen.append(payload)
+        if "assets" in payload:
+            assert payload["state"]["first_sentence"] == "Hooks decide your views."
+            return {"answers": {"visual_context": {"noul": 0.9}}, "usage": {"input_tokens": 1900}}
+        assert "text_context" not in payload["questions"]          # no on-screen text, no question
+        assert payload["state"]["opening"].startswith("1. Hooks decide")
+        return {"answers": {q: ({"choice": v} if isinstance(v, str) else {"noul": v})
+                            for q, v in RAW.items() if q not in ("text_context", "visual_context")},
+                "usage": {"input_tokens": 400}}
+    h = hooks.read_hook(["Hooks decide your views.", "Most people get this wrong.", "But here's the catch."],
+                        "k", "", b"\xff\xd8jpg", ["hook", "setup", "payoff"], call)
+    assert len(seen) == 2 and h["tokens"] == 2300 and h["channels"] == ["said", "shown"]
+
+
+def test_read_hook_fails_closed():
+    with pytest.raises(jev.JevError):
+        hooks.read_hook(["One."], "k", transport=lambda p, k: {"answers": {}})
+
+
+def test_formats_groups_by_hook_score():
+    reels = [{"a": "c", "sc": f"s{i}", "xm": x, "tier": "middle", "labels": {}, "dv": {},
+              "hook": hooks.parts({**RAW, "snapback": s})} for i, (x, s) in enumerate(
+              [(3.0, 0.9), (2.0, 0.9), (2.5, 0.9), (0.5, 0.1), (0.4, 0.1), (0.6, 0.1)])]
+    rep = formats.build({"accounts": [{"handle": "c"}], "reels": reels})
+    g = rep["per_account"]["c"]["triple hook score (0-3)"]
+    assert [(r["value"], r["median_x"]) for r in g] == [("3 of 3", 2.5), ("2 of 3", 0.5)]
+    assert rep["per_account"]["c"]["snapback"][0]["value"] == "yes"

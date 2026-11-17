@@ -59,6 +59,7 @@ yours = false
 
 [formula]
 first_max_words = 12
+triple_hook = true             # gate read also checks context, lean and snapback (docs/hooks.md)
 method_max_share = 0.334
 good_openers = ["specific_number", "question"]
 # Your own names, so the brief gate can tell a viewer-first takeaway from a sales line.
@@ -113,6 +114,7 @@ class Config:
     min_age_days: int = 7
     whisper_model: str = "small.en"
     first_max_words: int = 12
+    triple_hook: bool = True
     method_max_share: float = 0.334
     good_openers: tuple[str, ...] = ("specific_number", "question")
     brand_terms: tuple[str, ...] = ()
@@ -188,6 +190,7 @@ def load(explicit: str | None = None) -> Config:
     cfg.min_age_days = int(dec.get("min_age_days", cfg.min_age_days))
     cfg.whisper_model = str(dec.get("whisper_model", cfg.whisper_model))
     cfg.first_max_words = int(form.get("first_max_words", cfg.first_max_words))
+    cfg.triple_hook = bool(form.get("triple_hook", cfg.triple_hook))
     cfg.method_max_share = float(form.get("method_max_share", cfg.method_max_share))
     cfg.good_openers = tuple(form.get("good_openers", cfg.good_openers))
     cfg.brand_terms = tuple(form.get("brand_terms", cfg.brand_terms))

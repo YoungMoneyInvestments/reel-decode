@@ -158,6 +158,13 @@ def jev_read(d: dict, cfg: Config | None = None, transport=None) -> dict:
         raise RuntimeError(f"no spoken script found (looked in {src})")
     res = jev.read_script(normalize(acct.handle), sents, key, "", transport)
     reel = res["reel"]
+    fails = judge(acct, sents, res["roles"], reel, cfg)
+    hook = None
+    if cfg.triple_hook:
+        from .. import hooks
+        hook = hooks.read_hook(sents, key, str(d.get("on_screen_text") or ""), roles=res["roles"], transport=transport)
+        res["tokens"] += hook.pop("tokens")
+        fails += hooks.judge(hook)
     return {
         "hash": script_hash(text), "source": src, "model": jev.MODEL,
         "checked_at": dt.datetime.now().isoformat(timespec="seconds"),
@@ -165,5 +172,6 @@ def jev_read(d: dict, cfg: Config | None = None, transport=None) -> dict:
         "reel": {k: reel.get(k) for k in ("format", "hook_formula", "register", "cta_type",
                                           "viewer_payoff", "proof_shown", "self_promo")},
         "roles": [f"{r}: {s}" for r, s in zip(res["roles"], sents)],
-        "fails": judge(acct, sents, res["roles"], reel, cfg),
+        "hook": {k: hook[k] for k in ("score", "context_spot", "lean", "snapback_turn", "keyword_ask", "channels")} if hook else None,
+        "fails": fails,
     }

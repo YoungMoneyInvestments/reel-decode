@@ -6,6 +6,7 @@
 - **Fair comparisons.** Each video is judged against its own account's median for the same year. A 300-view account and a 300,000-view account can be compared on what separates their good videos from their bad ones.
 - **One interactive page.** Every video as a dot, a winners-vs-losers table per account, and each script sentence by sentence. A single HTML file that works offline.
 - **From findings to an edit.** `reeldecode taste` writes a taste book (pacing rules with timestamps) from reference videos you want to edit like; `reeldecode edit-plan` gives a keep, delete or move verdict for every script line. See [docs/editing.md](docs/editing.md).
+- **Score hooks on the triple hook.** Context, lean, snapback, then a topic-word ask: `reeldecode hooks` scores every video 0 to 3, `formats` shows whether higher scores beat each creator's typical video, and the gate blocks scripts missing a part. See [docs/hooks.md](docs/hooks.md).
 - **What formats win, from frames and words.** `reeldecode frames` has Jev look at stills from each video; `reeldecode formats` ranks formats, hooks and opening sequences per creator and across creators, each against that creator's own typical video. See [docs/formats.md](docs/formats.md).
 - **From outliers to your own idea.** `reeldecode ideas` turns the videos that beat their account's normal numbers into idea cards (structure, not wording); the gate fails a script that copies its reference. See [docs/ideas.md](docs/ideas.md).
 - **Lanes, so it ships every week.** Give each account named content lanes (job, funnel stage, format, weekly target, off-limits words); the gate checks every brief against its lane and `reeldecode lanes` shows which are behind. See [docs/lanes.md](docs/lanes.md).
@@ -64,6 +65,7 @@ reeldecode fetch && reeldecode transcribe && reeldecode anatomy && reeldecode pa
 | Anatomy | `reeldecode anatomy` | One typed call per sentence (its role) and one per script (format, opener, payoff, ask, tone, six yes/no checks). See [docs/decode-questions.md](docs/decode-questions.md) | TypeSafe API |
 | Visual | `reeldecode visual` | Cuts, faces, motion in the first half second, on-screen text in the first 3 seconds (OpenCV, tesseract). Covers music-only videos too | local |
 | Frames | `reeldecode frames` | Six stills per video go to Jev as images: shot type (talking head, screen recording, interview, b-roll, person over screen...), on-screen caption, and what the first frame does to stop the scroll. See [docs/formats.md](docs/formats.md) | TypeSafe API |
+| Hooks | `reeldecode hooks` | The triple hook per video: context in the first words (said, written, shown), a lean, a snapback, and a topic-word comment ask. See [docs/hooks.md](docs/hooks.md) | TypeSafe API |
 | Formats | `reeldecode formats` | Which script formats, spoken hooks, opening sequences, visual formats and first frames beat each creator's typical video, and which hold up across creators | local |
 | Page | `reeldecode page` | `decode.json` and `decode.html`: the plot, the lift table, every script | local |
 
