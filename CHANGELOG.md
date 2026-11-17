@@ -5,6 +5,7 @@ All notable changes to this project are listed here. The format follows [Keep a 
 ## [Unreleased]
 
 ### Added
+- `reeldecode ideas`: idea cards from videos at least N times their account's same-year median (structure and numbers, no script to reuse). `inspired_by` in a brief adds a copy check to the gate (fails on too many shared five-word runs or an eight-word verbatim run, and fails closed without a transcript). `learn report` lists posts over 100,000 organic views as promotion candidates; it never spends money. See [docs/ideas.md](docs/ideas.md).
 - Content lanes: `[[accounts.lanes]]` (job, funnel stages, format, weekly target, off-limits words), `gate new --lane --format`, lane checks in `gate check`, `reeldecode lanes` for posted / queued / short per lane. `carousel`, `image` and `text_post` briefs skip the spoken-script checks and require a source for every quote. See [docs/lanes.md](docs/lanes.md).
 - `reeldecode taste`: reference videos in, `tastebook.md` out (shot length, opening cuts, opening hold, cuts on new sentences, each cited with timestamps), plus before/after frames for every cut. Zooms, captions, b-roll and sound effects are reported as not measured.
 - `reeldecode edit-plan`: a typed keep / delete / move verdict, destination and coded reason for every script line, with repeat and contradiction handling. See [docs/editing.md](docs/editing.md).

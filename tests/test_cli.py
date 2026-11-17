@@ -5,7 +5,7 @@ import pytest
 from reeldecode import cli, config
 from reeldecode.collect import instagram
 
-COMMANDS = ["init", "collect", "fetch", "transcribe", "anatomy", "visual", "taste", "edit-plan", "page", "gate", "lanes", "learn"]
+COMMANDS = ["init", "collect", "fetch", "transcribe", "anatomy", "visual", "taste", "edit-plan", "ideas", "page", "gate", "lanes", "learn"]
 
 
 @pytest.mark.parametrize("cmd", COMMANDS)

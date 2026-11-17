@@ -15,7 +15,7 @@ from pathlib import Path
 import yaml
 
 from ..config import Config
-from . import formula, lanes
+from . import formula, lanes, originality
 
 STATUSES = ["idea", "scripted", "rendered", "scheduled", "posted", "reviewed"]
 STAGES = ("tofu", "mofu", "bofu")
@@ -131,6 +131,7 @@ def brief_checks(d: dict, cfg: Config | None = None) -> list[str]:
               "each quote or claim needs a recorded source (who said it, where, and permission)")
         check(not re.search(r"[–—]", d.get("caption") or ""), "caption contains an em or en dash")
     fails += lanes.lane_checks(d, cfg)
+    fails += originality.checks(d, cfg)
     return fails
 
 
