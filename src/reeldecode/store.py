@@ -29,6 +29,7 @@ class Store:
         cache = cfg.path(cfg.cache)
         self.audio, self.trans, self.meta = cache / "audio", cache / "transcripts", cache / "meta"
         self.video, self.visual, self.frames = cache / "video", cache / "visual", cache / "frames"
+        self.video_av, self.production = cache / "video_av", cache / "production"
         self.only = {normalize(h) for h in (only or set())}
 
     def files(self) -> list[Path]:

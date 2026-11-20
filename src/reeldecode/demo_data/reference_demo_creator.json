@@ -13,7 +13,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 2862,
    "likes": 143,
-   "comments": 7
+   "comments": 7,
+   "prod": {
+    "shortcode": "demo-crea-047",
+    "seconds": 37.6,
+    "shots": 23,
+    "shots_per_10s": 6.14,
+    "avg_shot_s": 1.63,
+    "transitions": {
+     "start": 1,
+     "cut": 22
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.82,
+     "code_render": 0.18
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.87,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 8,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 7,
+    "sfx_on_cue": 5,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.4,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 23 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-047/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-046",
@@ -87,7 +134,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.84,
-   "d_self_promo": 0.1
+   "d_self_promo": 0.1,
+   "prod": {
+    "shortcode": "demo-crea-046",
+    "seconds": 30.1,
+    "shots": 10,
+    "shots_per_10s": 3.25,
+    "avg_shot_s": 3.01,
+    "transitions": {
+     "start": 1,
+     "cut": 9
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.78,
+     "code_render": 0.22
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.87,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 1,
+    "sfx": 2,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.78,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.5,
+    "bpm": 125.1,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.39,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 10 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-046/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-045",
@@ -156,7 +250,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.86,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-crea-045",
+    "seconds": 26.4,
+    "shots": 14,
+    "shots_per_10s": 5.25,
+    "avg_shot_s": 1.89,
+    "transitions": {
+     "start": 1,
+     "cut": 13
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.9,
+     "code_render": 0.1
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.72,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 6,
+    "text_first_1s": true,
+    "captions": 18,
+    "callouts": 6,
+    "stickers": 2,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.94,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.48,
+    "bpm": 105.5,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.04,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 14 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-045/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-044",
@@ -220,7 +361,53 @@
    "d_concrete_detail": 0.24,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.63,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-crea-044",
+    "seconds": 24.1,
+    "shots": 12,
+    "shots_per_10s": 5.06,
+    "avg_shot_s": 2.01,
+    "transitions": {
+     "start": 1,
+     "cut": 11
+    },
+    "jump_cuts": 4,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 1.0
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.87,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 22,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 6,
+    "stickers": 1,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.64,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.55,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 12 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-044/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-043",
@@ -299,7 +486,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.55,
-   "d_self_promo": 0.02
+   "d_self_promo": 0.02,
+   "prod": {
+    "shortcode": "demo-crea-043",
+    "seconds": 32.2,
+    "shots": 16,
+    "shots_per_10s": 4.92,
+    "avg_shot_s": 2.01,
+    "transitions": {
+     "start": 1,
+     "cut": 15
+    },
+    "jump_cuts": 3,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.62,
+     "code_render": 0.38
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.91,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.94,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.47,
+    "bpm": 125.9,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.33,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 16 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-043/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-042",
@@ -373,7 +607,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.68,
-   "d_self_promo": 0.08
+   "d_self_promo": 0.08,
+   "prod": {
+    "shortcode": "demo-crea-042",
+    "seconds": 29.7,
+    "shots": 6,
+    "shots_per_10s": 1.95,
+    "avg_shot_s": 4.95,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.75,
+     "code_render": 0.25
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.82,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 22,
+    "text_first_1s": true,
+    "captions": 28,
+    "callouts": 6,
+    "stickers": 1,
+    "sfx": 3,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.74,
+    "bpm": 92.2,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.0,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-042/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-041",
@@ -385,7 +666,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 2567,
    "likes": 128,
-   "comments": 8
+   "comments": 8,
+   "prod": {
+    "shortcode": "demo-crea-041",
+    "seconds": 26.4,
+    "shots": 6,
+    "shots_per_10s": 2.12,
+    "avg_shot_s": 4.4,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.63,
+     "code_render": 0.37
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.93,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": true,
+    "captions": 20,
+    "callouts": 2,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.17,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-041/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-040",
@@ -459,7 +787,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.65,
-   "d_self_promo": 0.04
+   "d_self_promo": 0.04,
+   "prod": {
+    "shortcode": "demo-crea-040",
+    "seconds": 31.0,
+    "shots": 15,
+    "shots_per_10s": 4.95,
+    "avg_shot_s": 2.07,
+    "transitions": {
+     "start": 1,
+     "cut": 14
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.84,
+     "code_render": 0.16
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.93,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 26,
+    "text_first_1s": false,
+    "captions": 7,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 4,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.86,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.72,
+    "bpm": 92.2,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.58,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 15 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-040/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-039",
@@ -523,7 +898,54 @@
    "d_concrete_detail": 0.16,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.9,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-crea-039",
+    "seconds": 22.7,
+    "shots": 1,
+    "shots_per_10s": 0.66,
+    "avg_shot_s": 22.7,
+    "transitions": {
+     "start": 1,
+     "cut": 0
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.73,
+     "code_render": 0.27
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 4,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 6,
+    "stickers": 2,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.82,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.3,
+    "bpm": 123.7,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.45,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 1 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-039/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-038",
@@ -582,7 +1004,54 @@
    "d_concrete_detail": 0.42,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.92,
-   "d_self_promo": 0.1
+   "d_self_promo": 0.1,
+   "prod": {
+    "shortcode": "demo-crea-038",
+    "seconds": 21.6,
+    "shots": 4,
+    "shots_per_10s": 1.88,
+    "avg_shot_s": 5.4,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.63,
+     "code_render": 0.37
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.61,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 5,
+    "text_first_1s": false,
+    "captions": 18,
+    "callouts": 6,
+    "stickers": 1,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.61,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.59,
+    "bpm": 88.8,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.47,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-038/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-037",
@@ -656,7 +1125,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.87,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-crea-037",
+    "seconds": 27.7,
+    "shots": 10,
+    "shots_per_10s": 3.51,
+    "avg_shot_s": 2.77,
+    "transitions": {
+     "start": 1,
+     "cut": 9
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.7,
+     "code_render": 0.3
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.53,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": false,
+    "captions": 23,
+    "callouts": 2,
+    "stickers": 2,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.74,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.15,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 10 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-037/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-036",
@@ -668,7 +1184,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 3763,
    "likes": 188,
-   "comments": 12
+   "comments": 12,
+   "prod": {
+    "shortcode": "demo-crea-036",
+    "seconds": 14.5,
+    "shots": 7,
+    "shots_per_10s": 5.15,
+    "avg_shot_s": 2.07,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.81,
+     "code_render": 0.19
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 13,
+    "text_first_1s": true,
+    "captions": 13,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 8,
+    "sfx_on_cue": 6,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.38,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-036/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-035",
@@ -680,7 +1243,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 5775,
    "likes": 288,
-   "comments": 37
+   "comments": 37,
+   "prod": {
+    "shortcode": "demo-crea-035",
+    "seconds": 17.7,
+    "shots": 2,
+    "shots_per_10s": 0.94,
+    "avg_shot_s": 8.85,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.93,
+     "code_render": 0.07
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.94,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 3,
+    "text_first_1s": true,
+    "captions": 28,
+    "callouts": 2,
+    "stickers": 0,
+    "sfx": 9,
+    "sfx_on_cue": 7,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.47,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-035/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-034",
@@ -739,7 +1349,54 @@
    "d_concrete_detail": 0.32,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.6,
-   "d_self_promo": 0.14
+   "d_self_promo": 0.14,
+   "prod": {
+    "shortcode": "demo-crea-034",
+    "seconds": 21.4,
+    "shots": 3,
+    "shots_per_10s": 1.19,
+    "avg_shot_s": 7.13,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.83,
+     "code_render": 0.17
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.47,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 8,
+    "text_first_1s": true,
+    "captions": 15,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 4,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.76,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.59,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-034/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-033",
@@ -808,7 +1465,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.67,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-crea-033",
+    "seconds": 26.7,
+    "shots": 10,
+    "shots_per_10s": 3.8,
+    "avg_shot_s": 2.67,
+    "transitions": {
+     "start": 1,
+     "cut": 9
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.73,
+     "code_render": 0.27
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 14,
+    "text_first_1s": true,
+    "captions": 24,
+    "callouts": 1,
+    "stickers": 2,
+    "sfx": 9,
+    "sfx_on_cue": 9,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.04,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 10 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-033/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-032",
@@ -882,7 +1586,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.53,
-   "d_self_promo": 0.02
+   "d_self_promo": 0.02,
+   "prod": {
+    "shortcode": "demo-crea-032",
+    "seconds": 30.2,
+    "shots": 6,
+    "shots_per_10s": 2.11,
+    "avg_shot_s": 5.03,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.84,
+     "code_render": 0.16
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.94,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 12,
+    "text_first_1s": false,
+    "captions": 15,
+    "callouts": 2,
+    "stickers": 1,
+    "sfx": 6,
+    "sfx_on_cue": 6,
+    "voice": true,
+    "voice_share": 0.67,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.17,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-032/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-031",
@@ -936,7 +1687,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.87,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-crea-031",
+    "seconds": 19.0,
+    "shots": 2,
+    "shots_per_10s": 0.96,
+    "avg_shot_s": 9.5,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.86,
+     "code_render": 0.14
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.93,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 30,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 1,
+    "sfx": 9,
+    "sfx_on_cue": 9,
+    "voice": true,
+    "voice_share": 0.9,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.36,
+    "bpm": 105.5,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.12,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-031/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-030",
@@ -995,7 +1793,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.89,
-   "d_self_promo": 0.07
+   "d_self_promo": 0.07,
+   "prod": {
+    "shortcode": "demo-crea-030",
+    "seconds": 21.0,
+    "shots": 2,
+    "shots_per_10s": 0.89,
+    "avg_shot_s": 10.5,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.69,
+     "code_render": 0.31
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.92,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 24,
+    "text_first_1s": true,
+    "captions": 26,
+    "callouts": 0,
+    "stickers": 2,
+    "sfx": 3,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.74,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.74,
+    "bpm": 127.2,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.25,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-030/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-029",
@@ -1069,7 +1914,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.67,
-   "d_self_promo": 0.04
+   "d_self_promo": 0.04,
+   "prod": {
+    "shortcode": "demo-crea-029",
+    "seconds": 26.6,
+    "shots": 5,
+    "shots_per_10s": 1.76,
+    "avg_shot_s": 5.32,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.81,
+     "code_render": 0.19
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.88,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 24,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.95,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.09,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-029/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-028",
@@ -1143,7 +2035,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.7,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-crea-028",
+    "seconds": 29.8,
+    "shots": 8,
+    "shots_per_10s": 2.57,
+    "avg_shot_s": 3.73,
+    "transitions": {
+     "start": 1,
+     "cut": 7
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.96,
+     "code_render": 0.04
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.6,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 10,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 0,
+    "sfx": 2,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.67,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.34,
+    "bpm": 113.9,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.14,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 8 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-028/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-027",
@@ -1207,7 +2146,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.89,
-   "d_self_promo": 0.07
+   "d_self_promo": 0.07,
+   "prod": {
+    "shortcode": "demo-crea-027",
+    "seconds": 22.4,
+    "shots": 5,
+    "shots_per_10s": 2.04,
+    "avg_shot_s": 4.48,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.98,
+     "code_render": 0.02
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 12,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 2,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.82,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.43,
+    "bpm": 93.2,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.17,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-027/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-026",
@@ -1266,7 +2252,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.92,
-   "d_self_promo": 0.02
+   "d_self_promo": 0.02,
+   "prod": {
+    "shortcode": "demo-crea-026",
+    "seconds": 21.0,
+    "shots": 4,
+    "shots_per_10s": 1.68,
+    "avg_shot_s": 5.25,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.66,
+     "code_render": 0.34
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.57,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 19,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 1,
+    "stickers": 2,
+    "sfx": 9,
+    "sfx_on_cue": 8,
+    "voice": true,
+    "voice_share": 0.75,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.86,
+    "bpm": 128.7,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.16,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-026/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-025",
@@ -1278,7 +2311,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 2104,
    "likes": 105,
-   "comments": 31
+   "comments": 31,
+   "prod": {
+    "shortcode": "demo-crea-025",
+    "seconds": 37.5,
+    "shots": 7,
+    "shots_per_10s": 1.97,
+    "avg_shot_s": 5.36,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.69,
+     "code_render": 0.31
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.73,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 6,
+    "text_first_1s": true,
+    "captions": 13,
+    "callouts": 5,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.44,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-025/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-024",
@@ -1342,7 +2422,54 @@
    "d_concrete_detail": 0.51,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.82,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-crea-024",
+    "seconds": 22.3,
+    "shots": 13,
+    "shots_per_10s": 5.85,
+    "avg_shot_s": 1.72,
+    "transitions": {
+     "start": 1,
+     "cut": 12
+    },
+    "jump_cuts": 2,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.78,
+     "code_render": 0.22
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.61,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 24,
+    "text_first_1s": true,
+    "captions": 14,
+    "callouts": 4,
+    "stickers": 0,
+    "sfx": 5,
+    "sfx_on_cue": 4,
+    "voice": true,
+    "voice_share": 0.94,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.43,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 13 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-024/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-023",
@@ -1354,7 +2481,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 2316,
    "likes": 115,
-   "comments": 10
+   "comments": 10,
+   "prod": {
+    "shortcode": "demo-crea-023",
+    "seconds": 25.9,
+    "shots": 11,
+    "shots_per_10s": 4.22,
+    "avg_shot_s": 2.35,
+    "transitions": {
+     "start": 1,
+     "cut": 10
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.97,
+     "code_render": 0.03
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.69,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 25,
+    "text_first_1s": false,
+    "captions": 10,
+    "callouts": 4,
+    "stickers": 0,
+    "sfx": 8,
+    "sfx_on_cue": 7,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.45,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 11 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-023/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-022",
@@ -1413,7 +2587,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.76,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-crea-022",
+    "seconds": 17.1,
+    "shots": 6,
+    "shots_per_10s": 3.61,
+    "avg_shot_s": 2.85,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.78,
+     "code_render": 0.22
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 6,
+    "text_first_1s": false,
+    "captions": 20,
+    "callouts": 5,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.95,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.47,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-022/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-021",
@@ -1472,7 +2693,54 @@
    "d_concrete_detail": 0.27,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.54,
-   "d_self_promo": 0.14
+   "d_self_promo": 0.14,
+   "prod": {
+    "shortcode": "demo-crea-021",
+    "seconds": 20.8,
+    "shots": 2,
+    "shots_per_10s": 1.17,
+    "avg_shot_s": 10.4,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.8,
+     "code_render": 0.2
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.61,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 13,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.63,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.27,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-021/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-020",
@@ -1541,7 +2809,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.69,
-   "d_self_promo": 0.09
+   "d_self_promo": 0.09,
+   "prod": {
+    "shortcode": "demo-crea-020",
+    "seconds": 27.9,
+    "shots": 3,
+    "shots_per_10s": 1.24,
+    "avg_shot_s": 9.3,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.76,
+     "code_render": 0.24
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.58,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": false,
+    "captions": 24,
+    "callouts": 1,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.75,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.01,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-020/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-019",
@@ -1605,7 +2920,54 @@
    "d_concrete_detail": 0.25,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.86,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-crea-019",
+    "seconds": 23.8,
+    "shots": 4,
+    "shots_per_10s": 1.75,
+    "avg_shot_s": 5.95,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.95,
+     "code_render": 0.05
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 14,
+    "text_first_1s": true,
+    "captions": 23,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.62,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.62,
+    "bpm": 120.1,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.42,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-019/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-018",
@@ -1664,7 +3026,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.56,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-crea-018",
+    "seconds": 20.1,
+    "shots": 7,
+    "shots_per_10s": 3.7,
+    "avg_shot_s": 2.87,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.98,
+     "code_render": 0.02
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.92,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 2,
+    "stickers": 2,
+    "sfx": 2,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.74,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.31,
+    "bpm": 95.5,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.03,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-018/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-017",
@@ -1723,7 +3132,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.92,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-crea-017",
+    "seconds": 19.2,
+    "shots": 12,
+    "shots_per_10s": 5.99,
+    "avg_shot_s": 1.6,
+    "transitions": {
+     "start": 1,
+     "cut": 11
+    },
+    "jump_cuts": 6,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.63,
+     "code_render": 0.37
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.67,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 12,
+    "text_first_1s": true,
+    "captions": 24,
+    "callouts": 5,
+    "stickers": 1,
+    "sfx": 4,
+    "sfx_on_cue": 4,
+    "voice": true,
+    "voice_share": 0.88,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.23,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 12 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-017/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-016",
@@ -1792,7 +3248,54 @@
    "d_concrete_detail": 0.37,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.53,
-   "d_self_promo": 0.12
+   "d_self_promo": 0.12,
+   "prod": {
+    "shortcode": "demo-crea-016",
+    "seconds": 25.5,
+    "shots": 14,
+    "shots_per_10s": 5.57,
+    "avg_shot_s": 1.82,
+    "transitions": {
+     "start": 1,
+     "cut": 13
+    },
+    "jump_cuts": 6,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.61,
+     "code_render": 0.39
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.94,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 30,
+    "text_first_1s": false,
+    "captions": 19,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.85,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.16,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 14 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-016/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-015",
@@ -1851,7 +3354,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.92,
-   "d_self_promo": 0.19
+   "d_self_promo": 0.19,
+   "prod": {
+    "shortcode": "demo-crea-015",
+    "seconds": 20.8,
+    "shots": 13,
+    "shots_per_10s": 6.43,
+    "avg_shot_s": 1.6,
+    "transitions": {
+     "start": 1,
+     "cut": 12
+    },
+    "jump_cuts": 6,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.67,
+     "code_render": 0.33
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.92,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 20,
+    "text_first_1s": false,
+    "captions": 26,
+    "callouts": 0,
+    "stickers": 1,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.77,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.15,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 13 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-015/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-014",
@@ -1930,7 +3480,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.89,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-crea-014",
+    "seconds": 32.2,
+    "shots": 19,
+    "shots_per_10s": 5.98,
+    "avg_shot_s": 1.69,
+    "transitions": {
+     "start": 1,
+     "cut": 18
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.98,
+     "code_render": 0.02
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 11,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.79,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.14,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 19 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-014/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-013",
@@ -1989,7 +3586,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.68,
-   "d_self_promo": 0.1
+   "d_self_promo": 0.1,
+   "prod": {
+    "shortcode": "demo-crea-013",
+    "seconds": 19.9,
+    "shots": 4,
+    "shots_per_10s": 1.98,
+    "avg_shot_s": 4.97,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.83,
+     "code_render": 0.17
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.85,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": true,
+    "captions": 16,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 2,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.61,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.44,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-013/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-012",
@@ -2048,7 +3692,54 @@
    "d_concrete_detail": 0.4,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.67,
-   "d_self_promo": 0.14
+   "d_self_promo": 0.14,
+   "prod": {
+    "shortcode": "demo-crea-012",
+    "seconds": 21.0,
+    "shots": 7,
+    "shots_per_10s": 3.55,
+    "avg_shot_s": 3.0,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.89,
+     "code_render": 0.11
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.85,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 8,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 2,
+    "sfx": 1,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.67,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.63,
+    "bpm": 88.3,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.3,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-012/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-011",
@@ -2107,7 +3798,54 @@
    "d_concrete_detail": 0.33,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.55,
-   "d_self_promo": 0.2
+   "d_self_promo": 0.2,
+   "prod": {
+    "shortcode": "demo-crea-011",
+    "seconds": 21.2,
+    "shots": 12,
+    "shots_per_10s": 5.75,
+    "avg_shot_s": 1.77,
+    "transitions": {
+     "start": 1,
+     "cut": 11
+    },
+    "jump_cuts": 3,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.68,
+     "code_render": 0.32
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.92,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 3,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.92,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.47,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 12 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-011/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-010",
@@ -2186,7 +3924,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.57,
-   "d_self_promo": 0.04
+   "d_self_promo": 0.04,
+   "prod": {
+    "shortcode": "demo-crea-010",
+    "seconds": 32.5,
+    "shots": 17,
+    "shots_per_10s": 5.29,
+    "avg_shot_s": 1.91,
+    "transitions": {
+     "start": 1,
+     "cut": 16
+    },
+    "jump_cuts": 2,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.79,
+     "code_render": 0.21
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.56,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 19,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 2,
+    "sfx": 5,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.74,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.87,
+    "bpm": 89.8,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.57,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 17 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-010/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-009",
@@ -2198,7 +3983,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 2155,
    "likes": 107,
-   "comments": 19
+   "comments": 19,
+   "prod": {
+    "shortcode": "demo-crea-009",
+    "seconds": 27.2,
+    "shots": 3,
+    "shots_per_10s": 1.03,
+    "avg_shot_s": 9.07,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.68,
+     "code_render": 0.32
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.61,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": false,
+    "captions": 15,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 2,
+    "sfx_on_cue": 1,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.18,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-009/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-008",
@@ -2210,7 +4042,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 1145,
    "likes": 57,
-   "comments": 11
+   "comments": 11,
+   "prod": {
+    "shortcode": "demo-crea-008",
+    "seconds": 34.8,
+    "shots": 6,
+    "shots_per_10s": 1.64,
+    "avg_shot_s": 5.8,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.85,
+     "code_render": 0.15
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.67,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 11,
+    "text_first_1s": false,
+    "captions": 30,
+    "callouts": 0,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.4,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-008/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-007",
@@ -2274,7 +4153,54 @@
    "d_concrete_detail": 0.29,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.74,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-crea-007",
+    "seconds": 22.1,
+    "shots": 2,
+    "shots_per_10s": 0.97,
+    "avg_shot_s": 11.05,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.63,
+     "code_render": 0.37
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.88,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 6,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 9,
+    "sfx_on_cue": 8,
+    "voice": true,
+    "voice_share": 0.68,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.02,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-007/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-006",
@@ -2333,7 +4259,54 @@
    "d_concrete_detail": 0.41,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.82,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-crea-006",
+    "seconds": 18.6,
+    "shots": 6,
+    "shots_per_10s": 3.08,
+    "avg_shot_s": 3.1,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.99,
+     "code_render": 0.01
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.84,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 7,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 2,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.65,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.47,
+    "bpm": 127.2,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.04,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-006/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-005",
@@ -2397,7 +4370,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.7,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-crea-005",
+    "seconds": 24.6,
+    "shots": 8,
+    "shots_per_10s": 3.09,
+    "avg_shot_s": 3.08,
+    "transitions": {
+     "start": 1,
+     "cut": 7
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.77,
+     "code_render": 0.23
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.64,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 23,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 2,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.8,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.58,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 8 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-005/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-004",
@@ -2456,7 +4476,54 @@
    "d_concrete_detail": 0.43,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.58,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-crea-004",
+    "seconds": 19.9,
+    "shots": 1,
+    "shots_per_10s": 0.71,
+    "avg_shot_s": 19.9,
+    "transitions": {
+     "start": 1,
+     "cut": 0
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.62,
+     "code_render": 0.38
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.56,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 12,
+    "text_first_1s": false,
+    "captions": 25,
+    "callouts": 6,
+    "stickers": 1,
+    "sfx": 2,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.78,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.22,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 1 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-004/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-003",
@@ -2525,7 +4592,54 @@
    "d_concrete_detail": 0.23,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.54,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-crea-003",
+    "seconds": 28.7,
+    "shots": 11,
+    "shots_per_10s": 3.73,
+    "avg_shot_s": 2.61,
+    "transitions": {
+     "start": 1,
+     "cut": 10
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.74,
+     "code_render": 0.26
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.49,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.75,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.02,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 11 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-003/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-002",
@@ -2589,7 +4703,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.79,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-crea-002",
+    "seconds": 21.3,
+    "shots": 5,
+    "shots_per_10s": 2.57,
+    "avg_shot_s": 4.26,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.67,
+     "code_render": 0.33
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 12,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 3,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.78,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.19,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-002/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-001",
@@ -2663,7 +4824,54 @@
    "d_concrete_detail": 0.55,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.55,
-   "d_self_promo": 0.09
+   "d_self_promo": 0.09,
+   "prod": {
+    "shortcode": "demo-crea-001",
+    "seconds": 28.7,
+    "shots": 7,
+    "shots_per_10s": 2.47,
+    "avg_shot_s": 4.1,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.66,
+     "code_render": 0.34
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.66,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 11,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.65,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.44,
+    "bpm": 118.9,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.54,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-001/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-crea-000",
@@ -2717,7 +4925,54 @@
    "d_concrete_detail": 0.49,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.9,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-crea-000",
+    "seconds": 15.9,
+    "shots": 4,
+    "shots_per_10s": 2.45,
+    "avg_shot_s": 3.98,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.78,
+     "code_render": 0.22
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.54,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 7,
+    "text_first_1s": false,
+    "captions": 27,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 5,
+    "sfx_on_cue": 5,
+    "voice": true,
+    "voice_share": 0.86,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.86,
+    "bpm": 94.4,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.41,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-crea-000/VIDEO.md"
+   }
   }
  ]
 }

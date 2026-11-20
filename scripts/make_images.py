@@ -28,63 +28,85 @@ BANNER = """<!doctype html><html><head><meta charset="utf-8">
 <style>
 *{box-sizing:border-box;margin:0}
 body{width:__W__px;height:__H__px;background:radial-gradient(1200px 600px at 85% 20%,#1c2a4a 0,#0f1319 60%);color:#e8ecf2;
- font-family:"IBM Plex Sans",system-ui,sans-serif;display:flex;align-items:center;gap:56px;padding:0 __PAD__px;overflow:hidden}
-.l{flex:1.05;display:flex;flex-direction:column;gap:22px}
-.k{font:500 15px "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#6ea0ff}
-h1{font:600 __T__px/1 "IBM Plex Sans Condensed",sans-serif;letter-spacing:-.01em}
-p{font-size:__P__px;line-height:1.38;color:#b9c2d0;max-width:30ch}
-.cmd{font:500 17px "IBM Plex Mono",monospace;background:#171c24;border:1px solid #2a313d;border-radius:8px;padding:12px 16px;color:#e8ecf2;width:max-content}
+ font-family:"IBM Plex Sans",system-ui,sans-serif;display:flex;align-items:center;gap:48px;padding:0 __PAD__px;overflow:hidden}
+.l{flex:1;display:flex;flex-direction:column;gap:20px}
+.k{font:500 14px "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#6ea0ff}
+h1{font:600 __T__px/1.02 "IBM Plex Sans Condensed",sans-serif;letter-spacing:-.01em;max-width:13ch}
+p{font-size:__P__px;line-height:1.4;color:#b9c2d0;max-width:34ch}
+.cmd{font:500 16px "IBM Plex Mono",monospace;background:#171c24;border:1px solid #2a313d;border-radius:8px;padding:11px 15px;color:#e8ecf2;width:max-content}
 .cmd b{color:#3ecf98;font-weight:500}
-.r{flex:1;display:flex;flex-direction:column;gap:14px}
-.card{background:#171c24;border:1px solid #2a313d;border-radius:14px;padding:18px 20px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-.strip{display:flex;height:14px;border-radius:4px;overflow:hidden;margin:4px 0 12px}
-.line{display:grid;grid-template-columns:62px 1fr;gap:10px;font-size:15px;padding:5px 0;border-bottom:1px solid #232a35}
-.line i{font:500 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.05em;font-style:normal;padding-top:3px}
-.hd{display:flex;justify-content:space-between;font:400 13px "IBM Plex Mono",monospace;color:#98a2b3}
-.hd b{color:#e8ecf2;font-weight:500}
-table{width:100%;border-collapse:collapse;font-size:14.5px}
-td{padding:6px 4px;border-bottom:1px solid #232a35}
-td.g{text-align:right;font:500 14px "IBM Plex Mono",monospace}
+.r{flex:1.05;display:flex;flex-direction:column;gap:12px}
+.card{background:#171c24;border:1px solid #2a313d;border-radius:14px;padding:14px 18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.hd{display:flex;justify-content:space-between;align-items:baseline;font:400 12.5px "IBM Plex Mono",monospace;color:#98a2b3;margin-bottom:6px}
+.hd b{color:#e8ecf2;font-weight:500;font-size:13.5px}
+.n{display:inline-block;width:20px;height:20px;border-radius:50%;background:#2a3a5c;color:#9fc0ff;font:600 12px/20px "IBM Plex Mono",monospace;text-align:center;margin-right:8px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td{padding:4px 2px;border-bottom:1px solid #232a35}
+td.g{text-align:right;font:500 13.5px "IBM Plex Mono",monospace;white-space:nowrap}
 .pos{color:#3ecf98}.neg{color:#ff7b66}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:400 12.5px "IBM Plex Mono",monospace;border:1px solid #2a313d;border-radius:6px;padding:3px 7px;color:#b9c2d0}
+.chip b{color:#e8ecf2;font-weight:500}
+.f{font-size:14px;padding:3px 0;color:#d4dae3}.f i{font-style:normal;color:#ff7b66;margin-right:8px;font-family:"IBM Plex Mono",monospace}
 </style></head><body>
 <div class="l">
-  <div class="k">open source · short-form video</div>
-  <h1>reel-decode</h1>
-  <p>Find out what your winning Reels, Shorts and TikToks <em>say and show</em> that your losing ones don't.</p>
+  <div class="k">open source · reels, shorts, tiktok</div>
+  <h1>Know why your best videos win.</h1>
+  <p>reel-decode compares every video on your account and the accounts you study, so you can see what your winners do that your losers don't: the words, the cuts, the captions, the sound. Then it checks your next script before you film it.</p>
   <div class="cmd"><b>$</b> reeldecode page --demo --open</div>
 </div>
 <div class="r">
   <div class="card">
-    <div class="hd"><span><b>@demo_creator</b> · 3.1× its year median</span><span>top third</span></div>
-    <div class="strip">__STRIP__</div>
-    __LINES__
+    <div class="hd"><span><span class="n">1</span><b>What your winners do (and avoid)</b></span><span>winners vs losers, pts</span></div>
+    <table>__ROWS__</table>
   </div>
   <div class="card">
-    <div class="hd" style="margin-bottom:6px"><span><b>winners vs losers</b>, same account</span><span>gap, pts</span></div>
-    <table>__ROWS__</table>
+    <div class="hd"><span><span class="n">2</span><b>How your __XM__ outlier was made</b></span><span>shot by shot</span></div>
+    <div class="chips">__CHIPS__</div>
+  </div>
+  <div class="card">
+    <div class="hd"><span><span class="n">3</span><b>Your next script, before you film</b></span><span>gate check</span></div>
+    __FAILS__
   </div>
 </div>
 </body></html>"""
 
+# Real `reeldecode gate check` output on a sample brief (scripts/make_images.py does not call Jev).
+GATE_FAILS = ["no re-hook between hook and reward", "story backbone incomplete (character, conflict, turn)",
+              "cta 'comment_keyword' does not fit tofu (allowed: follow, question, save, send)"]
+
 
 def banner_html(data: dict, w: int, h: int, compact: bool = False) -> str:
     acct = next(a for a in data["accounts"] if a["handle"] == "demo_creator")
-    reels = [r for r in data["reels"] if r["a"] == "demo_creator" and r["script"] and r["tier"] == "winner"]
-    best = sorted(reels, key=lambda r: (-(len(r["script"]) >= 5), -(r["xm"] or 0)))[0]
-    strip = "".join(f'<span style="flex:{max(1, len(s[2].split()))};background:{ROLE_COLORS[s[1]]}"></span>'
-                    for s in best["script"])
-    lines = "".join(f'<div class="line"><i style="color:{ROLE_COLORS[s[1]]}">{s[1]}</i><span>{s[2]}</span></div>'
-                    for s in best["script"][: 3 if compact else 4])
+    reels = [r for r in data["reels"] if r["a"] == "demo_creator" and r.get("prod") and r["tier"] == "winner"]
+    best = sorted(reels, key=lambda r: -(r["xm"] or 0))[0]
+    p = best["prod"]
+    lifts = sorted([("script", x) for x in acct["lift"][:6]] + [("production", x) for x in acct["prod_lift"][:6]],
+                   key=lambda t: -abs(t[1]["gap"]))
+    picked, seen = [], set()
+    for kind, x in lifts:          # two from the script, two from the production
+        if sum(k == kind for k, _ in picked) < 2 and x["value"] not in seen:
+            picked.append((kind, x))
+            seen.add(x["value"])
+        if len(picked) == (3 if compact else 4):
+            break
     rows = ""
-    for x in acct["lift"][: 3 if compact else 4]:
+    for kind, x in picked:
         g = round(x["gap"] * 100)
-        name = f'{x["dim"].replace("_", " ")}: {x["value"].replace("_", " ")}'
+        name = x["value"].replace("_", " ") if kind == "production" else f'{x["dim"].replace("_", " ")}: {x["value"].replace("_", " ")}'
         rows += f'<tr><td>{name}</td><td class="g {"pos" if g > 0 else "neg"}">{g:+d}</td></tr>'
-    html = BANNER.replace("__STRIP__", strip).replace("__LINES__", lines).replace("__ROWS__", rows)
+    chips = [("shots", p["shots"]), ("pace", f'{p["shots_per_10s"]} / 10 s'),
+             ("text in 1st second", "yes" if p["text_first_1s"] else "no"), ("captions", p["captions"]),
+             ("sound effects", f'{p["sfx"]} ({p["sfx_on_cue"]} on cue)'),
+             ("voice", (p.get("voice_source") or "none").replace("_", " ")),
+             ("music", (f'{round(p["bpm"])} BPM' if p.get("bpm") else "none"))]
+    chips_html = "".join(f'<span class="chip">{k} <b>{v}</b></span>' for k, v in chips[: 5 if compact else 7])
+    fails = "".join(f'<div class="f"><i>FAIL</i>{f}</div>' for f in GATE_FAILS[: 2 if compact else 3])
+    html = (BANNER.replace("__ROWS__", rows).replace("__CHIPS__", chips_html).replace("__FAILS__", fails)
+            .replace("__XM__", f"{best['xm']:.1f}×"))
     html = html.replace("__W__", str(w)).replace("__H__", str(h))
-    html = html.replace("__PAD__", "64" if compact else "84").replace("__T__", "72" if compact else "92")
-    html = html.replace("__P__", "22" if compact else "25")
-    return html.replace("3.1×", f'{best["xm"]:.1f}×')
+    html = html.replace("__PAD__", "56" if compact else "72").replace("__T__", "60" if compact else "72")
+    return html.replace("__P__", "18" if compact else "20")
 
 
 def main() -> None:
@@ -108,15 +130,17 @@ def main() -> None:
             pg = ctx.new_page()
             pg.goto(html.as_uri(), wait_until="networkidle")
             pg.wait_for_timeout(400)
-            secs = pg.locator("section")
-            shots = {"plot": 0, "lift": 1, "script": 3} if scheme == "light" else {"plot": 0}
-            for key, idx in shots.items():
+            def section(has, pg=pg):  # the <section> holding this element, found by id, not position
+                return pg.locator("section").filter(has=pg.locator(has)).first
+            shots = ({"plot": "#plot", "lift": "#lift", "production": "#prodLift", "script": "#detail"}
+                     if scheme == "light" else {"plot": "#plot"})
+            for key, sel in shots.items():
                 out = IMG / f"page-{key}-{scheme}.png"
-                box = secs.nth(idx).bounding_box()
+                box = section(sel).bounding_box()
                 pad = 20
                 pg.set_viewport_size({"width": 1280, "height": int(box["y"] + box["height"] + 2 * pad + 40)})
-                box = secs.nth(idx).bounding_box()
-                pg.screenshot(path=str(out), clip={"x": box["x"] - pad, "y": box["y"] - pad,
+                box = section(sel).bounding_box()
+                pg.screenshot(path=str(out), full_page=True, clip={"x": box["x"] - pad, "y": box["y"] - pad,
                                                    "width": box["width"] + 2 * pad, "height": box["height"] + 2 * pad})
                 print("wrote", out)
             ctx.close()

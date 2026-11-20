@@ -65,7 +65,54 @@
    "d_concrete_detail": 0.58,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.63,
-   "d_self_promo": 0.09
+   "d_self_promo": 0.09,
+   "prod": {
+    "shortcode": "demo-fitc-043",
+    "seconds": 20.0,
+    "shots": 6,
+    "shots_per_10s": 3.11,
+    "avg_shot_s": 3.33,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.87,
+     "code_render": 0.13
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.84,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": true,
+    "captions": 17,
+    "callouts": 1,
+    "stickers": 1,
+    "sfx": 6,
+    "sfx_on_cue": 5,
+    "voice": true,
+    "voice_share": 0.9,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.44,
+    "bpm": 128.7,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.44,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-043/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-042",
@@ -139,7 +186,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.92,
-   "d_self_promo": 0.15
+   "d_self_promo": 0.15,
+   "prod": {
+    "shortcode": "demo-fitc-042",
+    "seconds": 23.7,
+    "shots": 14,
+    "shots_per_10s": 5.88,
+    "avg_shot_s": 1.69,
+    "transitions": {
+     "start": 1,
+     "cut": 13
+    },
+    "jump_cuts": 2,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.74,
+     "code_render": 0.26
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.6,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": true,
+    "captions": 7,
+    "callouts": 3,
+    "stickers": 2,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.95,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.53,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 14 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-042/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-041",
@@ -198,7 +292,54 @@
    "d_concrete_detail": 0.31,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.5,
-   "d_self_promo": 0.17
+   "d_self_promo": 0.17,
+   "prod": {
+    "shortcode": "demo-fitc-041",
+    "seconds": 17.7,
+    "shots": 11,
+    "shots_per_10s": 6.03,
+    "avg_shot_s": 1.61,
+    "transitions": {
+     "start": 1,
+     "cut": 10
+    },
+    "jump_cuts": 3,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.93,
+     "code_render": 0.07
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.6,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": false,
+    "captions": 22,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 3,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.67,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.57,
+    "bpm": 120.7,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.39,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 11 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-041/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-040",
@@ -267,7 +408,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.59,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-fitc-040",
+    "seconds": 24.1,
+    "shots": 5,
+    "shots_per_10s": 2.1,
+    "avg_shot_s": 4.82,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.72,
+     "code_render": 0.28
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.47,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 12,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 8,
+    "sfx_on_cue": 8,
+    "voice": true,
+    "voice_share": 0.66,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.32,
+    "bpm": 128.8,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.39,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-040/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-039",
@@ -326,7 +514,54 @@
    "d_concrete_detail": 0.41,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.55,
-   "d_self_promo": 0.1
+   "d_self_promo": 0.1,
+   "prod": {
+    "shortcode": "demo-fitc-039",
+    "seconds": 14.6,
+    "shots": 8,
+    "shots_per_10s": 5.79,
+    "avg_shot_s": 1.82,
+    "transitions": {
+     "start": 1,
+     "cut": 7
+    },
+    "jump_cuts": 6,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.82,
+     "code_render": 0.18
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.62,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 10,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.9,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.33,
+    "bpm": 106.0,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.59,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 8 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-039/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-038",
@@ -338,7 +573,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 22730,
    "likes": 1136,
-   "comments": 23
+   "comments": 23,
+   "prod": {
+    "shortcode": "demo-fitc-038",
+    "seconds": 30.0,
+    "shots": 7,
+    "shots_per_10s": 2.46,
+    "avg_shot_s": 4.29,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.92,
+     "code_render": 0.08
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.54,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 9,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 2,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.49,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-038/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-037",
@@ -407,7 +689,54 @@
    "d_concrete_detail": 0.47,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.59,
-   "d_self_promo": 0.08
+   "d_self_promo": 0.08,
+   "prod": {
+    "shortcode": "demo-fitc-037",
+    "seconds": 24.0,
+    "shots": 11,
+    "shots_per_10s": 4.53,
+    "avg_shot_s": 2.18,
+    "transitions": {
+     "start": 1,
+     "cut": 10
+    },
+    "jump_cuts": 4,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.68,
+     "code_render": 0.32
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.65,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 26,
+    "text_first_1s": true,
+    "captions": 25,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.93,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.15,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 11 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-037/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-036",
@@ -471,7 +800,54 @@
    "d_concrete_detail": 0.45,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.85,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-fitc-036",
+    "seconds": 18.6,
+    "shots": 9,
+    "shots_per_10s": 4.57,
+    "avg_shot_s": 2.07,
+    "transitions": {
+     "start": 1,
+     "cut": 8
+    },
+    "jump_cuts": 3,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.72,
+     "code_render": 0.28
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.74,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 14,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 2,
+    "sfx": 2,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.86,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.38,
+    "bpm": 117.5,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.14,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 9 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-036/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-035",
@@ -535,7 +911,53 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.63,
-   "d_self_promo": 0.2
+   "d_self_promo": 0.2,
+   "prod": {
+    "shortcode": "demo-fitc-035",
+    "seconds": 20.8,
+    "shots": 3,
+    "shots_per_10s": 1.67,
+    "avg_shot_s": 6.93,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 1.0
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.85,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 29,
+    "text_first_1s": false,
+    "captions": 8,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 7,
+    "sfx_on_cue": 5,
+    "voice": true,
+    "voice_share": 0.68,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.43,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-035/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-034",
@@ -594,7 +1016,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.94,
-   "d_self_promo": 0.15
+   "d_self_promo": 0.15,
+   "prod": {
+    "shortcode": "demo-fitc-034",
+    "seconds": 16.0,
+    "shots": 4,
+    "shots_per_10s": 2.21,
+    "avg_shot_s": 4.0,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.65,
+     "code_render": 0.35
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.53,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 20,
+    "text_first_1s": false,
+    "captions": 13,
+    "callouts": 2,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.72,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.57,
+    "bpm": 128.0,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.45,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-034/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-033",
@@ -653,7 +1122,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.93,
-   "d_self_promo": 0.14
+   "d_self_promo": 0.14,
+   "prod": {
+    "shortcode": "demo-fitc-033",
+    "seconds": 17.0,
+    "shots": 5,
+    "shots_per_10s": 2.65,
+    "avg_shot_s": 3.4,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.8,
+     "code_render": 0.2
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.91,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 27,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 5,
+    "stickers": 2,
+    "sfx": 6,
+    "sfx_on_cue": 4,
+    "voice": true,
+    "voice_share": 0.75,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.34,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-033/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-032",
@@ -722,7 +1238,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.73,
-   "d_self_promo": 0.2
+   "d_self_promo": 0.2,
+   "prod": {
+    "shortcode": "demo-fitc-032",
+    "seconds": 21.7,
+    "shots": 4,
+    "shots_per_10s": 2.01,
+    "avg_shot_s": 5.42,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.91,
+     "code_render": 0.09
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.48,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 4,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 2,
+    "sfx": 5,
+    "sfx_on_cue": 5,
+    "voice": true,
+    "voice_share": 0.76,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.57,
+    "bpm": 130.4,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.54,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-032/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-031",
@@ -786,7 +1349,54 @@
    "d_concrete_detail": 0.46,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.95,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-fitc-031",
+    "seconds": 22.5,
+    "shots": 14,
+    "shots_per_10s": 6.03,
+    "avg_shot_s": 1.61,
+    "transitions": {
+     "start": 1,
+     "cut": 13
+    },
+    "jump_cuts": 3,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.7,
+     "code_render": 0.3
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.91,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 29,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 2,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.95,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.67,
+    "bpm": 119.2,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.14,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 14 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-031/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-030",
@@ -860,7 +1470,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.5,
-   "d_self_promo": 0.19
+   "d_self_promo": 0.19,
+   "prod": {
+    "shortcode": "demo-fitc-030",
+    "seconds": 24.3,
+    "shots": 6,
+    "shots_per_10s": 2.55,
+    "avg_shot_s": 4.05,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.82,
+     "code_render": 0.18
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.65,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 7,
+    "text_first_1s": false,
+    "captions": 23,
+    "callouts": 4,
+    "stickers": 1,
+    "sfx": 5,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.07,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-030/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-029",
@@ -929,7 +1586,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.65,
-   "d_self_promo": 0.09
+   "d_self_promo": 0.09,
+   "prod": {
+    "shortcode": "demo-fitc-029",
+    "seconds": 22.5,
+    "shots": 4,
+    "shots_per_10s": 1.69,
+    "avg_shot_s": 5.62,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.95,
+     "code_render": 0.05
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 15,
+    "text_first_1s": false,
+    "captions": 20,
+    "callouts": 4,
+    "stickers": 0,
+    "sfx": 2,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.63,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.55,
+    "bpm": 125.4,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.37,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-029/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-028",
@@ -993,7 +1697,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.69,
-   "d_self_promo": 0.13
+   "d_self_promo": 0.13,
+   "prod": {
+    "shortcode": "demo-fitc-028",
+    "seconds": 21.4,
+    "shots": 10,
+    "shots_per_10s": 4.56,
+    "avg_shot_s": 2.14,
+    "transitions": {
+     "start": 1,
+     "cut": 9
+    },
+    "jump_cuts": 2,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.74,
+     "code_render": 0.26
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.85,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 17,
+    "text_first_1s": false,
+    "captions": 10,
+    "callouts": 5,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.73,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.76,
+    "bpm": 121.4,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.53,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 10 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-028/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-027",
@@ -1047,7 +1798,54 @@
    "d_concrete_detail": 0.22,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.8,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-fitc-027",
+    "seconds": 12.9,
+    "shots": 3,
+    "shots_per_10s": 2.53,
+    "avg_shot_s": 4.3,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.82,
+     "code_render": 0.18
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.91,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 8,
+    "text_first_1s": true,
+    "captions": 28,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 2,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.86,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.09,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-027/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-026",
@@ -1111,7 +1909,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.61,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-fitc-026",
+    "seconds": 19.6,
+    "shots": 2,
+    "shots_per_10s": 1.19,
+    "avg_shot_s": 9.8,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.69,
+     "code_render": 0.31
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.95,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": true,
+    "captions": 15,
+    "callouts": 1,
+    "stickers": 1,
+    "sfx": 3,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.61,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.66,
+    "bpm": 119.2,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.24,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-026/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-025",
@@ -1180,7 +2025,54 @@
    "d_concrete_detail": 0.14,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.88,
-   "d_self_promo": 0.13
+   "d_self_promo": 0.13,
+   "prod": {
+    "shortcode": "demo-fitc-025",
+    "seconds": 24.5,
+    "shots": 15,
+    "shots_per_10s": 6.15,
+    "avg_shot_s": 1.63,
+    "transitions": {
+     "start": 1,
+     "cut": 14
+    },
+    "jump_cuts": 4,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.72,
+     "code_render": 0.28
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 25,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 5,
+    "stickers": 0,
+    "sfx": 2,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.77,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.37,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 15 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-025/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-024",
@@ -1244,7 +2136,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.82,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-fitc-024",
+    "seconds": 19.0,
+    "shots": 12,
+    "shots_per_10s": 6.17,
+    "avg_shot_s": 1.58,
+    "transitions": {
+     "start": 1,
+     "cut": 11
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.82,
+     "code_render": 0.18
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 9,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 5,
+    "sfx_on_cue": 5,
+    "voice": true,
+    "voice_share": 0.65,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.4,
+    "bpm": 91.5,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.56,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 12 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-024/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-023",
@@ -1308,7 +2247,54 @@
    "d_concrete_detail": 0.5,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.89,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-fitc-023",
+    "seconds": 17.7,
+    "shots": 3,
+    "shots_per_10s": 1.8,
+    "avg_shot_s": 5.9,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.94,
+     "code_render": 0.06
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.63,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 30,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 5,
+    "stickers": 2,
+    "sfx": 7,
+    "sfx_on_cue": 7,
+    "voice": true,
+    "voice_share": 0.76,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.77,
+    "bpm": 131.5,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.29,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-023/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-022",
@@ -1377,7 +2363,54 @@
    "d_concrete_detail": 0.44,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.65,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-fitc-022",
+    "seconds": 24.3,
+    "shots": 3,
+    "shots_per_10s": 1.22,
+    "avg_shot_s": 8.1,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.84,
+     "code_render": 0.16
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.7,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 20,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 5,
+    "stickers": 1,
+    "sfx": 5,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.84,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.41,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-022/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-021",
@@ -1451,7 +2484,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.62,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-fitc-021",
+    "seconds": 23.6,
+    "shots": 3,
+    "shots_per_10s": 1.34,
+    "avg_shot_s": 7.87,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.62,
+     "code_render": 0.38
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.6,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 20,
+    "text_first_1s": false,
+    "captions": 14,
+    "callouts": 5,
+    "stickers": 1,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.79,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.34,
+    "bpm": 114.6,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.54,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-021/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-020",
@@ -1520,7 +2600,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.84,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-fitc-020",
+    "seconds": 19.9,
+    "shots": 9,
+    "shots_per_10s": 4.5,
+    "avg_shot_s": 2.21,
+    "transitions": {
+     "start": 1,
+     "cut": 8
+    },
+    "jump_cuts": 6,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.78,
+     "code_render": 0.22
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.69,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": false,
+    "captions": 21,
+    "callouts": 5,
+    "stickers": 2,
+    "sfx": 2,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.91,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.32,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 9 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-020/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-019",
@@ -1594,7 +2721,54 @@
    "d_concrete_detail": 0.55,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.57,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-fitc-019",
+    "seconds": 23.4,
+    "shots": 2,
+    "shots_per_10s": 0.93,
+    "avg_shot_s": 11.7,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.9,
+     "code_render": 0.1
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.89,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 25,
+    "text_first_1s": true,
+    "captions": 16,
+    "callouts": 4,
+    "stickers": 2,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.6,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.23,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-019/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-018",
@@ -1668,7 +2842,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.79,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-fitc-018",
+    "seconds": 24.2,
+    "shots": 10,
+    "shots_per_10s": 4.27,
+    "avg_shot_s": 2.42,
+    "transitions": {
+     "start": 1,
+     "cut": 9
+    },
+    "jump_cuts": 3,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.85,
+     "code_render": 0.15
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.91,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 19,
+    "text_first_1s": true,
+    "captions": 25,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 5,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.79,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.81,
+    "bpm": 127.4,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.57,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 10 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-018/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-017",
@@ -1742,7 +2963,54 @@
    "d_concrete_detail": 0.26,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.8,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-fitc-017",
+    "seconds": 27.2,
+    "shots": 14,
+    "shots_per_10s": 5.27,
+    "avg_shot_s": 1.94,
+    "transitions": {
+     "start": 1,
+     "cut": 13
+    },
+    "jump_cuts": 4,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.78,
+     "code_render": 0.22
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.65,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.84,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.01,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 14 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-017/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-016",
@@ -1801,7 +3069,54 @@
    "d_concrete_detail": 0.11,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.93,
-   "d_self_promo": 0.15
+   "d_self_promo": 0.15,
+   "prod": {
+    "shortcode": "demo-fitc-016",
+    "seconds": 18.4,
+    "shots": 4,
+    "shots_per_10s": 2.38,
+    "avg_shot_s": 4.6,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.84,
+     "code_render": 0.16
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.47,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 5,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 2,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.61,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.47,
+    "bpm": 104.3,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.21,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-016/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-015",
@@ -1875,7 +3190,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.53,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-fitc-015",
+    "seconds": 24.3,
+    "shots": 12,
+    "shots_per_10s": 5.13,
+    "avg_shot_s": 2.02,
+    "transitions": {
+     "start": 1,
+     "cut": 11
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.61,
+     "code_render": 0.39
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.82,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 10,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 5,
+    "stickers": 0,
+    "sfx": 2,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.65,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.32,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 12 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-015/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-014",
@@ -1939,7 +3301,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.53,
-   "d_self_promo": 0.12
+   "d_self_promo": 0.12,
+   "prod": {
+    "shortcode": "demo-fitc-014",
+    "seconds": 20.9,
+    "shots": 4,
+    "shots_per_10s": 2.13,
+    "avg_shot_s": 5.22,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.93,
+     "code_render": 0.07
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.62,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 25,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.8,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.52,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-014/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-013",
@@ -2013,7 +3422,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.7,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-fitc-013",
+    "seconds": 25.0,
+    "shots": 7,
+    "shots_per_10s": 2.7,
+    "avg_shot_s": 3.57,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.72,
+     "code_render": 0.28
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.94,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 22,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 2,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.63,
+    "bpm": 128.2,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.35,
+    "shot_size_main": "medium close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-013/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-012",
@@ -2087,7 +3543,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.95,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-fitc-012",
+    "seconds": 24.7,
+    "shots": 3,
+    "shots_per_10s": 1.25,
+    "avg_shot_s": 8.23,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.71,
+     "code_render": 0.29
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.47,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 27,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 2,
+    "sfx": 6,
+    "sfx_on_cue": 4,
+    "voice": true,
+    "voice_share": 0.63,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.36,
+    "bpm": 128.7,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.3,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-012/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-011",
@@ -2156,7 +3659,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.64,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-fitc-011",
+    "seconds": 23.9,
+    "shots": 15,
+    "shots_per_10s": 6.16,
+    "avg_shot_s": 1.59,
+    "transitions": {
+     "start": 1,
+     "cut": 14
+    },
+    "jump_cuts": 4,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.8,
+     "code_render": 0.2
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.59,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 14,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.87,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.79,
+    "bpm": 122.1,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.1,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 15 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-011/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-010",
@@ -2225,7 +3775,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.52,
-   "d_self_promo": 0.08
+   "d_self_promo": 0.08,
+   "prod": {
+    "shortcode": "demo-fitc-010",
+    "seconds": 22.3,
+    "shots": 8,
+    "shots_per_10s": 3.42,
+    "avg_shot_s": 2.79,
+    "transitions": {
+     "start": 1,
+     "cut": 7
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.94,
+     "code_render": 0.06
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 26,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 2,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.88,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.23,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 8 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-010/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-009",
@@ -2294,7 +3891,54 @@
    "d_concrete_detail": 0.17,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.7,
-   "d_self_promo": 0.08
+   "d_self_promo": 0.08,
+   "prod": {
+    "shortcode": "demo-fitc-009",
+    "seconds": 23.1,
+    "shots": 4,
+    "shots_per_10s": 1.89,
+    "avg_shot_s": 5.78,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.97,
+     "code_render": 0.03
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.5,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 21,
+    "text_first_1s": false,
+    "captions": 14,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.74,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.39,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-009/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-008",
@@ -2348,7 +3992,54 @@
    "d_concrete_detail": 0.49,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.5,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-fitc-008",
+    "seconds": 15.6,
+    "shots": 2,
+    "shots_per_10s": 1.38,
+    "avg_shot_s": 7.8,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.78,
+     "code_render": 0.22
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 21,
+    "text_first_1s": false,
+    "captions": 9,
+    "callouts": 6,
+    "stickers": 1,
+    "sfx": 2,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.93,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.21,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-008/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-007",
@@ -2407,7 +4098,54 @@
    "d_concrete_detail": 0.3,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.8,
-   "d_self_promo": 0.14
+   "d_self_promo": 0.14,
+   "prod": {
+    "shortcode": "demo-fitc-007",
+    "seconds": 18.3,
+    "shots": 4,
+    "shots_per_10s": 2.06,
+    "avg_shot_s": 4.58,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.64,
+     "code_render": 0.36
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.9,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 6,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 2,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.74,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.14,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-007/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-006",
@@ -2471,7 +4209,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.56,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-fitc-006",
+    "seconds": 21.1,
+    "shots": 3,
+    "shots_per_10s": 1.28,
+    "avg_shot_s": 7.03,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.71,
+     "code_render": 0.29
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.89,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 29,
+    "text_first_1s": false,
+    "captions": 27,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.65,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.29,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-006/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-005",
@@ -2530,7 +4315,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.67,
-   "d_self_promo": 0.14
+   "d_self_promo": 0.14,
+   "prod": {
+    "shortcode": "demo-fitc-005",
+    "seconds": 18.9,
+    "shots": 5,
+    "shots_per_10s": 2.9,
+    "avg_shot_s": 3.78,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.74,
+     "code_render": 0.26
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.89,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 9,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 2,
+    "stickers": 0,
+    "sfx": 9,
+    "sfx_on_cue": 7,
+    "voice": true,
+    "voice_share": 0.9,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.49,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-005/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-004",
@@ -2599,7 +4431,54 @@
    "d_concrete_detail": 0.28,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.55,
-   "d_self_promo": 0.09
+   "d_self_promo": 0.09,
+   "prod": {
+    "shortcode": "demo-fitc-004",
+    "seconds": 21.2,
+    "shots": 5,
+    "shots_per_10s": 2.22,
+    "avg_shot_s": 4.24,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.67,
+     "code_render": 0.33
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.84,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 29,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 2,
+    "sfx": 7,
+    "sfx_on_cue": 6,
+    "voice": true,
+    "voice_share": 0.93,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.37,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-004/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-003",
@@ -2658,7 +4537,54 @@
    "d_concrete_detail": 0.18,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.84,
-   "d_self_promo": 0.17
+   "d_self_promo": 0.17,
+   "prod": {
+    "shortcode": "demo-fitc-003",
+    "seconds": 17.7,
+    "shots": 8,
+    "shots_per_10s": 4.45,
+    "avg_shot_s": 2.21,
+    "transitions": {
+     "start": 1,
+     "cut": 7
+    },
+    "jump_cuts": 6,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.89,
+     "code_render": 0.11
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 26,
+    "text_first_1s": true,
+    "captions": 13,
+    "callouts": 2,
+    "stickers": 0,
+    "sfx": 5,
+    "sfx_on_cue": 5,
+    "voice": true,
+    "voice_share": 0.79,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.22,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 8 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-003/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-002",
@@ -2712,7 +4638,54 @@
    "d_concrete_detail": 0.35,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.94,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-fitc-002",
+    "seconds": 14.3,
+    "shots": 3,
+    "shots_per_10s": 2.0,
+    "avg_shot_s": 4.77,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.86,
+     "code_render": 0.14
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.95,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 9,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 6,
+    "stickers": 1,
+    "sfx": 2,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.76,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.27,
+    "shot_size_main": "medium close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-002/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-001",
@@ -2776,7 +4749,54 @@
    "d_concrete_detail": 0.12,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.78,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-fitc-001",
+    "seconds": 21.1,
+    "shots": 2,
+    "shots_per_10s": 1.04,
+    "avg_shot_s": 10.55,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.93,
+     "code_render": 0.07
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.53,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 3,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.79,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.85,
+    "bpm": 127.0,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.36,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-001/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-fitc-000",
@@ -2850,7 +4870,54 @@
    "d_concrete_detail": 0.41,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.75,
-   "d_self_promo": 0.04
+   "d_self_promo": 0.04,
+   "prod": {
+    "shortcode": "demo-fitc-000",
+    "seconds": 21.4,
+    "shots": 7,
+    "shots_per_10s": 3.24,
+    "avg_shot_s": 3.06,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.88,
+     "code_render": 0.12
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.93,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 4,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 1,
+    "sfx": 8,
+    "sfx_on_cue": 8,
+    "voice": true,
+    "voice_share": 0.87,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.24,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-fitc-000/VIDEO.md"
+   }
   }
  ]
 }

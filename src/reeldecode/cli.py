@@ -7,6 +7,7 @@ Pipeline (each step caches, so reruns only do new work):
   anatomy     Jev labels every sentence and every script (needs TYPESAFE_API_KEY)
   visual      cuts, faces, opening motion and on-screen text, measured locally
   frames      Jev looks at six stills per video: shot type, captions, what the first frame does
+  production  rea-video: shot-by-shot forensics (cuts, captions, SFX, voice, music, filmed/AI/code)
   hooks       Jev scores each opening on the triple hook: context, lean, snapback, topic-word ask
   formats     which formats, hooks and openings beat each creator's typical video, and across creators
   taste       reference videos -> tastebook.md (pacing rules with timestamps)
@@ -104,6 +105,19 @@ def c_frames(a) -> int:
     from .frames import cmd_frames
     cfg = _cfg(a)
     return cmd_frames(_store(a, cfg), _per(a, cfg), a.force, a.workers or 4)
+
+
+def c_production(a) -> int:
+    from . import production
+    try:
+        if a.one:
+            return production.cmd_production_one(a.one, Path(a.out), a.vlm)
+        cfg = _cfg(a)
+        return production.cmd_production(_store(a, cfg), _per(a, cfg), cfg.min_age_days, cfg.yours(),
+                                         a.workers or 2, a.vlm, a.force)
+    except production.ProductionError as exc:
+        print(f"[production] {exc}", file=sys.stderr)
+        return 1
 
 
 def c_hooks(a) -> int:
@@ -254,6 +268,16 @@ def parser() -> argparse.ArgumentParser:
     p = sub.add_parser("frames", parents=[common, data], help="Jev looks at stills: shot type, captions, first frame")
     p.add_argument("--force", action="store_true", help="look again at videos already labelled")
     p.set_defaults(fn=c_frames)
+
+    p = sub.add_parser("production", parents=[common, data],
+                       help="rea-video: shots, cuts, captions, sound effects, voice, music, how each video was made")
+    p.add_argument("--vlm", action="store_true",
+                   help="let rea-video's vision model judge each shot (REA_VLM_BASE_URL / _API_KEY / _MODEL); "
+                        "without it the filmed/AI/code call is counted only when the tools are sure")
+    p.add_argument("--force", action="store_true", help="decode again videos already decoded")
+    p.add_argument("--one", default="", help="decode one video (file or URL) instead of the dataset")
+    p.add_argument("--out", default="production-one", help="output folder for --one")
+    p.set_defaults(fn=c_production)
 
     p = sub.add_parser("hooks", parents=[common, data], help="Jev scores each opening: context, lean, snapback, ask")
     p.add_argument("--force", action="store_true", help="score again videos already scored")

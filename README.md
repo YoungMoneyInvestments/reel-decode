@@ -1,20 +1,32 @@
-<p align="center"><img src="docs/images/hero.png" alt="reel-decode: find out what your winning Reels, Shorts and TikToks say and show that your losing ones don't" width="100%"></p>
+<p align="center"><img src="docs/images/hero.png" alt="reel-decode: what your winners do, how your best video was made, and a check on your next script before you film" width="100%"></p>
 
-**reel-decode** reads every short video on an account, labels what each sentence of the script is doing, measures what is on screen, and shows you which choices your best videos make that your worst ones don't. Then it checks your next script against what you found, before you film it.
+**Stop guessing which videos will work.** reel-decode reads every Reel, Short and TikTok on your account and on the accounts you learn from. It tells you what your best videos do that your worst ones don't, from the first words of the script to the cuts, captions, sound effects and music. Then it turns that into a checklist your next script has to pass before you spend a day filming it.
 
-- **Script anatomy.** Local Whisper transcribes each video. A typed-question model labels every sentence (hook, setup, proof, method, payoff, call to action) and every script (format, opener, payoff, ask, tone). No free-text parsing.
-- **Fair comparisons.** Each video is judged against its own account's median for the same year. A 300-view account and a 300,000-view account can be compared on what separates their good videos from their bad ones.
-- **One interactive page.** Every video as a dot, a winners-vs-losers table per account, and each script sentence by sentence. A single HTML file that works offline.
-- **From findings to an edit.** `reeldecode taste` writes a taste book (pacing rules with timestamps) from reference videos you want to edit like; `reeldecode edit-plan` gives a keep, delete or move verdict for every script line. See [docs/editing.md](docs/editing.md).
-- **Score hooks on the triple hook.** Context, lean, snapback, then a topic-word ask: `reeldecode hooks` scores every video 0 to 3, `formats` shows whether higher scores beat each creator's typical video, and the gate blocks scripts missing a part. See [docs/hooks.md](docs/hooks.md).
-- **What formats win, from frames and words.** `reeldecode frames` has Jev look at stills from each video; `reeldecode formats` ranks formats, hooks and opening sequences per creator and across creators, each against that creator's own typical video. See [docs/formats.md](docs/formats.md).
-- **From outliers to your own idea.** `reeldecode ideas` turns the videos that beat their account's normal numbers into idea cards (structure, not wording); the gate fails a script that copies its reference. See [docs/ideas.md](docs/ideas.md).
-- **Lanes, so it ships every week.** Give each account named content lanes (job, funnel stage, format, weekly target, off-limits words); the gate checks every brief against its lane and `reeldecode lanes` shows which are behind. See [docs/lanes.md](docs/lanes.md).
-- **A gate for the next script.** Turn the findings into checks (`reeldecode gate check`) and a test-and-learn loop that reads each post's numbers at 24 h, 72 h and 7 days.
+## What it does for you
 
-Works on Instagram Reels, YouTube Shorts and TikTok: anything `yt-dlp` can download.
+**You learn what works for your own audience.** Each video is scored against its own account's normal views for that year, so the answer comes from your audience. The page shows every trait your top third has and your bottom third doesn't, with the counts behind it. The same structure that lifts one creator can sink another, and you'll see which one you are.
 
-## Quickstart
+**You see how a winning video is edited, shot by shot.** A transcript misses half of what makes a video work. `reeldecode production` breaks each video down shot by shot: how fast it cuts, where the jump cuts are, whether text hits the screen in the first second, how the captions are styled, every sound effect and the cut it lands on, human voice or TTS, whether the edit is cut to the music's beat, and whether each shot was filmed, AI-generated or built from templates. Your winners and losers are compared on all of it.
+
+**You turn other creators' outliers into your own next video.** `reeldecode ideas` picks the videos that beat their account's normal numbers several times over. For each one you get the structure (how it opens, the order of its beats, how long it runs) and a shot-by-shot remake breakdown: camera, framing, lighting, caption style, sound cues. You make it with your own words and footage, and the gate fails a script that copies the original.
+
+**You catch a weak script before you film it.** Write a brief, run `reeldecode gate check`, and it lists exactly what is missing: no re-hook, no payoff for the viewer, an ask that doesn't fit the funnel stage, a first line that runs too long for what your data says wins. Fix the script while it costs a minute to fix.
+
+**Every post makes the next one better.** Each post's numbers are read at 24 hours, 72 hours and 7 days, hook versions are compared against each other, and what you learn goes back into the checklist. Content lanes keep each account posting on target.
+
+## What changes in your week
+
+| Without it | With reel-decode |
+|---|---|
+| Scroll other creators and guess why their videos hit | A ranked list of what separates winners from losers, per account, with counts |
+| Copy a big creator's format and hope it transfers | See whether that format beats *your* typical video before you commit to it |
+| Rewatch a viral video frame by frame to work out the edit | One command gives you shots, pacing, captions, sound effects and music for every video |
+| Find out a script was weak after it flopped | The gate flags the missing piece before you film |
+| Every post is a fresh guess | Every post feeds the checklist for the next one |
+
+Everything runs on your machine except the script labeling, which costs about **20 cents for 400 videos**.
+
+## Try it in a minute
 
 Clone this repository, then:
 
@@ -23,39 +35,55 @@ pip install -e .
 reeldecode page --demo --open
 ```
 
-That opens the decode page on a bundled **synthetic** dataset (made-up accounts like `@demo_creator`, made-up scripts and view counts) so you can see the output in under a minute, offline, with no keys.
+That opens the full page on a bundled demo dataset (made-up accounts, scripts and view counts), offline, with no keys.
 
-To run it on real accounts:
+On your own accounts:
 
 ```bash
-pip install -e '.[fetch,transcribe,visual]'
+pip install -e '.[fetch,transcribe,visual,production]'
 reeldecode init                                     # writes reeldecode.toml; list your accounts there
 reeldecode collect --from-csv videos.csv --handle your_handle
-reeldecode fetch && reeldecode transcribe && reeldecode anatomy && reeldecode page --open
+reeldecode fetch && reeldecode transcribe && reeldecode anatomy
+reeldecode production && reeldecode page --open
 ```
 
-`anatomy` needs a TypeSafe key in `TYPESAFE_API_KEY`. Everything else runs on your machine.
+`anatomy` needs a TypeSafe key in `TYPESAFE_API_KEY`. `production` needs ffmpeg. Works on anything `yt-dlp` can download: Instagram Reels, YouTube Shorts, TikTok.
 
-## What you get
+## What you see
 
-<p align="center"><img src="docs/images/page-lift-light.png" alt="Winners-vs-losers table on the synthetic demo dataset" width="85%"></p>
+<p align="center"><img src="docs/images/page-lift-light.png" alt="Winners-vs-losers table: script traits per account, in percentage points" width="85%"></p>
 
-**Sample finding (synthetic demo data).** On `@demo_creator`, scripts that spend over a third of their sentences teaching sit in 4 of 14 winners but 12 of 15 losers (**−51 points**). On `@demo_fitcoach` the same shape is in 12 of 15 winners and 3 of 13 losers (**+57**). A flat statement as the opener loses on all three accounts. The demo data is generated with these effects planted on purpose; it shows the kind of answer the tool gives, not a real result. The lesson it illustrates did show up in real data: the script shape that lifts one account can sink another, so copying a bigger creator's structure is a test, not a plan.
+**What the script does.** Every trait your top third has more (green) or less (red) than your bottom third. In the demo, `@demo_creator`'s winners rarely spend over a third of the script teaching (4 of 14 winners, 12 of 15 losers), while on `@demo_fitcoach` that same shape wins (12 of 15 vs 3 of 13). The demo has these effects planted so you can see the kind of answer you get.
+
+<p align="center"><img src="docs/images/page-production-light.png" alt="Winners-vs-losers table on how each video was made: cuts, captions, sound effects, music, voice" width="85%"></p>
+
+**How it was made.** The same comparison on the edit. In the demo, 13 of 16 `@demo_creator` winners use three or more sound effects against 1 of 16 losers, while `@demo_studyhacks` winners mostly skip background music (4 of 14 vs 10 of 13).
 
 <table>
 <tr>
 <td width="50%"><img src="docs/images/page-plot-light.png" alt="Every video in one picture, positioned by views against its account's same-year median"></td>
-<td width="50%"><img src="docs/images/page-script-light.png" alt="One script, sentence by sentence, colored by the job each sentence does"></td>
+<td width="50%"><img src="docs/images/page-script-light.png" alt="One video: its edit, its labels, and its script sentence by sentence"></td>
 </tr>
 <tr>
-<td>Every video as a dot, placed by views against its account's same-year median. Click one to read it.</td>
-<td>Each script sentence by sentence, colored by the job it does, with the labels and timings.</td>
+<td>Every video as a dot, placed by views against its account's normal. Click one to open it.</td>
+<td>One video: how it was edited, what its script does, sentence by sentence.</td>
 </tr>
 </table>
 
+## Everything it does
+
+- **Script anatomy.** Local Whisper transcribes each video. A typed-question model labels every sentence (hook, setup, proof, method, payoff, call to action) and every script (format, opener, payoff, ask, tone).
+- **Production forensics.** `reeldecode production` runs [rea-video](https://github.com/JuneYaooo/rea-video) on every video: shots, cut types, captions, text callouts, stickers, sound effects and their cues, voice and music source, beat-synced editing, framing, camera, lighting, and filmed / AI / code per shot, plus a remake plan. See [docs/production.md](docs/production.md).
+- **Hooks.** `reeldecode hooks` scores every opening on the triple hook (context, lean, snapback, then a topic-word ask) and the gate blocks scripts missing a part. See [docs/hooks.md](docs/hooks.md).
+- **Formats.** `reeldecode frames` reads stills from each video; `reeldecode formats` ranks formats, hooks, opening sequences, edit pace, text style and sound design per creator and across creators. See [docs/formats.md](docs/formats.md).
+- **Idea cards.** `reeldecode ideas` turns outliers into structure-only cards with a shot-by-shot breakdown; the gate fails a script that copies its reference. See [docs/ideas.md](docs/ideas.md).
+- **Editing help.** `reeldecode taste` writes pacing rules with timestamps from videos you want to edit like; `reeldecode edit-plan` gives a keep, delete or move verdict for every script line. See [docs/editing.md](docs/editing.md).
+- **Lanes.** Named content lanes per account (job, funnel stage, format, weekly target, off-limits words); `reeldecode lanes` shows which are behind. See [docs/lanes.md](docs/lanes.md).
+- **The gate and the loop.** `reeldecode gate check` before you film, `reeldecode learn` after you post.
+
 ## How it works
 
-<p align="center"><img src="docs/images/architecture.svg" alt="Pipeline: collect, fetch, transcribe, anatomy, visual, page; then formula, gate, post versions, learn" width="100%"></p>
+<p align="center"><img src="docs/images/architecture.svg" alt="Pipeline: collect, fetch, transcribe, anatomy, visual, production, page; then formula, gate, post versions, learn" width="100%"></p>
 
 | Step | Command | What happens | Runs |
 |---|---|---|---|
@@ -66,6 +94,7 @@ reeldecode fetch && reeldecode transcribe && reeldecode anatomy && reeldecode pa
 | Visual | `reeldecode visual` | Cuts, faces, motion in the first half second, on-screen text in the first 3 seconds (OpenCV, tesseract). Covers music-only videos too | local |
 | Frames | `reeldecode frames` | Six stills per video go to Jev as images: shot type (talking head, screen recording, interview, b-roll, person over screen...), on-screen caption, and what the first frame does to stop the scroll. See [docs/formats.md](docs/formats.md) | TypeSafe API |
 | Hooks | `reeldecode hooks` | The triple hook per video: context in the first words (said, written, shown), a lean, a snapback, and a topic-word comment ask. See [docs/hooks.md](docs/hooks.md) | TypeSafe API |
+| Production | `reeldecode production` | rea-video breaks each video into shots and sound stems: cut types, captions and text callouts, stickers, sound effects and their cues, voice and music source, beat-synced editing, framing, camera, lighting, and filmed / AI / code per shot (counted only when checked). Keeps the full `VIDEO.md` breakdown and remake plan. See [docs/production.md](docs/production.md) | local (optional vision model) |
 | Formats | `reeldecode formats` | Which script formats, spoken hooks, opening sequences, visual formats and first frames beat each creator's typical video, and which hold up across creators | local |
 | Page | `reeldecode page` | `decode.json` and `decode.html`: the plot, the lift table, every script | local |
 
@@ -107,6 +136,7 @@ A brief is one YAML file per video. The gate checks the script rubric (hook, pay
 | Collect, fetch, transcribe, visual, page, gate check, learn | free, on your machine |
 | Anatomy (TypeSafe Jev) | about **$0.04 per million input tokens**. One script is one call per sentence plus one. A short 3-sentence script measured 4,056 input tokens ($0.0002); a typical 30 to 60 second script with 8 to 12 sentences runs about 11,000 tokens: roughly **$0.0005 per video**, or **about 20 cents for 400 videos** |
 | Frames (TypeSafe Jev, images) | about 1,900 input tokens per still, six stills a video: measured **$0.038 for 80 real videos** (about $0.0005 each) |
+| Production (rea-video) | free, on your machine; about 3x the video's running time on a laptop CPU. `--vlm` uses your own vision-model endpoint |
 | Gate read | the same, once per script you write |
 
 Every anatomy run appends its token count and cost to `decode_runs.jsonl`, and the page shows the total. Check TypeSafe's current price before a big run.
@@ -121,6 +151,7 @@ pip install -e '.[fetch]'             # yt-dlp
 pip install -e '.[transcribe]'        # openai-whisper (and ffmpeg on your PATH)
 pip install -e '.[visual]'            # OpenCV; also install the tesseract binary
 pip install -e '.[collect]'           # Playwright, for the opt-in Instagram collector
+pip install -e '.[production]'        # rea-video, for the shot-by-shot production stage (needs ffmpeg)
 pip install -e '.[youtube]'           # Google API client, for reading your own YouTube numbers
 pip install -e '.[all]'
 ```

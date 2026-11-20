@@ -13,6 +13,10 @@ from .questions import REEL_CHOICE_DIMS, REEL_NOUL_DIMS, REEL_Q, ROLES
 from .store import Store
 
 FRAME_KEYS = ("visual_format", "open_shot", "hook_visual", "shot_seq", "shot_changes", "caption_share")
+PROD_KEYS = ("shots", "shots_per_10s", "avg_shot_s", "jump_cuts", "effect_transitions", "made_mix", "made_main",
+             "made_reliable", "text_first_1s", "captions", "callouts", "stickers", "sfx", "sfx_on_cue", "voice",
+             "voice_source", "music", "bpm", "music_source", "beat_synced", "camera_moving_share", "shot_size_main",
+             "lighting", "remake", "package")
 
 
 def demo_dir() -> Path:
@@ -39,6 +43,7 @@ def build(st: Store, per_account: int, min_age_days: int, yours: set[str],
             "judged": len(judged),
             "median_views": statistics.median([r["views"] for r in judged]) if judged else None,
             "lift": analysis.lift_rows(rows),
+            "prod_lift": analysis.production_lift(rows),
         })
         for r in rows:
             sc = r.get("script")
@@ -54,6 +59,7 @@ def build(st: Store, per_account: int, min_age_days: int, yours: set[str],
                 "dv": r["dv"],
                 "hook": {k: v for k, v in r["hook"].items()} if r.get("hook") else None,
                 "frames": {k: r["frames"].get(k) for k in FRAME_KEYS} if r.get("frames") else None,
+                "prod": {k: r["prod"].get(k) for k in PROD_KEYS} if r.get("prod") else None,
                 "script": [[s["t"], s["role"], s["text"]] for s in sc] if sc else None,
             })
     cost, tokens = run_costs(st.data)
