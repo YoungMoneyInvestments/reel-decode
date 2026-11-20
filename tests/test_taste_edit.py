@@ -39,18 +39,22 @@ def test_detect_cuts_on_a_real_clip(tmp_path):
     assert abs(taste.duration_of(f) - 3.0) < 0.2
 
 
-def _fake(verdicts):
-    it = iter(verdicts)
+def _fake(lines, verdicts):
+    """Answers each call by the line it asks about: make_plan calls from a thread pool, so call order
+    is not line order (it differs on Python 3.13). Repeated lines take their answers in order."""
+    queue: dict[str, list] = {}
+    for ln, v in zip(lines, verdicts):
+        queue.setdefault(ln, []).append(v)
 
     def call(payload, key):
-        v, w, r = next(it)
+        v, w, r = queue[payload["state"]["line"]].pop(0)
         return {"answers": {"verdict": {"choice": v}, "where": {"choice": w}, "reason": {"choice": r}}}
     return call
 
 
 def test_plan_applies_in_order():
     lines = ["Hook line.", "Throat clearing.", "Takeaway buried.", "Ask."]
-    plan = edit.make_plan(lines, "k", _fake([("keep", "stay", "does_its_job"), ("delete", "stay", "weak"),
+    plan = edit.make_plan(lines, "k", _fake(lines, [("keep", "stay", "does_its_job"), ("delete", "stay", "weak"),
                                               ("move", "after_hook", "buries_the_point"),
                                               ("keep", "stay", "does_its_job")]))
     assert [p["n"] for p in edit.apply_order(plan)] == [1, 3, 4]
@@ -58,9 +62,9 @@ def test_plan_applies_in_order():
 
 
 def test_move_that_goes_nowhere_is_a_keep_and_stay_is_forced_for_keep():
-    plan = edit.make_plan(["a"], "k", _fake([("move", "stay", "weak")]))
+    plan = edit.make_plan(["a"], "k", _fake(["a"], [("move", "stay", "weak")]))
     assert plan[0]["verdict"] == "keep"
-    plan = edit.make_plan(["a"], "k", _fake([("keep", "end", "does_its_job")]))
+    plan = edit.make_plan(["a"], "k", _fake(["a"], [("keep", "end", "does_its_job")]))
     assert plan[0]["where"] == "stay"
 
 
@@ -70,8 +74,9 @@ def test_missing_answer_fails_closed():
 
 
 def test_repeated_line_keeps_its_first_copy_and_odd_keeps_are_flagged():
-    plan = edit.make_plan(["Same idea.", "Um, so.", "Same idea."], "k",
-                          _fake([("delete", "stay", "repeats"), ("keep", "stay", "weak"),
+    lines = ["Same idea.", "Um, so.", "Same idea."]
+    plan = edit.make_plan(lines, "k",
+                          _fake(lines, [("delete", "stay", "repeats"), ("keep", "stay", "weak"),
                                  ("delete", "stay", "repeats")]))
     assert [p["verdict"] for p in plan] == ["keep", "keep", "delete"]
     assert plan[1]["flag"] and "Check by hand" in edit.change_list(plan)
