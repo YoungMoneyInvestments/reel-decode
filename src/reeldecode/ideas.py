@@ -29,9 +29,23 @@ def idea_cards(data: dict, min_x: float = MIN_X, limit: int = 20, include_yours:
             "viewer_payoff": r["labels"].get("viewer_payoff"), "register": r["labels"].get("register"),
             "seconds": dv.get("seconds"), "role_seq": dv.get("role_seq"),
             "proof_in_first_three": dv.get("proof_in_first_three"), "opener": r["script"][0][2],
+            "production": r.get("prod"),
         })
     cards.sort(key=lambda c: -c["x_median"])
     return cards[:limit]
+
+
+def _production_lines(p: dict | None) -> list[str]:
+    """How the outlier was made (rea-video), so the remake keeps its craft, not its footage."""
+    if not p:
+        return []
+    from .production import describe
+    out = [f"- how it was made: {describe(p)}"]
+    if p.get("remake") and p.get("made_reliable"):
+        out.append(f"- remake route: {p['remake']}")
+    if p.get("package"):
+        out.append(f"- shot-by-shot breakdown: `{p['package']}` (camera, lighting, caption styles, sound cues per shot)")
+    return out
 
 
 def cards_markdown(cards: list[dict], min_x: float) -> str:
@@ -49,6 +63,7 @@ def cards_markdown(cards: list[dict], min_x: float) -> str:
                 f"- {c['seconds']} s; sentence jobs in order `{c['role_seq']}` "
                 "(H hook, S setup, T story, P proof, M method, Y payoff, C cta)",
                 f"- proof in the first three sentences: {'yes' if c['proof_in_first_three'] else 'no'}",
+                *_production_lines(c.get("production")),
                 f"- their opener (reference only, do not reuse): \"{c['opener']}\"",
                 f"- start yours: `reeldecode gate new E___ \"<your title>\" --variable hook --stage <tofu|mofu|bofu> "
                 f"--account <you> --lane <lane>` then add `inspired_by: [{c['shortcode']}]`", ""]

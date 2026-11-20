@@ -149,3 +149,46 @@ def visual_lift(rows: list[dict]) -> list[dict]:
     los = [r for r in rows if r.get("tier") == "loser" and r.get("vis")]
     tests = [("visual", name, lambda r, f=fn: bool(f(r["vis"]))) for name, fn in VIS_TRAITS]
     return gap_table(win, los, tests, min_hits=0)
+
+
+# Production traits from rea-video (the `production` stage). Measured traits count on every decoded video;
+# production-method traits count only on videos whose method call is reliable (see production.py).
+PROD_TRAITS = [
+    ("fast cutting (4+ shots per 10 s)", lambda p: (p.get("shots_per_10s") or 0) >= 4),
+    ("long takes (under 1.5 shots per 10 s)", lambda p: p.get("shots_per_10s") is not None and p["shots_per_10s"] < 1.5),
+    ("jump cuts (2+)", lambda p: p.get("jump_cuts", 0) >= 2),
+    ("transition effects beyond hard cuts", lambda p: p.get("effect_transitions", 0) >= 1),
+    ("text on screen in the first second", lambda p: p.get("text_first_1s")),
+    ("burned-in captions", lambda p: p.get("captions", 0) >= 3),
+    ("styled text callouts (3+)", lambda p: p.get("callouts", 0) >= 3),
+    ("stickers or emoji", lambda p: p.get("stickers", 0) >= 1),
+    ("added sound effects (3+)", lambda p: p.get("sfx", 0) >= 3),
+    ("sound effects land on cuts or text (2+)", lambda p: p.get("sfx_on_cue", 0) >= 2),
+    ("background music", lambda p: p.get("music")),
+    ("edit cut to the beat", lambda p: p.get("beat_synced")),
+    ("voice is a human recording", lambda p: p.get("voice_source") == "human_recording"),
+    ("voice is TTS or AI", lambda p: p.get("voice_source") in ("tts", "ai_video_native")),
+    ("camera moves over half the time", lambda p: (p.get("camera_moving_share") or 0) > 0.5),
+    ("mostly close framing", lambda p: p.get("shot_size_main") in ("medium close-up", "close-up", "extreme close-up")),
+]
+MADE_TRAITS = [
+    ("mostly filmed (over 80% live action)", lambda p: (p.get("made_mix") or {}).get("live_action", 0) > 0.8),
+    ("has AI-generated shots", lambda p: (p.get("made_mix") or {}).get("ai_video", 0) > 0),
+    ("has code or template graphics", lambda p: (p.get("made_mix") or {}).get("code_render", 0) > 0),
+    ("has screen recording", lambda p: (p.get("made_mix") or {}).get("screen_capture", 0) > 0),
+    ("has an AI avatar", lambda p: (p.get("made_mix") or {}).get("avatar", 0) > 0),
+]
+
+
+def production_lift(rows: list[dict]) -> list[dict]:
+    """Winners vs losers on how the video was made. Method traits use only reliably-judged videos."""
+    has = lambda r: bool(r.get("prod"))
+    win = [r for r in rows if r.get("tier") == "winner" and has(r)]
+    los = [r for r in rows if r.get("tier") == "loser" and has(r)]
+    out = gap_table(win, los, [("production", n, lambda r, f=fn: bool(f(r["prod"]))) for n, fn in PROD_TRAITS],
+                    min_hits=0)
+    rel = lambda rs: [r for r in rs if r["prod"].get("made_reliable")]
+    out += gap_table(rel(win), rel(los), [("made", n, lambda r, f=fn: bool(f(r["prod"]))) for n, fn in MADE_TRAITS],
+                     min_hits=0)
+    out.sort(key=lambda x: -abs(x["gap"]))
+    return out

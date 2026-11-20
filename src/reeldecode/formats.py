@@ -53,6 +53,32 @@ def _yn(v):
     return None if v is None else ("yes" if v else "no")
 
 
+def _pr(r: dict, k: str):
+    return (r.get("prod") or {}).get(k)
+
+
+def pace_band(v: float | None) -> str | None:
+    if v is None:
+        return None
+    return ("under 1.5 shots per 10 s" if v < 1.5 else "1.5 to 3 shots per 10 s" if v < 3
+            else "3 to 5 shots per 10 s" if v < 5 else "5+ shots per 10 s")
+
+
+def text_style(p: dict | None) -> str | None:
+    if not p:
+        return None
+    parts = [n for n, on in (("captions", p.get("captions", 0) >= 3), ("callouts", p.get("callouts", 0) >= 3),
+                             ("stickers", p.get("stickers", 0) >= 1)) if on]
+    return " + ".join(parts) or "no on-screen text"
+
+
+def sound_style(p: dict | None) -> str | None:
+    if not p:
+        return None
+    music = ("music cut to the beat" if p.get("beat_synced") else "music") if p.get("music") else "no music"
+    return music + (" + sound effects" if p.get("sfx", 0) >= 3 else "")
+
+
 def _pair(a, b):
     return f"{a} + {b}" if a and b else None
 
@@ -71,6 +97,11 @@ GROUPINGS: list[tuple[str, Callable[[dict], str | None]]] = [
     ("context channels (said, written, shown)",
      lambda r: None if _hk(r, "channels") is None else (" + ".join(_hk(r, "channels")) or "none")),
     ("topic-word comment ask", lambda r: _hk(r, "keyword_ask")),
+    ("edit pace", lambda r: pace_band(_pr(r, "shots_per_10s"))),
+    ("on-screen text", lambda r: text_style(r.get("prod"))),
+    ("sound design", lambda r: sound_style(r.get("prod"))),
+    ("voice source", lambda r: _pr(r, "voice_source")),
+    ("production method", lambda r: _pr(r, "made_main") if _pr(r, "made_reliable") else None),
     ("script format + spoken hook", lambda r: _pair(_lab(r, "format"), _lab(r, "hook_formula"))),
     ("visual format + script format", lambda r: _pair(_fr(r, "visual_format"), _lab(r, "format"))),
     ("opening shot + spoken hook", lambda r: _pair(_fr(r, "open_shot"), _lab(r, "hook_formula"))),
@@ -133,7 +164,8 @@ def build(data: dict, min_n: int = MIN_N, include_yours: bool = True) -> dict:
             per[h] = g
     others = {h: g for h, g in per.items() if h not in ours}
     with_frames = sum(1 for r in data["reels"] if r.get("frames"))
-    return {"min_n": min_n, "ours": sorted(ours), "videos_with_frames": with_frames,
+    with_prod = sum(1 for r in data["reels"] if r.get("prod"))
+    return {"min_n": min_n, "ours": sorted(ours), "videos_with_frames": with_frames, "videos_with_production": with_prod,
             "per_account": per, "across_creators": cross_creator(others)}
 
 
@@ -150,6 +182,9 @@ def markdown(rep: dict, top: int = 5) -> str:
     if not rep["videos_with_frames"]:
         out += ["_No video has frame labels yet, so visual format, opening shot and first frame are empty. Run "
                 "`reeldecode frames` to add them._", ""]
+    if not rep.get("videos_with_production"):
+        out += ["_No video has a production decode yet, so edit pace, on-screen text, sound design, voice source "
+                "and production method are empty. Run `reeldecode production` to add them._", ""]
     cc = rep["across_creators"]
     if cc:
         out += ["## Across reference creators", "",

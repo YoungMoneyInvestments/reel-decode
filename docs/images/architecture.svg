@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="IBM Plex Sans, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="IBM Plex Sans, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
   <title>reel-decode architecture</title>
   <defs>
     <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -15,7 +15,7 @@
       .loop{stroke:#0f8a5f;stroke-width:1.8;fill:none;stroke-dasharray:6 5}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="560" rx="16"/>
+  <rect class="bg" width="1200" height="660" rx="16"/>
 
   <text class="lane" x="40" y="44">DECODE: WHAT SEPARATES WINNERS FROM LOSERS</text>
 
@@ -49,7 +49,7 @@
   <text class="s" x="636" y="254">cuts, faces, motion, text</text>
   <text class="m" x="636" y="278">OpenCV + tesseract</text>
 
-  <rect class="box" x="866" y="62" width="294" height="234" style="stroke:#1f5fd6"/>
+  <rect class="box" x="866" y="62" width="294" height="300" style="stroke:#1f5fd6"/>
   <text class="t" x="886" y="94">page</text>
   <text class="s" x="886" y="118">each video ÷ its account's same-year</text>
   <text class="s" x="886" y="138">median → top third vs bottom third</text>
@@ -58,7 +58,18 @@
   <text class="m" x="886" y="222">decode.html  (one file,</text>
   <text class="m" x="886" y="242">  works offline)</text>
   <text class="m" x="886" y="270">VISUAL-FINDINGS.md</text>
+  <text class="m" x="886" y="290">PRODUCTION-FINDINGS.md</text>
+  <text class="s" x="886" y="320">+ formats, idea cards with a</text>
+  <text class="s" x="886" y="340">shot-by-shot remake breakdown</text>
 
+  <rect class="box" x="618" y="306" width="200" height="100"/>
+  <text class="t" x="636" y="334">production</text>
+  <text class="s" x="636" y="356">shots, captions, SFX, music,</text>
+  <text class="s" x="636" y="374">filmed / AI / code per shot</text>
+  <text class="m" x="636" y="396">rea-video, local</text>
+
+  <path class="ln" d="M316 180 V346 H614" marker-end="url(#a)"/>
+  <path class="ln" d="M818 346 H862" marker-end="url(#a)"/>
   <path class="ln" d="M210 121 H232" marker-end="url(#a)"/>
   <path class="ln" d="M396 121 H418" marker-end="url(#a)"/>
   <path class="ln" d="M592 121 H614" marker-end="url(#a)"/>
@@ -66,39 +77,39 @@
   <path class="ln" d="M316 180 V248 H614" marker-end="url(#a)"/>
   <path class="ln" d="M818 248 H862" marker-end="url(#a)"/>
 
-  <text class="lane" x="180" y="352">THE LOOP: USE IT ON THE NEXT VIDEO</text>
+  <text class="lane" x="180" y="452">THE LOOP: USE IT ON THE NEXT VIDEO</text>
 
-  <rect class="box" x="40" y="370" width="230" height="140"/>
-  <text class="t" x="58" y="402">formula</text>
-  <text class="s" x="58" y="426">your thresholds, per account,</text>
-  <text class="s" x="58" y="446">from what your page showed</text>
-  <text class="m" x="58" y="490">reeldecode.toml</text>
+  <rect class="box" x="40" y="470" width="230" height="140"/>
+  <text class="t" x="58" y="502">formula</text>
+  <text class="s" x="58" y="526">your thresholds, per account,</text>
+  <text class="s" x="58" y="546">from what your page showed</text>
+  <text class="m" x="58" y="590">reeldecode.toml</text>
 
-  <rect class="box" x="300" y="370" width="250" height="140"/>
-  <text class="t" x="318" y="402">gate</text>
-  <text class="s" x="318" y="426">brief: one viewer, one topic,</text>
-  <text class="s" x="318" y="446">stage-fit ask, three hooks;</text>
-  <text class="s" x="318" y="466">Jev reads the script</text>
-  <text class="m" x="318" y="494">gate check → exit 1 / 0</text>
+  <rect class="box" x="300" y="470" width="250" height="140"/>
+  <text class="t" x="318" y="502">gate</text>
+  <text class="s" x="318" y="526">brief: one viewer, one topic,</text>
+  <text class="s" x="318" y="546">stage-fit ask, three hooks;</text>
+  <text class="s" x="318" y="566">Jev reads the script</text>
+  <text class="m" x="318" y="594">gate check → exit 1 / 0</text>
 
-  <rect class="box" x="580" y="370" width="250" height="140"/>
-  <text class="t" x="598" y="402">post versions</text>
-  <text class="s" x="598" y="426">2–4 different cuts as trials,</text>
-  <text class="s" x="598" y="446">about a week apart;</text>
-  <text class="s" x="598" y="466">winner to the main feed</text>
-  <text class="m" x="598" y="494">you, on your phone</text>
+  <rect class="box" x="580" y="470" width="250" height="140"/>
+  <text class="t" x="598" y="502">post versions</text>
+  <text class="s" x="598" y="526">2–4 different cuts as trials,</text>
+  <text class="s" x="598" y="546">about a week apart;</text>
+  <text class="s" x="598" y="566">winner to the main feed</text>
+  <text class="m" x="598" y="594">you, on your phone</text>
 
-  <rect class="box" x="860" y="370" width="300" height="140"/>
-  <text class="t" x="878" y="402">learn</text>
-  <text class="s" x="878" y="426">numbers at 24 h, 72 h, 7 d;</text>
-  <text class="s" x="878" y="446">winner by 3 s hold, watch %,</text>
-  <text class="s" x="878" y="466">then sends per 1,000 views</text>
-  <text class="m" x="878" y="494">LEARNINGS.md</text>
+  <rect class="box" x="860" y="470" width="300" height="140"/>
+  <text class="t" x="878" y="502">learn</text>
+  <text class="s" x="878" y="526">numbers at 24 h, 72 h, 7 d;</text>
+  <text class="s" x="878" y="546">winner by 3 s hold, watch %,</text>
+  <text class="s" x="878" y="566">then sends per 1,000 views</text>
+  <text class="m" x="878" y="594">LEARNINGS.md</text>
 
-  <path class="ln" d="M270 440 H296" marker-end="url(#a)"/>
-  <path class="ln" d="M550 440 H576" marker-end="url(#a)"/>
-  <path class="ln" d="M830 440 H856" marker-end="url(#a)"/>
-  <path class="ln" d="M1013 296 V326 H155 V366" marker-end="url(#a)"/>
-  <path class="loop" d="M1010 510 V540 H155 V514" marker-end="url(#a)"/>
-  <text class="s" x="470" y="535" style="fill:#0f8a5f">update the formula from your own results</text>
+  <path class="ln" d="M270 540 H296" marker-end="url(#a)"/>
+  <path class="ln" d="M550 540 H576" marker-end="url(#a)"/>
+  <path class="ln" d="M830 540 H856" marker-end="url(#a)"/>
+  <path class="ln" d="M1013 362 V426 H155 V466" marker-end="url(#a)"/>
+  <path class="loop" d="M1010 610 V640 H155 V614" marker-end="url(#a)"/>
+  <text class="s" x="470" y="635" style="fill:#0f8a5f">update the formula from your own results</text>
 </svg>

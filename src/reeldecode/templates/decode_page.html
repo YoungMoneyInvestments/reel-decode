@@ -104,6 +104,12 @@ tr.on td{background:color-mix(in srgb,var(--accent) 13%,transparent)}
     <div class="panel scroll"><table id="lift"></table></div>
   </section>
 
+  <section id="prodSection">
+    <h2>How winners are made vs losers</h2>
+    <p class="muted">The same comparison on how each video was made, measured by rea-video: cuts, transitions, captions and text callouts, sound effects, voice, music and camera. Filmed, AI and code traits count only videos whose production method a vision model or agent checked, or the tools were sure of.</p>
+    <div class="panel scroll"><table id="prodLift"></table></div>
+  </section>
+
   <section>
     <h2>Which choices win, account by account</h2>
     <div class="controls">
@@ -190,11 +196,11 @@ function drawPlot(){
 }
 function inGroup(r){ return r.a===state.acct && r.labels && r.labels[state.dim]===state.group; }
 
-function drawLift(){
-  const cols = accts.filter(a=>a.lift && a.lift.length);
-  if(!cols.length){ $('lift').innerHTML='<tr><td class="muted">Not enough judged reels with a spoken script in any account yet.</td></tr>'; return; }
+function drawLift(key='lift', el='lift', empty='Not enough judged reels with a spoken script in any account yet.'){
+  const cols = accts.filter(a=>a[key] && a[key].length);
+  if(!cols.length){ $(el).innerHTML=`<tr><td class="muted">${esc(empty)}</td></tr>`; return; }
   const rows = new Map();
-  cols.forEach(a=>a.lift.forEach(x=>{ const k=x.dim+'|'+x.value; if(!rows.has(k)) rows.set(k,{dim:x.dim,value:x.value,c:{}}); rows.get(k).c[a.handle]=x; }));
+  cols.forEach(a=>a[key].forEach(x=>{ const k=x.dim+'|'+x.value; if(!rows.has(k)) rows.set(k,{dim:x.dim,value:x.value,c:{}}); rows.get(k).c[a.handle]=x; }));
   const score = r => { const o=cols.filter(a=>a.ours).map(a=>Math.abs(r.c[a.handle]?.gap||0)), t=cols.filter(a=>!a.ours).map(a=>Math.abs(r.c[a.handle]?.gap||0)); return Math.max(0,...o,...t); };
   const list=[...rows.values()].filter(r=>score(r)>=0.12).sort((a,b)=>score(b)-score(a)).slice(0,28);
   let h='<thead><tr><th>Trait</th>'+cols.map(a=>`<th class="num">@${esc(a.handle)}<br><span style="text-transform:none;letter-spacing:0">${a.ours?'yours':'reference'}</span></th>`).join('')+'</tr></thead><tbody>';
@@ -205,7 +211,7 @@ function drawLift(){
       return `<td><span class="gap" title="winners ${x.win_n} (${Math.round(x.win_share*100)}%) · losers ${x.lose_n} (${Math.round(x.lose_share*100)}%)" style="background:color-mix(in srgb,var(--${g>=0?'pos':'neg'}) ${Math.round(al*100)}%,transparent)">${g>0?'+':''}${g}</span></td>`;
     }).join('')+'</tr>';
   });
-  $('lift').innerHTML=h+'</tbody>';
+  $(el).innerHTML=h+'</tbody>';
 }
 
 function drawGroups(){
@@ -232,6 +238,7 @@ function drawDetail(){
   if(!r){ $('detail').innerHTML='<p class="muted">Click a dot or a row to open a reel.</p>'; return; }
   let h=`<div style="display:flex;flex-direction:column;gap:12px"><div class="reelhead"><b>@${esc(r.a)}</b><span class="mono">${fmt(r.views)} views</span><span class="mono muted">${r.x!=null?'×'+r.x.toFixed(2)+' of its year median':''}</span><span class="mono muted">${fmt(r.likes)} likes · ${fmt(r.comments)} comments</span><span class="muted">${esc(r.posted||'')}</span><span class="muted">${r.tier==='unjudged'?'not judged':nice(r.tier==='winner'?'top third':r.tier==='loser'?'bottom third':'middle third')}</span><a href="${esc(r.url)}" target="_blank" rel="noopener">Open video</a></div>`;
   if(r.caption) h+=`<div class="cap">Caption: ${esc(r.caption)}</div>`;
+  if(r.prod) h+=prodChips(r.prod);
   if(!r.script){ h+=`<p class="muted">${r.status==='no_speech'?'No spoken script: this reel is music, ambient sound or on-screen text only, so there is nothing for Jev to read.':'Script not decoded ('+esc(nice(r.status))+').'}</p></div>`; $('detail').innerHTML=h; return; }
   const dv=r.dv;
   h+='<div class="chips">'+DIMS.map(d=>`<span class="chip">${esc(nice(d))} <b>${esc(nice(r.labels[d]))}</b></span>`).join('')
@@ -241,6 +248,19 @@ function drawDetail(){
   h+='<div class="legend">'+D.roles.map(x=>`<span><i style="background:${ROLE_VAR(x)}"></i>${esc(x)}</span>`).join('')+'</div>';
   h+='<div class="script">'+r.script.map(s=>`<div class="line"><span class="t">${Math.floor(s[0]/60)}:${String(Math.floor(s[0]%60)).padStart(2,'0')}</span><span class="r" style="color:${ROLE_VAR(s[1])}">${esc(s[1])}</span><span>${esc(s[2])}</span></div>`).join('')+'</div></div>';
   $('detail').innerHTML=h;
+}
+function prodChips(p){
+  const pct=v=>Math.round(v*100)+'%', c=(k,v)=>`<span class="chip">${esc(k)} <b>${esc(v)}</b></span>`;
+  let h='<div class="chips" title="Measured by rea-video">'+c('shots',p.shots)+c('pace',(p.shots_per_10s??'–')+' per 10 s');
+  if(p.jump_cuts) h+=c('jump cuts',p.jump_cuts);
+  h+=c('text in first second',p.text_first_1s?'yes':'no')+c('captions',p.captions)+c('callouts',p.callouts);
+  if(p.stickers) h+=c('stickers',p.stickers);
+  h+=c('sound effects',p.sfx+(p.sfx_on_cue?` (${p.sfx_on_cue} on a cue)`:''));
+  h+=c('voice',p.voice?nice(p.voice_source||'unknown'):'none')+c('music',p.music?((p.bpm?Math.round(p.bpm)+' BPM':'yes')+(p.beat_synced?', on the beat':'')):'none');
+  if(p.shot_size_main) h+=c('framing',p.shot_size_main);
+  if(p.made_reliable && p.made_mix) h+=c('made',Object.entries(p.made_mix).sort((a,b)=>b[1]-a[1]).map(([k,v])=>nice(k)+' '+pct(v)).join(', '));
+  else h+='<span class="chip muted">made: not counted (unverified)</span>';
+  return h+'</div>';
 }
 function select(sc,scroll){ state.sel=sc; const r=D.reels.find(x=>x.sc===sc); if(r && r.a!==state.acct){state.acct=r.a;state.group=null;} drawPlot(); drawGroups(); drawDetail(); if(scroll) $('detail').scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }
 
@@ -258,4 +278,6 @@ const full = r => r.script && r.script.length >= 6;
 const first = D.reels.filter(r=>full(r) && r.tier==='winner' && accts.find(a=>a.handle===r.a)?.ours).sort((a,b)=>b.x-a.x)[0] || D.reels.filter(full).sort((a,b)=>b.views-a.views)[0];
 if(first){ state.sel=first.sc; state.acct=first.a; }
 drawHead(); drawPlot(); drawLift(); drawGroups(); drawDetail();
+if(D.reels.some(r=>r.prod)) drawLift('prod_lift','prodLift','Not enough judged reels with a production decode in any account yet.');
+else $('prodSection').hidden=true;
 </script>

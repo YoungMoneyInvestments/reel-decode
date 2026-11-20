@@ -70,7 +70,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.65,
-   "d_self_promo": 0.07
+   "d_self_promo": 0.07,
+   "prod": {
+    "shortcode": "demo-stud-039",
+    "seconds": 23.6,
+    "shots": 6,
+    "shots_per_10s": 2.72,
+    "avg_shot_s": 3.93,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.91,
+     "code_render": 0.09
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.67,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 18,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 2,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.87,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.13,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-039/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-038",
@@ -144,7 +191,54 @@
    "d_concrete_detail": 0.39,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.71,
-   "d_self_promo": 0.09
+   "d_self_promo": 0.09,
+   "prod": {
+    "shortcode": "demo-stud-038",
+    "seconds": 24.7,
+    "shots": 15,
+    "shots_per_10s": 6.05,
+    "avg_shot_s": 1.65,
+    "transitions": {
+     "start": 1,
+     "cut": 14
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.95,
+     "code_render": 0.05
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.65,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 25,
+    "text_first_1s": true,
+    "captions": 19,
+    "callouts": 1,
+    "stickers": 2,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.69,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.48,
+    "bpm": 94.7,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.13,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 15 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-038/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-037",
@@ -208,7 +302,54 @@
    "d_concrete_detail": 0.37,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.58,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-stud-037",
+    "seconds": 20.0,
+    "shots": 8,
+    "shots_per_10s": 4.25,
+    "avg_shot_s": 2.5,
+    "transitions": {
+     "start": 1,
+     "cut": 7
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.87,
+     "code_render": 0.13
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.65,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 8,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 1,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.62,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.64,
+    "bpm": 99.6,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.22,
+    "shot_size_main": "medium close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 8 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-037/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-036",
@@ -267,7 +408,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.71,
-   "d_self_promo": 0.04
+   "d_self_promo": 0.04,
+   "prod": {
+    "shortcode": "demo-stud-036",
+    "seconds": 17.0,
+    "shots": 10,
+    "shots_per_10s": 6.13,
+    "avg_shot_s": 1.7,
+    "transitions": {
+     "start": 1,
+     "cut": 9
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.93,
+     "code_render": 0.07
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.5,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 26,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 2,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.51,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 10 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-036/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-035",
@@ -341,7 +529,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.78,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-stud-035",
+    "seconds": 23.7,
+    "shots": 12,
+    "shots_per_10s": 5.22,
+    "avg_shot_s": 1.97,
+    "transitions": {
+     "start": 1,
+     "cut": 11
+    },
+    "jump_cuts": 3,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.99,
+     "code_render": 0.01
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 10,
+    "text_first_1s": true,
+    "captions": 29,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 7,
+    "sfx_on_cue": 6,
+    "voice": true,
+    "voice_share": 0.68,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.74,
+    "bpm": 93.0,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.52,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 12 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-035/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-034",
@@ -410,7 +645,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.51,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-stud-034",
+    "seconds": 23.8,
+    "shots": 4,
+    "shots_per_10s": 1.61,
+    "avg_shot_s": 5.95,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.93,
+     "code_render": 0.07
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.65,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 7,
+    "text_first_1s": true,
+    "captions": 29,
+    "callouts": 6,
+    "stickers": 1,
+    "sfx": 6,
+    "sfx_on_cue": 4,
+    "voice": true,
+    "voice_share": 0.83,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.28,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-034/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-033",
@@ -474,7 +756,54 @@
    "d_concrete_detail": 0.36,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.8,
-   "d_self_promo": 0.04
+   "d_self_promo": 0.04,
+   "prod": {
+    "shortcode": "demo-stud-033",
+    "seconds": 20.0,
+    "shots": 4,
+    "shots_per_10s": 2.09,
+    "avg_shot_s": 5.0,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.85,
+     "code_render": 0.15
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.48,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 16,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.76,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.5,
+    "bpm": 99.4,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.37,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-033/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-032",
@@ -538,7 +867,54 @@
    "d_concrete_detail": 0.13,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.65,
-   "d_self_promo": 0.15
+   "d_self_promo": 0.15,
+   "prod": {
+    "shortcode": "demo-stud-032",
+    "seconds": 19.5,
+    "shots": 9,
+    "shots_per_10s": 4.54,
+    "avg_shot_s": 2.17,
+    "transitions": {
+     "start": 1,
+     "cut": 8
+    },
+    "jump_cuts": 4,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.84,
+     "code_render": 0.16
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.87,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 29,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 8,
+    "sfx_on_cue": 6,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.45,
+    "bpm": 104.9,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.38,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 9 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-032/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-031",
@@ -602,7 +978,54 @@
    "d_concrete_detail": 0.21,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.76,
-   "d_self_promo": 0.17
+   "d_self_promo": 0.17,
+   "prod": {
+    "shortcode": "demo-stud-031",
+    "seconds": 21.3,
+    "shots": 6,
+    "shots_per_10s": 3.01,
+    "avg_shot_s": 3.55,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.95,
+     "code_render": 0.05
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.94,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 19,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 1,
+    "stickers": 0,
+    "sfx": 9,
+    "sfx_on_cue": 8,
+    "voice": true,
+    "voice_share": 0.61,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.13,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-031/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-030",
@@ -666,7 +1089,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.87,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-stud-030",
+    "seconds": 19.6,
+    "shots": 3,
+    "shots_per_10s": 1.72,
+    "avg_shot_s": 6.53,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.79,
+     "code_render": 0.21
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 21,
+    "text_first_1s": false,
+    "captions": 27,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 6,
+    "sfx_on_cue": 6,
+    "voice": true,
+    "voice_share": 0.83,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.69,
+    "bpm": 130.1,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.09,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-030/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-029",
@@ -720,7 +1190,54 @@
    "d_concrete_detail": 0.23,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.64,
-   "d_self_promo": 0.12
+   "d_self_promo": 0.12,
+   "prod": {
+    "shortcode": "demo-stud-029",
+    "seconds": 14.2,
+    "shots": 3,
+    "shots_per_10s": 2.37,
+    "avg_shot_s": 4.73,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.78,
+     "code_render": 0.22
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 6,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 5,
+    "stickers": 0,
+    "sfx": 4,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.75,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.64,
+    "bpm": 115.0,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.48,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-029/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-028",
@@ -779,7 +1296,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.92,
-   "d_self_promo": 0.17
+   "d_self_promo": 0.17,
+   "prod": {
+    "shortcode": "demo-stud-028",
+    "seconds": 16.8,
+    "shots": 5,
+    "shots_per_10s": 2.68,
+    "avg_shot_s": 3.36,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.96,
+     "code_render": 0.04
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.93,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 5,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.81,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.42,
+    "bpm": 103.7,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.08,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-028/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-027",
@@ -843,7 +1407,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.88,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-stud-027",
+    "seconds": 19.0,
+    "shots": 2,
+    "shots_per_10s": 0.98,
+    "avg_shot_s": 9.5,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.79,
+     "code_render": 0.21
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.93,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 21,
+    "text_first_1s": false,
+    "captions": 18,
+    "callouts": 5,
+    "stickers": 0,
+    "sfx": 4,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.82,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.12,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-027/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-026",
@@ -907,7 +1518,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.73,
-   "d_self_promo": 0.08
+   "d_self_promo": 0.08,
+   "prod": {
+    "shortcode": "demo-stud-026",
+    "seconds": 21.1,
+    "shots": 10,
+    "shots_per_10s": 4.84,
+    "avg_shot_s": 2.11,
+    "transitions": {
+     "start": 1,
+     "cut": 9
+    },
+    "jump_cuts": 4,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.68,
+     "code_render": 0.32
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.68,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 6,
+    "text_first_1s": false,
+    "captions": 20,
+    "callouts": 1,
+    "stickers": 2,
+    "sfx": 6,
+    "sfx_on_cue": 4,
+    "voice": true,
+    "voice_share": 0.78,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.7,
+    "bpm": 124.8,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.57,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 10 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-026/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-025",
@@ -919,7 +1577,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 50640,
    "likes": 2532,
-   "comments": 14
+   "comments": 14,
+   "prod": {
+    "shortcode": "demo-stud-025",
+    "seconds": 36.4,
+    "shots": 2,
+    "shots_per_10s": 0.67,
+    "avg_shot_s": 18.2,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.75,
+     "code_render": 0.25
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.89,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 11,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.19,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-025/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-024",
@@ -931,7 +1636,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 24267,
    "likes": 1213,
-   "comments": 2
+   "comments": 2,
+   "prod": {
+    "shortcode": "demo-stud-024",
+    "seconds": 24.3,
+    "shots": 10,
+    "shots_per_10s": 4.22,
+    "avg_shot_s": 2.43,
+    "transitions": {
+     "start": 1,
+     "cut": 9
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.77,
+     "code_render": 0.23
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.87,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 17,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": true,
+    "music_share": 0.39,
+    "bpm": 106.5,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.38,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 10 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-024/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-023",
@@ -943,7 +1695,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 17048,
    "likes": 852,
-   "comments": 11
+   "comments": 11,
+   "prod": {
+    "shortcode": "demo-stud-023",
+    "seconds": 18.3,
+    "shots": 3,
+    "shots_per_10s": 1.63,
+    "avg_shot_s": 6.1,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.85,
+     "code_render": 0.15
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.51,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 26,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 2,
+    "sfx": 8,
+    "sfx_on_cue": 8,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": true,
+    "music_share": 0.31,
+    "bpm": 93.9,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.52,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-023/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-022",
@@ -1002,7 +1801,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.58,
-   "d_self_promo": 0.14
+   "d_self_promo": 0.14,
+   "prod": {
+    "shortcode": "demo-stud-022",
+    "seconds": 17.8,
+    "shots": 9,
+    "shots_per_10s": 4.92,
+    "avg_shot_s": 1.98,
+    "transitions": {
+     "start": 1,
+     "cut": 8
+    },
+    "jump_cuts": 4,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.7,
+     "code_render": 0.3
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.94,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 5,
+    "text_first_1s": false,
+    "captions": 21,
+    "callouts": 2,
+    "stickers": 0,
+    "sfx": 4,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.82,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.73,
+    "bpm": 126.0,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.59,
+    "shot_size_main": "close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 9 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-022/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-021",
@@ -1061,7 +1907,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.54,
-   "d_self_promo": 0.14
+   "d_self_promo": 0.14,
+   "prod": {
+    "shortcode": "demo-stud-021",
+    "seconds": 20.3,
+    "shots": 7,
+    "shots_per_10s": 3.35,
+    "avg_shot_s": 2.9,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.71,
+     "code_render": 0.29
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.73,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 25,
+    "text_first_1s": true,
+    "captions": 14,
+    "callouts": 6,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.62,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.21,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-021/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-020",
@@ -1115,7 +2008,54 @@
    "d_concrete_detail": 0.55,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.75,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-stud-020",
+    "seconds": 12.7,
+    "shots": 2,
+    "shots_per_10s": 1.7,
+    "avg_shot_s": 6.35,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.71,
+     "code_render": 0.29
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.83,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 22,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 2,
+    "sfx": 6,
+    "sfx_on_cue": 4,
+    "voice": true,
+    "voice_share": 0.91,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.1,
+    "shot_size_main": "medium close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-020/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-019",
@@ -1169,7 +2109,54 @@
    "d_concrete_detail": 0.5,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.53,
-   "d_self_promo": 0.15
+   "d_self_promo": 0.15,
+   "prod": {
+    "shortcode": "demo-stud-019",
+    "seconds": 15.5,
+    "shots": 4,
+    "shots_per_10s": 2.58,
+    "avg_shot_s": 3.88,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.96,
+     "code_render": 0.04
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.91,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 24,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 6,
+    "sfx_on_cue": 5,
+    "voice": true,
+    "voice_share": 0.91,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.6,
+    "bpm": 118.7,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.24,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-019/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-018",
@@ -1223,7 +2210,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.91,
-   "d_self_promo": 0.17
+   "d_self_promo": 0.17,
+   "prod": {
+    "shortcode": "demo-stud-018",
+    "seconds": 14.9,
+    "shots": 2,
+    "shots_per_10s": 1.2,
+    "avg_shot_s": 7.45,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.97,
+     "code_render": 0.03
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.84,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 9,
+    "text_first_1s": true,
+    "captions": 7,
+    "callouts": 6,
+    "stickers": 0,
+    "sfx": 8,
+    "sfx_on_cue": 7,
+    "voice": true,
+    "voice_share": 0.75,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.41,
+    "bpm": 127.1,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.17,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-018/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-017",
@@ -1292,7 +2326,54 @@
    "d_concrete_detail": 0.17,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.87,
-   "d_self_promo": 0.04
+   "d_self_promo": 0.04,
+   "prod": {
+    "shortcode": "demo-stud-017",
+    "seconds": 20.6,
+    "shots": 7,
+    "shots_per_10s": 3.2,
+    "avg_shot_s": 2.94,
+    "transitions": {
+     "start": 1,
+     "cut": 6
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.97,
+     "code_render": 0.03
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.88,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 22,
+    "text_first_1s": false,
+    "captions": 23,
+    "callouts": 2,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.8,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.26,
+    "shot_size_main": "medium",
+    "lighting": "window_side",
+    "remake": "filmed 7 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-017/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-016",
@@ -1351,7 +2432,54 @@
    "d_concrete_detail": 0.13,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.92,
-   "d_self_promo": 0.2
+   "d_self_promo": 0.2,
+   "prod": {
+    "shortcode": "demo-stud-016",
+    "seconds": 16.8,
+    "shots": 5,
+    "shots_per_10s": 2.98,
+    "avg_shot_s": 3.36,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.85,
+     "code_render": 0.15
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.87,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 4,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 9,
+    "sfx_on_cue": 9,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.89,
+    "bpm": 131.3,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.05,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-016/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-015",
@@ -1410,7 +2538,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.56,
-   "d_self_promo": 0.02
+   "d_self_promo": 0.02,
+   "prod": {
+    "shortcode": "demo-stud-015",
+    "seconds": 19.3,
+    "shots": 11,
+    "shots_per_10s": 5.75,
+    "avg_shot_s": 1.75,
+    "transitions": {
+     "start": 1,
+     "cut": 10
+    },
+    "jump_cuts": 2,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.82,
+     "code_render": 0.18
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.88,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 30,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.69,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.06,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 11 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-015/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-014",
@@ -1474,7 +2649,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.54,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-stud-014",
+    "seconds": 19.0,
+    "shots": 6,
+    "shots_per_10s": 3.22,
+    "avg_shot_s": 3.17,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.86,
+     "code_render": 0.14
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.58,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 22,
+    "text_first_1s": true,
+    "captions": 15,
+    "callouts": 6,
+    "stickers": 2,
+    "sfx": 2,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.73,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.59,
+    "shot_size_main": "medium close-up",
+    "lighting": "soft_front",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-014/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-013",
@@ -1533,7 +2755,53 @@
    "d_concrete_detail": 0.31,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.8,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-stud-013",
+    "seconds": 18.4,
+    "shots": 2,
+    "shots_per_10s": 1.0,
+    "avg_shot_s": 9.2,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 1.0
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.85,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 8,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 1,
+    "stickers": 2,
+    "sfx": 4,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.89,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.52,
+    "bpm": 102.5,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.47,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-013/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-012",
@@ -1592,7 +2860,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.93,
-   "d_self_promo": 0.19
+   "d_self_promo": 0.19,
+   "prod": {
+    "shortcode": "demo-stud-012",
+    "seconds": 19.0,
+    "shots": 3,
+    "shots_per_10s": 1.35,
+    "avg_shot_s": 6.33,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.92,
+     "code_render": 0.08
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.84,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 5,
+    "stickers": 1,
+    "sfx": 8,
+    "sfx_on_cue": 6,
+    "voice": true,
+    "voice_share": 0.6,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.75,
+    "bpm": 103.7,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.38,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-012/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-011",
@@ -1666,7 +2981,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.59,
-   "d_self_promo": 0.06
+   "d_self_promo": 0.06,
+   "prod": {
+    "shortcode": "demo-stud-011",
+    "seconds": 27.9,
+    "shots": 2,
+    "shots_per_10s": 0.87,
+    "avg_shot_s": 13.95,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.8,
+     "code_render": 0.2
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.89,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 28,
+    "text_first_1s": false,
+    "captions": 19,
+    "callouts": 3,
+    "stickers": 1,
+    "sfx": 1,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.89,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.23,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-011/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-010",
@@ -1725,7 +3087,54 @@
    "d_concrete_detail": 0.11,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.85,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-stud-010",
+    "seconds": 16.9,
+    "shots": 6,
+    "shots_per_10s": 3.67,
+    "avg_shot_s": 2.82,
+    "transitions": {
+     "start": 1,
+     "cut": 5
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.9,
+     "code_render": 0.1
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.94,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 8,
+    "text_first_1s": false,
+    "captions": 14,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.8,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.56,
+    "bpm": 115.2,
+    "music_source": "existing_library",
+    "beat_synced": true,
+    "camera_moving_share": 0.44,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 6 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-010/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-009",
@@ -1737,7 +3146,54 @@
    "caption": "No talking, just the process. #demo",
    "views": 40498,
    "likes": 2024,
-   "comments": 25
+   "comments": 25,
+   "prod": {
+    "shortcode": "demo-stud-009",
+    "seconds": 22.2,
+    "shots": 4,
+    "shots_per_10s": 1.91,
+    "avg_shot_s": 5.55,
+    "transitions": {
+     "start": 1,
+     "cut": 3
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.72,
+     "code_render": 0.28
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.74,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 23,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 4,
+    "stickers": 1,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": false,
+    "voice_share": 0.0,
+    "voice_source": null,
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.5,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 4 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-009/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-008",
@@ -1796,7 +3252,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.85,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-stud-008",
+    "seconds": 20.7,
+    "shots": 12,
+    "shots_per_10s": 5.94,
+    "avg_shot_s": 1.72,
+    "transitions": {
+     "start": 1,
+     "cut": 11
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.74,
+     "code_render": 0.26
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.55,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 14,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 5,
+    "sfx_on_cue": 4,
+    "voice": true,
+    "voice_share": 0.94,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.17,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 12 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-008/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-007",
@@ -1875,7 +3378,54 @@
    "d_concrete_detail": 0.32,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.63,
-   "d_self_promo": 0.11
+   "d_self_promo": 0.11,
+   "prod": {
+    "shortcode": "demo-stud-007",
+    "seconds": 27.6,
+    "shots": 17,
+    "shots_per_10s": 6.14,
+    "avg_shot_s": 1.62,
+    "transitions": {
+     "start": 1,
+     "cut": 16
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.61,
+     "code_render": 0.39
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.6,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 12,
+    "text_first_1s": true,
+    "captions": 23,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.81,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.27,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 17 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-007/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-006",
@@ -1939,7 +3489,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.65,
-   "d_self_promo": 0.16
+   "d_self_promo": 0.16,
+   "prod": {
+    "shortcode": "demo-stud-006",
+    "seconds": 20.2,
+    "shots": 5,
+    "shots_per_10s": 2.5,
+    "avg_shot_s": 4.04,
+    "transitions": {
+     "start": 1,
+     "cut": 4
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.75,
+     "code_render": 0.25
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.85,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 7,
+    "text_first_1s": false,
+    "captions": 0,
+    "callouts": 5,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.64,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.04,
+    "shot_size_main": "medium",
+    "lighting": "soft_front",
+    "remake": "filmed 5 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-006/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-005",
@@ -2008,7 +3605,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.61,
-   "d_self_promo": 0.18
+   "d_self_promo": 0.18,
+   "prod": {
+    "shortcode": "demo-stud-005",
+    "seconds": 21.7,
+    "shots": 13,
+    "shots_per_10s": 5.85,
+    "avg_shot_s": 1.67,
+    "transitions": {
+     "start": 1,
+     "cut": 12
+    },
+    "jump_cuts": 5,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.77,
+     "code_render": 0.23
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.91,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 12,
+    "text_first_1s": false,
+    "captions": 25,
+    "callouts": 6,
+    "stickers": 2,
+    "sfx": 4,
+    "sfx_on_cue": 3,
+    "voice": true,
+    "voice_share": 0.88,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.42,
+    "bpm": 101.3,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.13,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 13 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-005/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-004",
@@ -2082,7 +3726,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.61,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-stud-004",
+    "seconds": 28.3,
+    "shots": 12,
+    "shots_per_10s": 4.32,
+    "avg_shot_s": 2.36,
+    "transitions": {
+     "start": 1,
+     "cut": 11
+    },
+    "jump_cuts": 3,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.9,
+     "code_render": 0.1
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.54,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 20,
+    "text_first_1s": false,
+    "captions": 28,
+    "callouts": 5,
+    "stickers": 1,
+    "sfx": 3,
+    "sfx_on_cue": 2,
+    "voice": true,
+    "voice_share": 0.93,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.03,
+    "shot_size_main": "close-up",
+    "lighting": "window_side",
+    "remake": "filmed 12 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-004/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-003",
@@ -2141,7 +3832,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.67,
-   "d_self_promo": 0.03
+   "d_self_promo": 0.03,
+   "prod": {
+    "shortcode": "demo-stud-003",
+    "seconds": 18.5,
+    "shots": 3,
+    "shots_per_10s": 1.39,
+    "avg_shot_s": 6.17,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.64,
+     "code_render": 0.36
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.52,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 5,
+    "text_first_1s": false,
+    "captions": 28,
+    "callouts": 1,
+    "stickers": 2,
+    "sfx": 1,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.53,
+    "bpm": 114.6,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.25,
+    "shot_size_main": "close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-003/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-002",
@@ -2210,7 +3948,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.8,
-   "d_self_promo": 0.1
+   "d_self_promo": 0.1,
+   "prod": {
+    "shortcode": "demo-stud-002",
+    "seconds": 22.8,
+    "shots": 3,
+    "shots_per_10s": 1.27,
+    "avg_shot_s": 7.6,
+    "transitions": {
+     "start": 1,
+     "cut": 2
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.99,
+     "code_render": 0.01
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.86,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 16,
+    "text_first_1s": true,
+    "captions": 0,
+    "callouts": 0,
+    "stickers": 0,
+    "sfx": 3,
+    "sfx_on_cue": 1,
+    "voice": true,
+    "voice_share": 0.92,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.87,
+    "bpm": 95.9,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.2,
+    "shot_size_main": "medium",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 3 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-002/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-001",
@@ -2264,7 +4049,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.1,
    "d_single_idea": 0.72,
-   "d_self_promo": 0.12
+   "d_self_promo": 0.12,
+   "prod": {
+    "shortcode": "demo-stud-001",
+    "seconds": 15.6,
+    "shots": 2,
+    "shots_per_10s": 0.98,
+    "avg_shot_s": 7.8,
+    "transitions": {
+     "start": 1,
+     "cut": 1
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 0,
+    "made_mix": {
+     "live_action": 0.64,
+     "code_render": 0.36
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.63,
+    "made_reliable": false,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 23,
+    "text_first_1s": true,
+    "captions": 19,
+    "callouts": 3,
+    "stickers": 0,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.75,
+    "voice_source": "human_recording",
+    "music": true,
+    "music_share": 0.83,
+    "bpm": 128.7,
+    "music_source": "existing_library",
+    "beat_synced": false,
+    "camera_moving_share": 0.51,
+    "shot_size_main": "medium close-up",
+    "lighting": "ambient_low_light",
+    "remake": "filmed 2 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-001/VIDEO.md"
+   }
   },
   {
    "shortcode": "demo-stud-000",
@@ -2343,7 +4175,54 @@
    "d_concrete_detail": 0.9,
    "d_proof_shown": 0.9,
    "d_single_idea": 0.63,
-   "d_self_promo": 0.05
+   "d_self_promo": 0.05,
+   "prod": {
+    "shortcode": "demo-stud-000",
+    "seconds": 27.9,
+    "shots": 9,
+    "shots_per_10s": 3.27,
+    "avg_shot_s": 3.1,
+    "transitions": {
+     "start": 1,
+     "cut": 8
+    },
+    "jump_cuts": 0,
+    "effect_transitions": 1,
+    "made_mix": {
+     "live_action": 0.84,
+     "code_render": 0.16
+    },
+    "made_main": "live_action",
+    "made_confidence": 0.91,
+    "made_reliable": true,
+    "readers": [
+     "tools"
+    ],
+    "overlays": [
+     "subtitle"
+    ],
+    "text_cues": 13,
+    "text_first_1s": false,
+    "captions": 27,
+    "callouts": 1,
+    "stickers": 2,
+    "sfx": 0,
+    "sfx_on_cue": 0,
+    "voice": true,
+    "voice_share": 0.7,
+    "voice_source": "human_recording",
+    "music": false,
+    "music_share": 0.0,
+    "bpm": null,
+    "music_source": null,
+    "beat_synced": false,
+    "camera_moving_share": 0.19,
+    "shot_size_main": "medium close-up",
+    "lighting": "window_side",
+    "remake": "filmed 9 shots -> 1 shooting setup",
+    "rea_video": "synthetic",
+    "package": "demo/demo-stud-000/VIDEO.md"
+   }
   }
  ]
 }

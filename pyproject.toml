@@ -31,6 +31,8 @@ transcribe = ["openai-whisper"]
 visual = ["opencv-python-headless>=4.8,<5", "numpy"]  # 5.x removed the Haar face detector
 collect = ["playwright>=1.40"]
 youtube = ["google-api-python-client>=2", "google-auth>=2"]
+# rea-video is not on PyPI; pinned to the commit the production stage was tested against
+production = ["rea-video[ocr] @ git+https://github.com/JuneYaooo/rea-video@131d1527557d2cccacb64059d47560964235acd7"]
 all = ["reel-decode[fetch,transcribe,visual,collect,youtube]"]
 dev = ["pytest>=7", "ruff>=0.4"]
 
