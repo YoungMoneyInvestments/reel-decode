@@ -231,3 +231,10 @@ def test_formats_groups_by_hook_score():
     g = rep["per_account"]["c"]["triple hook score (0-3)"]
     assert [(r["value"], r["median_x"]) for r in g] == [("3 of 3", 2.5), ("2 of 3", 0.5)]
     assert rep["per_account"]["c"]["snapback"][0]["value"] == "yes"
+
+
+def test_shot_question_separates_graphics_over_a_talking_head():
+    from reeldecode.questions import SHOT_Q
+    crit = SHOT_Q["criteria"]
+    assert "talking_head_with_graphics" in crit and "talking_head" in crit
+    assert "nothing on screen but the person" in crit["talking_head"]
