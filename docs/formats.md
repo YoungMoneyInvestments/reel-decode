@@ -26,7 +26,7 @@ closed questions. The wording lives in `src/reeldecode/questions.py`:
 
 | question | asked of | answers |
 |---|---|---|
-| `shot` | every still | talking_head, person_over_screen, screen_recording, interview, b_roll, product_shot, text_card, clip_from_elsewhere, split_screen, other |
+| `shot` | every still | talking_head, talking_head_with_graphics, person_over_screen, screen_recording, interview, b_roll, product_shot, text_card, clip_from_elsewhere, split_screen, other |
 | `caption` | every still | probability there is on-screen text of three or more words |
 | `hook_visual` | the first still | headline_text, face_closeup, proof_on_screen, product_or_tool, action, unexpected_image, scene_or_aesthetic, other |
 

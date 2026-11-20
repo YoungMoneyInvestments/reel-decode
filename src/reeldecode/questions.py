@@ -166,7 +166,10 @@ SHOT_Q = {
     "instructions": ("`frame` is one still from a short vertical video (a Reel, TikTok or Short). What kind "
                      "of shot is it? Judge what fills the frame, not any caption on top of it. " + UNTRUSTED),
     "criteria": {
-        "talking_head": "A person facing the camera and talking, filling most of the frame.",
+        "talking_head": "A person facing the camera and talking, filling most of the frame, with nothing on screen but the person and captions.",
+        "talking_head_with_graphics": ("A person facing the camera and talking, filling most of the frame, with "
+                                       "graphics floating around them: panels, charts, cards, icons or small images "
+                                       "laid over the live shot (more than just captions)."),
         "person_over_screen": "A person cut out or shown small over a screenshot, website, chart or other background (green screen).",
         "screen_recording": "A phone or computer screen fills the frame: an app, website, chart, code or document.",
         "interview": "Two or more people in conversation, a podcast set, or someone being interviewed off-camera.",

@@ -5,6 +5,7 @@ All notable changes to this project are listed here. The format follows [Keep a 
 ## [Unreleased]
 
 ### Added
+- `frames`: new shot type `talking_head_with_graphics` (a person to camera with panels, charts or cards laid over the live shot). Before this, such a video was labeled `talking_head` and could not be ranked apart from a plain one; one continuous take with building overlays has zero cuts, so cut-based pacing cannot see it either.
 - `reeldecode hooks`: the triple hook (context, lean, snapback) scored 0 to 3 per video with typed Jev questions, plus where the context is set (said, written, shown) and whether the ending asks for a topic word after delivering value. `formats` groups by score and parts; `gate read` blocks scripts missing a part (`triple_hook = false` turns it off). See [docs/hooks.md](docs/hooks.md).
 - `reeldecode frames`: six stills per video (three from the first 3 seconds, three from the body) go to Jev as images with typed questions: shot type, on-screen caption, and what the first frame does. Per-video visual format, opening shot and shot sequence are computed in code. All or nothing per video; cost logged to `decode_runs.jsonl`.
 - `reeldecode formats`: script format, spoken hook, opening sequence of sentence jobs, visual format, opening shot, first frame and their pairings, ranked per creator by median times-typical, then pooled across creators one vote each. See [docs/formats.md](docs/formats.md).
